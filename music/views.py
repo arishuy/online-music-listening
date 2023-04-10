@@ -9,7 +9,7 @@ def music(request):
 def homepage(request):
     return render(request, 'homepage.html')
 def recent(request):
-    return HttpResponse("Hello, world. You're at the recent index.")
+    return render(request, 'recentlisten.html')
 def playlists(request):
     return HttpResponse("Hello, world. You're at the playlists index.")
 def detail(request, song_id):
