@@ -239,3 +239,86 @@ body {
   color: #FFFFFF;
   margin: 20px 0 0 20px;
 }
+.music-listennings {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: black;
+  width: 100%;
+  height: 100px;
+}
+.music-container {
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.music-container .music-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.music-container .music-info {
+  padding: 20px;
+}
+.music-container img {
+  width: 100%;
+  border-radius: 20px;
+}
+.music-container .music-name {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 15px 0 0 0;
+}
+.music-container .music-singer {
+  color: #919191;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+}
+.music-control {
+  width: 15vw;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.progress-bar {
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: black;
+  margin: 0 40px 0 40px;
+}
+.music-control-volume {
+  width: 15vw;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 10px 0 10px;
+}
+.music-control-volume i {
+  padding: 0 10px 0 10px;
+}
+progress {
+  width: 100%;
+  height: 5px;
+  background: #2b2b2b;
+  border-radius: 5px;
+  margin: 0 10px 0 10px;
+}
