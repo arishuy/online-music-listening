@@ -210,6 +210,11 @@ body {
   width: 100%;
   border-radius: 20px;
 }
+.music-card i {
+  font-size: 135px;
+  color: white;
+}
+
 .music-card .music-name {
   color: white;
   font-size: 1.2em;
