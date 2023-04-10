@@ -322,3 +322,53 @@ progress {
   border-radius: 5px;
   margin: 0 10px 0 10px;
 }
+.music-card:hover {
+  background: #1e1e1e;
+  cursor: pointer;
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}
+.detail_song {
+  margin-top: 20px;
+  background: #2b2b2b;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+}
+.detail_song .detail_song_info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.detail_song .detail_song_img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.detail_song img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.detail_song .detail_song_name {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 15px 0 0 0;
+}
+.detail_song .detail_song_singer {
+  color: #919191;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+}
