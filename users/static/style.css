@@ -377,3 +377,6 @@ progress {
   font-size: 16px;
   line-height: 23px;
 }
+#progressBar {
+  padding: 0 15px;
+}
