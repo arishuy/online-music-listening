@@ -1,34 +1,26 @@
 {% extends "master.html" %}
 {% block title %}
-  Register
+Register
 {% endblock %}
 {% block content %}
 <div class="login-page">
-    <div class="login-picture">
-      <i class="fa-solid fa-key"></i>
-    </div>
-    <div class="form">
-      <h1>Register</h1>
-      <div class="register-form">
-        <input
-          type="email"
-          placeholder="Email address"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button onClick={handleRegister}>Create</button>
-        <p class="message">
-          Already registered?
-          <a href="/login">Sign In</a>
-        </p>
-      </div>
-    </div>
+  <div class="login-picture">
+    <i class="fa-solid fa-key"></i>
   </div>
+  <div class="form">
+    <h1>Register</h1>
+    <form class="register-form" action="{% url 'register' %}" method="POST">
+      {% csrf_token %}
+      <input name="email" type="email" placeholder="Email address" required />
+      <input name="username" type="text" placeholder="User name" required />
+      <input name="password1" type="password" placeholder="Password" />
+      <input name="password2" type="password" placeholder="Confirm Password" />
+      <button type="submit">Create</button>
+      <p class="message">
+        Already registered?
+        <a href="/login">Sign In</a>
+      </p>
+    </form>
+  </div>
+</div>
 {% endblock %}
