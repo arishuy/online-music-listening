@@ -10,6 +10,7 @@ class Artist(models.Model):
         return self.name
     
 
+
 class Genre(models.Model):
     name = models.CharField(max_length=30)
 
@@ -18,13 +19,16 @@ class Genre(models.Model):
         return self.name
     
 
+
 class Album(models.Model):
     name = models.CharField(max_length=50)
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
+    release_day = models.DateField()
 
 
     def __str__(self) -> str:
         return self.name
+
 
 
 class Song(models.Model):
@@ -42,8 +46,9 @@ class Song(models.Model):
         return self.name
     
 
+
 class User(models.Model):
-    username = models.CharField(max_length=50)
+    username = models.CharField(max_length=50, unique=True)
     password = models.CharField(max_length=30)
 
 
