@@ -17,7 +17,7 @@ def music(request):
 
 def homepage(request):
     songs = Song.objects.all()
-    print(songs)
+    # print(songs)
     songJson = list(map(lambda song: {
         "name": song.name,
         "artists": list(map(lambda artist: {
