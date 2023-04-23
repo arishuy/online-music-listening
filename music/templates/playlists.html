@@ -12,68 +12,21 @@
   <div class="main-content">
     <div class="head-group-title">Danh sách phát của bạn</div>
     <div class="list-musics">
-      <div class="music-card">
+      {% for playlist in playlists %}
+      <div class="music-card" onclick="playlist({{playlist.id}})">
         <div class="music-img">
           <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
         </div>
         <div class="music-info">
-          <div class="music-name">Playlists 1</div>
-          <div class="music-singer">Mô tả</div>
+          <div class="music-name">
+            {{playlist.name}}
+          </div>
+          <div class="music-singer">
+            {{playlist.create_date}}
+          </div>
       </div>
+      {% endfor %}
     </div>
-    <div class="music-card">
-      <div class="music-img">
-        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-      </div>
-      <div class="music-info">
-        <div class="music-name">Playlists 1</div>
-        <div class="music-singer">Mô tả</div>
-    </div>
-  </div><div class="music-card">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Playlists 1</div>
-      <div class="music-singer">Mô tả</div>
-  </div>
-</div>
-<div class="music-card">
-  <div class="music-img">
-    <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-  </div>
-  <div class="music-info">
-    <div class="music-name">Playlists 1</div>
-    <div class="music-singer">Mô tả</div>
-</div>
-</div>
-<div class="music-card">
-  <div class="music-img">
-    <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-  </div>
-  <div class="music-info">
-    <div class="music-name">Playlists 1</div>
-    <div class="music-singer">Mô tả</div>
-</div>
-</div>
-<div class="music-card">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Playlists 1</div>
-      <div class="music-singer">Mô tả</div>
-  </div>
-</div>
-  <div class="music-card">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Playlists 1</div>
-      <div class="music-singer">Mô tả</div>
-  </div>
-  </div>
   <div class="music-card">
     <div class="music-img">
         <i class="fas fa-plus"></i>
@@ -88,44 +41,9 @@
   </div>
 
 </div>
-
-<!-- <div class="music-listennings">
-  <div class="music-container">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Playlists 1</div>
-      <div class="music-singer">Mô tả</div>
-    </div>
-  </div>
-  <div class="music-control">
-    <div class="music-control-btn">
-      <i class="fas fa-heart"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-random"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-step-backward"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-play"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-step-forward"></i>
-    </div>
-  </div>
-
-  <div class="progress-bar">
-    <div class="time-left">00:00</div>
-    <progress value="0" max="1"></progress>
-      <div class="time-right">3:40</div>
-  </div>
-  
-  <div class="music-control-volume">
-    <i class="fas fa-volume-up"></i>
-    <input type="range" class="form-range" id="customRange1">
-  </div>
-</div> -->
+<script>
+  function playlist(id) {
+    window.location.href = "/playlist/" + id;
+  }
+</script>
 {% endblock %}
