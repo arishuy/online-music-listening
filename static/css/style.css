@@ -177,11 +177,14 @@ body {
 }
 
 .avatar {
-  position: absolute;
+  /* position: absolute;
   left: 90%;
   top: 15px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%; */
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-left: auto;
 }
 .avatar img {
   width: 50px;

@@ -1,13 +1,8 @@
-{% extends "master.html" %}
-{% block title %}
-  Playlists
-{% endblock %}
-{% block content %}
+{% extends "master.html" %} {% block title %} Playlists {% endblock %} 
+{% block content %} {% include 'navbar.html' %}
 
-{% include 'navbar.html' %}
-
-  <div>
-    {% include 'header.html' %}
+<div>
+  {% include 'header.html' %}
 
   <div class="main-content">
     <div class="head-group-title">Danh sách phát của bạn</div>
@@ -15,35 +10,33 @@
       {% for playlist in playlists %}
       <div class="music-card" onclick="playlist({{playlist.id}})">
         <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
+          <img
+            src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg"
+            alt="avatar"
+          />
         </div>
         <div class="music-info">
-          <div class="music-name">
-            {{playlist.name}}
+          <div class="music-name">{{playlist.name}}</div>
+          <div class="music-singer">{{playlist.create_date}}</div>
+        </div>
+        {% endfor %}
+        <div class="music-card">
+          <div class="music-img">
+            <i class="fas fa-plus"></i>
           </div>
-          <div class="music-singer">
-            {{playlist.create_date}}
+          <div class="music-info">
+            <div class="music-name">Tạo Playlist mới</div>
+            <!-- <div class="music-singer">Mô tả</div> -->
           </div>
+        </div>
       </div>
-      {% endfor %}
+     
     </div>
-  <div class="music-card">
-    <div class="music-img">
-        <i class="fas fa-plus"></i>
-    </div>
-    <div class="music-info">
-      <div class="music-name">Tạo Playlist mới</div>
-      <!-- <div class="music-singer">Mô tả</div> -->
   </div>
+  <script>
+    function playlist(id) {
+      window.location.href = "/playlist/" + id;
+    }
+  </script>
+  {% endblock %}
 </div>
-  
-        
-  </div>
-
-</div>
-<script>
-  function playlist(id) {
-    window.location.href = "/playlist/" + id;
-  }
-</script>
-{% endblock %}
