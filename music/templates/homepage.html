@@ -118,8 +118,8 @@ Home Page
         <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
       </div>
       <div class="music-info">
-        <div class="music-name">Bài hát 1</div>
-        <div class="music-singer">Ca sĩ 1</div>
+        <div id="music-name" class="music-name">Bài hát 1</div>
+        <div id="artist" class="music-singer">Ca sĩ 1</div>
       </div>
     </div>
 
@@ -131,13 +131,13 @@ Home Page
         <i class="fas fa-random"></i>
       </div>
       <div class="music-control-btn">
-        <i class="fas fa-step-backward"></i>
+        <i id="previousbtn" class="fas fa-step-backward"></i>
       </div>
       <div class="music-control-btn">
         <i id="playbtn" class="fas fa-play"></i>
       </div>
       <div class="music-control-btn">
-        <i class="fas fa-step-forward"></i>
+        <i id="nextbtn" class="fas fa-step-forward"></i>
       </div>
     </div>
 
@@ -154,18 +154,46 @@ Home Page
   </div>
 </div>
 <script>
-  const audio = new Audio("http://127.0.0.1:8000/media/audio/EmCuaNgayHomQua.mp3")
+  const songs = JSON.parse("{{songs|escapejs}}");
+  var currIdx = 0;
+  var isPlaying = false;
+  const musicName = document.getElementById('music-name');
+  const artist = document.getElementById('artist');
+
+  const audio = new Audio(songs ? songs[currIdx].audio : "");
   const playBtn = document.getElementById('playbtn');
   const progressBar = document.getElementById('progressBar');
   const timeleft = document.getElementById('timeleft');
   const timeright = document.getElementById('timeright');
   const volumeBar = document.getElementById('volumeBar');
+  const nextBtn = document.getElementById('nextbtn');
+  const previousBtn = document.getElementById('previousbtn');
   let mouseDownOnSlider = false;
+
+  nextBtn.addEventListener("click", () => {
+    if (currIdx < songs.length - 1) {
+      currIdx++;
+      audio.src = songs[currIdx].audio;
+      if (isPlaying)
+        audio.play();
+    }
+  })
+
+  previousBtn.addEventListener("click", () => {
+    if (currIdx > 0) {
+      currIdx--;
+      audio.src = songs[currIdx].audio;
+      if (isPlaying)
+        audio.play();
+    }
+  })
 
   audio.addEventListener("loadeddata", () => {
     progressBar.value = 0;
     timeright.innerHTML = formatTime(audio.duration);
     audio.volume = volumeBar.value / 100;
+    musicName.innerHTML = songs[currIdx].name;
+    artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
   });
   audio.addEventListener("timeupdate", () => {
     if (!mouseDownOnSlider) {
@@ -179,6 +207,7 @@ Home Page
 
   playBtn.addEventListener("click", () => {
     audio.paused ? audio.play() : audio.pause();
+    isPlaying = !audio.paused;
     playBtn.className = audio.paused ? "fas fa-play" : "fas fa-pause";
   });
 
