@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('', include('music.urls')),
     path('', include('users.urls')),
+    path("", include("django.contrib.auth.urls")),  # new
     path('admin/', admin.site.urls),
 ]
 urlpatterns += staticfiles_urlpatterns()
