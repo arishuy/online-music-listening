@@ -380,3 +380,9 @@ progress {
 #progressBar {
   padding: 0 15px;
 }
+.alert-style {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 1;
+}

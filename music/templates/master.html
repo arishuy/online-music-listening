@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-{% load static %}
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Music website">
-  <link rel="icon" href="{% static 'favicon.ico' %}">
-  <title>{% block title %}{% endblock %}</title>
-  {% load bootstrap5 %}
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
-  <link rel="stylesheet" href="{% static 'homepage.css' %}">
-  <script
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Music website">
+    <title>{% block title %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'image/favicon.ico' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+    <script
     src="https://kit.fontawesome.com/37cc4dd05e.js"
     crossorigin="anonymous"
   ></script>

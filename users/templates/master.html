@@ -9,8 +9,9 @@
   {% load bootstrap5 %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
-  <link rel="icon" href="{% static 'favicon.ico' %}">
-  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" href="{% static 'image/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script type="text/javascript" src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
   <script
     src="https://kit.fontawesome.com/37cc4dd05e.js"
     crossorigin="anonymous"
@@ -18,6 +19,13 @@
   <!-- <link rel="stylesheet" href="{% static 'bootstrap-icons\bootstrap-icons\bootstrap-icons.css' %}"> -->
 </head>
 <body class="bg-black">
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-warning alert-style" role="alert" >
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
     {% block content %}
     {% endblock %}
 </body>
