@@ -1,0 +1,47 @@
+{% extends "master.html" %}
+{% block title %}
+  Playlists
+{% endblock %}
+{% block content %}
+
+{% include 'navbar.html' %}
+
+  <div style="width: 80vw">
+    {% include 'header.html' %}
+
+  <div class="main-content">
+    <div class="head-group-title">Danh sách bài hát:
+    </div>
+    <div class="group-song d-flex justify-content-center">
+    <div class="list-songs pt-3" style="width: 78vw">
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tên bài hát</th>
+            <th scope="col">Lượt nghe</th>
+            <th scope="col">Ngày phát hành</th>
+            <th scope="col">Thời lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for song in songs %}
+          <tr>
+            <th scope="row">{{song.id}}</th>
+            <td>{{song.name}}</td>
+            <td>{{song.stream_count}}</td>
+            <td>{{song.release_day}}</td>
+            <td>{{song.duration}}</td>
+          </tr>
+          {% endfor %}
+          
+        </tbody>
+      </table>
+    </div>
+          
+</div>
+  
+  </div>
+
+</div>
+{% endblock %}
