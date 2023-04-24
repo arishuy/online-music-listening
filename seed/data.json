@@ -1,0 +1,420 @@
+[
+{
+    "model": "music.artist",
+    "pk": 1,
+    "fields": {
+        "name": "Sơn Tùng MTP",
+        "about": "The most popular artist of Vpop"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 2,
+    "fields": {
+        "name": "Justin Bieber",
+        "about": "Justin's recent album JUSTICE includes the chart-topping global smashes \"Peaches feat. Daniel Caesar & Giveon\", \"Holy\" feat. Chance The Rapper, \"Lonely\" feat. Benny Blanco, \"Anyone,\" and \"Hold On.\" The album also features guest appearances from The Kid LAROI, Dominic Fike, Khalid, Beam, Burna Boy, Lil Uzi Vert, Jaden, Quavo + more. The JUSTICE campaign has reasserted Justin's dominance as a live performer; from his triumphant return to the live stage with his T-Mobile-sponsored NYE livestream co"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 3,
+    "fields": {
+        "name": "The Weeknd",
+        "about": "The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of the most successful & significant artists of the modern era. 2012’s 3X platinum  collated 3 breakout mixtapes—House of Balloons, Thursday & Echoes of Silence—into his 1st chart-topping collection followed by his debut LP  in 2013. Two years later, “Earned It (Fifty Shades of Grey)” won “Best R&B Performance” &"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 4,
+    "fields": {
+        "name": "Taylor Swift",
+        "about": "Taylor Swift is that rarest of pop phenomena: a superstar who managed to completely cross over from country to the mainstream. Others have performed similar moves -- notably,  and  both became enduring pop culture icons based on their 1970s work -- but Swift shed her country roots like they were a second skin; it was a necessary molting to reveal she was perhaps the sharpest, savviest populist singer/songwriter of her generation, one who could harness the zeitgeist, make it personal and, just as impressively, perform the reverse. These skills were evident on her earliest hits, especially the neo-tribute \"Tim McGraw,\" but her second album, 2008's Fearless, showcased a songwriter discovering who she was and, in the process, finding a mass audience. Fearless wound up having considerable legs not only in the U.S., where it racked up six platinum singles on the strength of the Top Ten hits \"Love Story\" and \"You Belong with Me,\" but throughout the world, performing particularly well in the U.K., Canada, and Australia. Speak Now, delivered almost two years later, consolidated that success and moved Swift into the stratosphere of superstardom. Her popularity only increased over her next three albums -- Red (2012), 1989 (2014), Reputation (2017) -- and found her moving assuredly into a pop realm where she already belonged. Even when she scaled back her approach with 2020's stripped-down sibling releases folklore and Evermore, she remained atop the pop world, a position she maintained with re-recordings of her back catalog along with Midnights, a moody album released in 2022."
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 5,
+    "fields": {
+        "name": "Adele",
+        "about": "Since the release of her debut album ‘19’, in 2008, Adele has become one of the most successful British artists of her generation. Her critically acclaimed debut album garnered over 6.5 million sales worldwide whilst the album has gone 8x Platinum in the UK. At the age of 19, Adele became the first-ever recipient of the BRITS Critics’ Choice Award. The accolades received by Adele only multiplied as the following year saw her claim Best New Artist and Best Female Pop Vocal Performance at the GRAMMYs.  As Adele embarks on her next chapter, she holds 15 GRAMMYs, 9 BRITS, 18 Billboard Awards, 2 IVORs, 1 Golden Globe, 1 Academy Award and 5 American Music Awards under her belt. The British singer-songwriter has received 11.5 million Album sales in the UK alone and 48 million Worldwide Album sales."
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 6,
+    "fields": {
+        "name": "MONO",
+        "about": "MONO (Nguyen Viet Hoang), who was born in 21/01/2000, is an artist representing dynamic but profound young people. MONO constantly explores new life experiences or perspectives by immersing in these. Not choosing to be the center of a game or a story, MONO chooses to take it in, in order to appreciate it as well as deliver everyone the most genuine and meaningful perspectives. Bringing a poly-dimensional view of the human, nature and living, MONO believes that only when we sincerely become one with the subject then we could deeply understand and touch it. ‘MONO’ also represents the uncompromising determination of his artistic journey and belief."
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 7,
+    "fields": {
+        "name": "Billie Eilish",
+        "about": "With the release of her highly anticipated sophomore album ‘Happier Than Ever,’ the 19-year-old Los Angeles native remains one of the biggest stars to emerge in the 21st century. Since the release of her debut single “ocean eyes” in 2015, Eilish continues to shatter the ceiling of music with her genre-defying sound. Fast forward from her humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? debuted at No. 1 on the Billboard 200 in the U.S as well as 17 additional countries around the world upon release in 2019, and was the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? was written, produced and recorded entirely by Billie Eilish and brother FINNEAS in their childhood home of Los Angeles. Billie Eilish went on to make history as the youngest artist to receive nominations and win in all the major categories at the 62nd GRAMMY® Awards, receiving an award for Best New Artist, Album of the Year, Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie Eilish is also the youngest artist to write and record an official James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish was nominated for four additional awards at the 63rd Annual GRAMMY Awards in 2021, and took home both Record of the Year for 'everything i wanted,' and Best Song Written For Visual Media for 'No Time To Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by Billie and her brother FINNEAS, who also produced the album."
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 8,
+    "fields": {
+        "name": "H-Kray",
+        "about": "Nghệ sĩ mới"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 9,
+    "fields": {
+        "name": "HIEUTHUHAI",
+        "about": "Nghệ sĩ Việt Nam"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 10,
+    "fields": {
+        "name": "Amee",
+        "about": "Nghệ sĩ Việt Nam"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 11,
+    "fields": {
+        "name": "tlinh",
+        "about": "Nghệ sĩ Việt Nam"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 12,
+    "fields": {
+        "name": "Hoàng Dũng",
+        "about": "N"
+    }
+},
+{
+    "model": "music.artist",
+    "pk": 13,
+    "fields": {
+        "name": "Bích Phương",
+        "about": "Nghệ sĩ mới"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 1,
+    "fields": {
+        "name": "VPOP"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 2,
+    "fields": {
+        "name": "KPOP"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 3,
+    "fields": {
+        "name": "R&B"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 6,
+    "fields": {
+        "name": "Rock"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 7,
+    "fields": {
+        "name": "Ballad"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 8,
+    "fields": {
+        "name": "Electronic"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 9,
+    "fields": {
+        "name": "Country"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 10,
+    "fields": {
+        "name": "Dance"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 11,
+    "fields": {
+        "name": "Jazz"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 12,
+    "fields": {
+        "name": "Funk"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 13,
+    "fields": {
+        "name": "Latin"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 14,
+    "fields": {
+        "name": "JPOP"
+    }
+},
+{
+    "model": "music.genre",
+    "pk": 15,
+    "fields": {
+        "name": "Pop"
+    }
+},
+{
+    "model": "music.song",
+    "pk": 2,
+    "fields": {
+        "name": "Em Của Ngày Hôm Qua",
+        "stream_count": 0,
+        "cover_path": "EmCuaNgayHomQua.png",
+        "audio_file": "audio/EmCuaNgayHomQua.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-23",
+        "duration": 20,
+        "album": null,
+        "artists": [
+            1
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 3,
+    "fields": {
+        "name": "Tấm Lòng Son",
+        "stream_count": 20,
+        "cover_path": "TamLongSon.jpg",
+        "audio_file": "audio/TamLongSonRemix-HKrayDaiMeo-7887396.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-23",
+        "duration": 50,
+        "album": null,
+        "artists": [
+            8
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 4,
+    "fields": {
+        "name": "Không thể say",
+        "stream_count": 58,
+        "cover_path": "KhongTheSay.jpg",
+        "audio_file": "audio/KhongTheSay-HIEUTHUHAI-9293024.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 69,
+        "album": null,
+        "artists": [
+            9
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 5,
+    "fields": {
+        "name": "Ưng Quá Chừng",
+        "stream_count": 64,
+        "cover_path": "UngQuaChung.jpg",
+        "audio_file": "audio/UngQuaChung-AMEE-8783624.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 95,
+        "album": null,
+        "artists": [
+            10
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 6,
+    "fields": {
+        "name": "Waiting For You",
+        "stream_count": 832,
+        "cover_path": "WaitingForYou.jpg",
+        "audio_file": "audio/WaitingForYou-MONOOnionn-7733882.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 85,
+        "album": null,
+        "artists": [
+            6
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 7,
+    "fields": {
+        "name": "Nếu Lúc Đó",
+        "stream_count": 67,
+        "cover_path": "NeuLucDo.jpg",
+        "audio_file": "audio/NeuLucDo-tlinh2pillz-8783613.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 63,
+        "album": null,
+        "artists": [
+            11
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 8,
+    "fields": {
+        "name": "Hãy Trao Cho Anh",
+        "stream_count": 628,
+        "cover_path": "HayTraoChoAnh.jpg",
+        "audio_file": "audio/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 75,
+        "album": null,
+        "artists": [
+            1
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 9,
+    "fields": {
+        "name": "Nàng Thơ",
+        "stream_count": 132,
+        "cover_path": "NangTho.jpg",
+        "audio_file": "audio/NangTho-HoangDung-6413381.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 546,
+        "album": null,
+        "artists": [
+            12
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 10,
+    "fields": {
+        "name": "Đi Đu Đưa Đi",
+        "stream_count": 835,
+        "cover_path": "DiDuDuaDi.jpg",
+        "audio_file": "audio/DiDuDuaDi-BichPhuong-6059493.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 673,
+        "album": null,
+        "artists": [
+            13
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.song",
+    "pk": 11,
+    "fields": {
+        "name": "Một Cú Lừa",
+        "stream_count": 744,
+        "cover_path": "MotCuLua.jpg",
+        "audio_file": "audio/MotCuLua-BichPhuong-6288019.mp3",
+        "audio_link": null,
+        "release_day": "2023-04-24",
+        "duration": 654,
+        "album": null,
+        "artists": [
+            13
+        ],
+        "genres": [
+            1
+        ]
+    }
+},
+{
+    "model": "music.playlist",
+    "pk": 1,
+    "fields": {
+        "name": "Nhac hay",
+        "create_date": "2023-04-23",
+        "owner": 3,
+        "song_list": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "music.playlist",
+    "pk": 2,
+    "fields": {
+        "name": "dawda",
+        "create_date": "2023-04-23",
+        "owner": 1,
+        "song_list": []
+    }
+}
+]
