@@ -1,6 +1,9 @@
 import json
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
+from .models import Song
+import random
 from .models import Playlist
 from .models import Song
 
@@ -11,9 +14,10 @@ def music(request):
     return HttpResponse("Hello, world. You're at the music index.")
 
 
+
 def homepage(request):
     songs = Song.objects.all()
-    print(songs)
+    # print(songs)
     songJson = list(map(lambda song: {
         "name": song.name,
         "image": song.image,
@@ -22,7 +26,12 @@ def homepage(request):
         }, song.artists.all())),
         "audio": song.audio_file.url if song.audio_file else song.audio_link,
     }, songs))
-    return render(request, 'homepage.html', {'songs': json.dumps(songJson)})
+    latest_songs = Song.objects.order_by('-release_day')[:5]
+    random_count = 5
+    if len(songs) < random_count:
+        random_count = len(songs)
+    suggested_songs = random.sample(list(songs), k=random_count)
+    return render(request, 'homepage.html', {'songs': json.dumps(songJson), 'latest_songs': latest_songs, 'suggested_songs': suggested_songs})
 
 
 def recent(request):
