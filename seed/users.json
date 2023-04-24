@@ -325,73 +325,73 @@
 },
 {
     "model": "auth.permission",
-    "pk": 41,
+    "pk": 37,
     "fields": {
         "name": "Can add song",
-        "content_type": 11,
+        "content_type": 10,
         "codename": "add_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change song",
+        "content_type": 10,
+        "codename": "change_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete song",
+        "content_type": 10,
+        "codename": "delete_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view song",
+        "content_type": 10,
+        "codename": "view_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add playlist",
+        "content_type": 11,
+        "codename": "add_playlist"
     }
 },
 {
     "model": "auth.permission",
     "pk": 42,
     "fields": {
-        "name": "Can change song",
+        "name": "Can change playlist",
         "content_type": 11,
-        "codename": "change_song"
+        "codename": "change_playlist"
     }
 },
 {
     "model": "auth.permission",
     "pk": 43,
     "fields": {
-        "name": "Can delete song",
+        "name": "Can delete playlist",
         "content_type": 11,
-        "codename": "delete_song"
+        "codename": "delete_playlist"
     }
 },
 {
     "model": "auth.permission",
     "pk": 44,
     "fields": {
-        "name": "Can view song",
-        "content_type": 11,
-        "codename": "view_song"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 45,
-    "fields": {
-        "name": "Can add playlist",
-        "content_type": 12,
-        "codename": "add_playlist"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 46,
-    "fields": {
-        "name": "Can change playlist",
-        "content_type": 12,
-        "codename": "change_playlist"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 47,
-    "fields": {
-        "name": "Can delete playlist",
-        "content_type": 12,
-        "codename": "delete_playlist"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 48,
-    "fields": {
         "name": "Can view playlist",
-        "content_type": 12,
+        "content_type": 11,
         "codename": "view_playlist"
     }
 },
