@@ -9,9 +9,9 @@ Home Page
 <div>
   {% include 'header.html' %}
 
-  <div class="main-content">
+  <div class="main-content ">
     <div class="head-group-title">Mới phát hành </div>
-    <div class="list-musics">
+    <div class="list-musics" style="width: 78vw">
       <div class="music-card">
         <div class="music-img">
           <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
@@ -63,7 +63,7 @@ Home Page
 
     </div>
     <div class="head-group-title">Danh sách đề xuất </div>
-    <div class="list-musics">
+    <div class="list-musics" style="width: 78vw">
       <div class="music-card">
         <div class="music-img">
           <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
@@ -109,13 +109,23 @@ Home Page
           <div class="music-singer">Ca sĩ 1</div>
         </div>
       </div>
+      <div class="music-card">
+        <div class="music-img">
+          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
+        </div>
+        <div class="music-info">
+          <div class="music-name">Bài hát 1</div>
+          <div class="music-singer">Ca sĩ 1</div>
+        </div>
+      </div>
+      
     </div>
   </div>
 
   <div class="music-listennings">
     <div class="music-container">
       <div class="music-img">
-        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
+        <img id="music-img" src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
       </div>
       <div class="music-info">
         <div id="music-name" class="music-name">Bài hát 1</div>
@@ -159,7 +169,7 @@ Home Page
   var isPlaying = false;
   const musicName = document.getElementById('music-name');
   const artist = document.getElementById('artist');
-
+  const img = document.getElementById('music-img');
   const audio = new Audio(songs ? songs[currIdx].audio : "");
   const playBtn = document.getElementById('playbtn');
   const progressBar = document.getElementById('progressBar');
@@ -174,6 +184,7 @@ Home Page
     if (currIdx < songs.length - 1) {
       currIdx++;
       audio.src = songs[currIdx].audio;
+      img.src = songs[currIdx].image;
       if (isPlaying)
         audio.play();
     }
@@ -183,6 +194,7 @@ Home Page
     if (currIdx > 0) {
       currIdx--;
       audio.src = songs[currIdx].audio;
+      img.src = songs[currIdx].image;
       if (isPlaying)
         audio.play();
     }
@@ -193,6 +205,7 @@ Home Page
     timeright.innerHTML = formatTime(audio.duration);
     audio.volume = volumeBar.value / 100;
     musicName.innerHTML = songs[currIdx].name;
+    img.src = songs[currIdx].image;
     artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
   });
   audio.addEventListener("timeupdate", () => {

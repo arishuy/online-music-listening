@@ -1,5 +1,5 @@
-{% extends "master.html" %} {% block title %} Playlists {% endblock %} 
-{% block content %} {% include 'navbar.html' %}
+{% extends "master.html" %} {% block title %} Playlists {% endblock %} {% block
+content %} {% include 'navbar.html' %}
 
 <div>
   {% include 'header.html' %}
@@ -20,17 +20,16 @@
           <div class="music-singer">{{playlist.create_date}}</div>
         </div>
         {% endfor %}
-        <div class="music-card">
-          <div class="music-img">
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="music-info">
-            <div class="music-name">Tạo Playlist mới</div>
-            <!-- <div class="music-singer">Mô tả</div> -->
-          </div>
+      </div>
+      <div class="music-card">
+        <div class="music-img">
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="music-info">
+          <div class="music-name">Tạo Playlist mới</div>
+          <!-- <div class="music-singer">Mô tả</div> -->
         </div>
       </div>
-     
     </div>
   </div>
   <script>

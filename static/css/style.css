@@ -130,6 +130,7 @@ body {
   font-size: 1em;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   display: flex;
 }
 .dark-cl {
@@ -388,4 +389,8 @@ progress {
   bottom: 0;
   right: 10px;
   z-index: 1;
+}
+.main-content
+{
+  width: 80vw;
 }
