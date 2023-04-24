@@ -13,43 +13,43 @@ Home Page
     <div class="head-group-title">Mới phát hành </div>
     <div class="list-musics" style="width: 78vw">
       {% if latest_songs %}
-        {% for song in latest_songs%}
-          {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
-          <div class="music-card">
-            <div class="music-img">
-              <img src="{{ cover_path }}" alt="avatar">
-            </div>
-            <div class="music-info">
-              <div class="music-name">{{ song.name }}</div>         
-              <div class="music-singer">{{ song.artist_list_str }}</div>
-            </div>
-          </div>
-          {% endwith %}
-        {% endfor %}
+      {% for song in latest_songs%}
+      {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+      <div class="music-card">
+        <div class="music-img">
+          <img src="{{ cover_path }}" alt="avatar">
+        </div>
+        <div class="music-info">
+          <div class="music-name">{{ song.name }}</div>
+          <div class="music-singer">{{ song.artist_list_str }}</div>
+        </div>
+      </div>
+      {% endwith %}
+      {% endfor %}
       {% endif %}
     </div>
-    
+
     <div class="head-group-title">Danh sách đề xuất </div>
     <div class="list-musics" style="width: 78vw">
       {% if suggested_songs %}
-        {% for song in suggested_songs %}
-          {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
-          <div class="music-card">
-            <div class="music-img">
-              <img src="{{ cover_path }}" alt="avatar">
-            </div>
-            <div class="music-info">
-              <div class="music-name">{{ song.name }}</div>
-              <div class="music-singer">{{ song.artist_list_str }}</div>
-            </div>
-          </div>
-          {% endwith %}
-        {% endfor %}
+      {% for song in suggested_songs %}
+      {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+      <div class="music-card">
+        <div class="music-img">
+          <img src="{{ cover_path }}" alt="avatar">
+        </div>
+        <div class="music-info">
+          <div class="music-name">{{ song.name }}</div>
+          <div class="music-singer">{{ song.artist_list_str }}</div>
+        </div>
+      </div>
+      {% endwith %}
+      {% endfor %}
       {% endif %}
     </div>
   </div>
 
-  
+
   <div class="music-listennings">
     <div class="music-container">
       <div class="music-img">
@@ -111,21 +111,25 @@ Home Page
   nextBtn.addEventListener("click", () => {
     if (currIdx < songs.length - 1) {
       currIdx++;
-      audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
-      if (isPlaying)
-        audio.play();
+    } else {
+      currIdx = 0;
     }
+    audio.src = songs[currIdx].audio;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    if (isPlaying)
+      audio.play();
   })
 
   previousBtn.addEventListener("click", () => {
     if (currIdx > 0) {
       currIdx--;
-      audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
-      if (isPlaying)
-        audio.play();
+    } else {
+      currIdx = songs.length - 1;
     }
+    audio.src = songs[currIdx].audio;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    if (isPlaying)
+      audio.play();
   })
 
   audio.addEventListener("loadeddata", () => {
@@ -134,7 +138,6 @@ Home Page
     audio.volume = volumeBar.value / 100;
     musicName.innerHTML = songs[currIdx].name;
     img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
-    console.log(img.src);
     artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
   });
   audio.addEventListener("timeupdate", () => {
@@ -144,7 +147,7 @@ Home Page
     }
   });
   audio.addEventListener("ended", () => {
-    playBtn.className = "fas fa-play";
+    nextBtn.click();
   });
 
   playBtn.addEventListener("click", () => {
