@@ -8,4 +8,4 @@ py manage.py loaddata  seed/users.json
 
 
 admin
-982002
+123456

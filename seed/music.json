@@ -396,25 +396,20 @@
 },
 {
     "model": "music.playlist",
-    "pk": 1,
+    "pk": 3,
     "fields": {
-        "name": "Nhac hay",
-        "create_date": "2023-04-23",
-        "owner": 3,
+        "name": "Nhạc đá",
+        "create_date": "2023-04-24",
+        "owner": 6,
         "song_list": [
             2,
-            3
+            3,
+            5,
+            7,
+            8,
+            10,
+            11
         ]
-    }
-},
-{
-    "model": "music.playlist",
-    "pk": 2,
-    "fields": {
-        "name": "dawda",
-        "create_date": "2023-04-23",
-        "owner": 1,
-        "song_list": []
     }
 }
 ]
