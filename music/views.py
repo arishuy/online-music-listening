@@ -20,6 +20,7 @@ def homepage(request):
     # print(songs)
     songJson = list(map(lambda song: {
         "name": song.name,
+        "image": song.cover_path,
         "artists": list(map(lambda artist: {
             "name": artist.name
         }, song.artists.all())),

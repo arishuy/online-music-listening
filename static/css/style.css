@@ -130,6 +130,7 @@ body {
   font-size: 1em;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   display: flex;
 }
 .dark-cl {
@@ -177,11 +178,14 @@ body {
 }
 
 .avatar {
-  position: absolute;
+  /* position: absolute;
   left: 90%;
   top: 15px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%; */
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-left: auto;
 }
 .avatar img {
   width: 50px;
@@ -217,7 +221,7 @@ body {
 
 .music-card .music-name {
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   margin: 15px 0 0 0;
 }
@@ -226,7 +230,7 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 23px;
 }
 .list-musics {
@@ -278,7 +282,7 @@ body {
 }
 .music-container .music-name {
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   margin: 15px 0 0 0;
 }
@@ -287,7 +291,7 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 23px;
 }
 .music-control {
@@ -385,4 +389,8 @@ progress {
   bottom: 0;
   right: 10px;
   z-index: 1;
+}
+.main-content
+{
+  width: 80vw;
 }
