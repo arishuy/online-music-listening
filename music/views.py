@@ -20,13 +20,13 @@ def homepage(request):
     # print(songs)
     songJson = list(map(lambda song: {
         "name": song.name,
-        "image": song.cover_path,
+        "image": "/media/song_cover/" + song.cover_path,
         "artists": list(map(lambda artist: {
             "name": artist.name
         }, song.artists.all())),
         "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }, songs))
-    latest_songs = Song.objects.order_by('-release_day')[:5]
+    }, songs.order_by('-release_day')[:5]))
+    latest_songs = Song.objects.order_by('-release_day')
     random_count = 5
     if len(songs) < random_count:
         random_count = len(songs)
