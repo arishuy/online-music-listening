@@ -397,72 +397,18 @@
 },
 {
     "model": "auth.user",
-    "pk": 1,
+    "pk": 6,
     "fields": {
-        "password": "pbkdf2_sha256$600000$7asDC0J4N4cZsHVTix0fPK$BSLjbNZkQOwNXlc94uwjHT3tFlErQU3wa0BfTfUmvu8=",
-        "last_login": "2023-04-16T15:27:44.482Z",
-        "is_superuser": true,
-        "username": "hai",
-        "first_name": "",
-        "last_name": "",
-        "email": "haixinhtuoi123@gmail.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2023-04-16T15:27:07.429Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$390000$S7379uWa93fyoRhEeWSK7N$EerhNrHzqDn7Yunm8DWajWczTkaw9JSFv9/96Tqv1PU=",
-        "last_login": "2023-04-24T06:21:46.197Z",
+        "password": "pbkdf2_sha256$390000$uoCnApGMWMmmFJ0Q9OAuOH$/gg24T/V7074NZZ8z7Ta6jEHpSionlyvyfLO2TCzmQQ=",
+        "last_login": "2023-04-24T06:36:05.330Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
         "last_name": "",
-        "email": "admin@gmail.com",
+        "email": "",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2023-04-23T06:53:39.891Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$390000$2AxPl3oGqNw4TISOojq9U8$d/ZflE1lhBJh6cliWuYXNdsNJNRjFwvfefUTRTA/Nd8=",
-        "last_login": "2023-04-24T04:01:36Z",
-        "is_superuser": false,
-        "username": "huybui",
-        "first_name": "",
-        "last_name": "",
-        "email": "huybui639@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-04-23T09:21:11Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 5,
-    "fields": {
-        "password": "pbkdf2_sha256$390000$nL7IV7rGfksubmYDZskbj8$bJPj2q7nS164ATYa510RqqvrCg+wbLM5DRAaxT+H7AA=",
-        "last_login": "2023-04-23T09:26:49.962Z",
-        "is_superuser": false,
-        "username": "dawdawda",
-        "first_name": "",
-        "last_name": "",
-        "email": "hoand@iotlink.com.vn",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-04-23T09:26:49.740Z",
+        "date_joined": "2023-04-24T06:35:48.236Z",
         "groups": [],
         "user_permissions": []
     }
