@@ -112,7 +112,7 @@ Home Page
     if (currIdx < songs.length - 1) {
       currIdx++;
       audio.src = songs[currIdx].audio;
-      img.src = songs[currIdx].image;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
       if (isPlaying)
         audio.play();
     }
@@ -122,7 +122,7 @@ Home Page
     if (currIdx > 0) {
       currIdx--;
       audio.src = songs[currIdx].audio;
-      img.src = songs[currIdx].image;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
       if (isPlaying)
         audio.play();
     }
@@ -133,7 +133,8 @@ Home Page
     timeright.innerHTML = formatTime(audio.duration);
     audio.volume = volumeBar.value / 100;
     musicName.innerHTML = songs[currIdx].name;
-    img.src = songs[currIdx].image;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    console.log(img.src);
     artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
   });
   audio.addEventListener("timeupdate", () => {
