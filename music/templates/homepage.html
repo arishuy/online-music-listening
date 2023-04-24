@@ -12,106 +12,44 @@ Home Page
   <div class="main-content">
     <div class="head-group-title">Mới phát hành </div>
     <div class="list-musics">
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-
-
-
-
+      {% if latest_songs %}
+        {% for song in latest_songs%}
+          {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+          <div class="music-card">
+            <div class="music-img">
+              <img src="{{ cover_path }}" alt="avatar">
+            </div>
+            <div class="music-info">
+              <div class="music-name">{{ song.name }}</div>         
+              <div class="music-singer">{{ song.artist_list_str }}</div>
+            </div>
+          </div>
+          {% endwith %}
+        {% endfor %}
+      {% endif %}
     </div>
+    
     <div class="head-group-title">Danh sách đề xuất </div>
     <div class="list-musics">
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-        </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-        </div>
-      </div>
+      {% if suggested_songs %}
+        {% for song in suggested_songs %}
+          {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+          <div class="music-card">
+            <div class="music-img">
+              <img src="{{ cover_path }}" alt="avatar">
+            </div>
+            <div class="music-info">
+              <div class="music-name">{{ song.name }}</div>
+              <div class="music-singer">{{ song.artist_list_str }}</div>
+            </div>
+          </div>
+          {% endwith %}
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
 
+  
   <div class="music-listennings">
     <div class="music-container">
       <div class="music-img">
