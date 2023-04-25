@@ -15,7 +15,7 @@ Home Page
       {% if latest_songs %}
       {% for song in latest_songs%}
       {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
-      <div class="music-card">
+      <div id="{{ song.id }}" class="music-card">
         <div class="music-img">
           <img src="{{ cover_path }}" alt="avatar">
         </div>
@@ -34,7 +34,7 @@ Home Page
       {% if suggested_songs %}
       {% for song in suggested_songs %}
       {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
-      <div class="music-card">
+      <div id="{{ song.id }}" class="music-card">
         <div class="music-img">
           <img src="{{ cover_path }}" alt="avatar">
         </div>
@@ -106,7 +106,19 @@ Home Page
   const volumeBar = document.getElementById('volumeBar');
   const nextBtn = document.getElementById('nextbtn');
   const previousBtn = document.getElementById('previousbtn');
+  const musicCards = document.getElementsByClassName('music-card');
   let mouseDownOnSlider = false;
+
+  playMusic = (id) => {
+    currIdx = songs.findIndex(song => song.id == id)
+    audio.src = songs[currIdx].audio;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    playBtn.className = "fas fa-pause";
+    isPlaying = true;
+    audio.play();
+  }
+
+  Array.from(musicCards, musicCard => musicCard.addEventListener("click", event => playMusic(event.target.id)));
 
   nextBtn.addEventListener("click", () => {
     if (currIdx < songs.length - 1) {
