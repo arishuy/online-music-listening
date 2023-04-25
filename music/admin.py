@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Artist, Album, Genre, User, Song, Playlist
+from .models import Artist, Album, Genre, Song, Playlist
 # Register your models here.
 
 admin.site.register(Artist)

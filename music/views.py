@@ -14,11 +14,11 @@ def music(request):
     return HttpResponse("Hello, world. You're at the music index.")
 
 
-
 def homepage(request):
     songs = Song.objects.all()
     # print(songs)
     songJson = list(map(lambda song: {
+        "id": song.id,
         "name": song.name,
         "cover_path": song.cover_path,
         "artists": list(map(lambda artist: {
