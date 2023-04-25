@@ -25,8 +25,8 @@ def homepage(request):
             "name": artist.name
         }, song.artists.all())),
         "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }, songs.order_by('-release_day')[:5]))
-    latest_songs = Song.objects.order_by('-release_day')
+    }, songs.order_by('-release_day')))
+    latest_songs = Song.objects.order_by('-release_day')[:10]
     random_count = 5
     if len(songs) < random_count:
         random_count = len(songs)
