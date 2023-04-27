@@ -1,7 +1,8 @@
 import json
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.urls import reverse
 from django.views import generic
 from .models import Song
 import random
@@ -68,6 +69,7 @@ def detail_playlist(request, playlist_id):
     }
     return render(request, 'detailplaylist.html', context)
 
+
 def search(request):
     allgenres = Genre.objects.all()
     listgenre = list(map(lambda genre: {
@@ -75,6 +77,17 @@ def search(request):
         "name": genre.name,
     }, allgenres))
     context = {
-        'allgenres': json.dumps(listgenre),
+        'allgenres': listgenre,
     }
+    if request.method == "POST":
+        genre_id = request.POST["genre"]
+        text = request.POST["text"]
+        songs = Song.objects.filter(
+            genres__id__contains=genre_id).filter(name__contains=text)
+        print(songs)
+        context["text"] = text
+        context["genre_id"] = int(genre_id)
+        context["songs"] = songs
+        return render(request, 'search.html', context)
+
     return render(request, 'search.html', context)
