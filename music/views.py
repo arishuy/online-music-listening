@@ -50,7 +50,13 @@ def playlists(request):
 
 
 def detail(request, song_id):
-    return render(request, 'detailsong.html', {'song_id': song_id})
+    song = Song.objects.get(id=song_id)
+    songJson = {
+        "id": song.id,
+        "audio": song.audio_file.url if song.audio_file else song.audio_link,
+    }
+    songJson = json.dumps(songJson)
+    return render(request, 'detailsong.html', {'song': song, 'songJson': songJson})
 
 
 def detail_playlist(request, playlist_id):
