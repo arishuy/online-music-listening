@@ -1,11 +1,13 @@
 import json
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.views import generic
 from .models import Song
 import random
 from .models import Playlist
 from .models import Song
+from .models import Genre
 
 # Create your views here.
 
@@ -59,3 +61,14 @@ def detail_playlist(request, playlist_id):
         'songs': songs,
     }
     return render(request, 'detailplaylist.html', context)
+
+def search(request):
+    allgenres = Genre.objects.all()
+    listgenre = list(map(lambda genre: {
+        "id": genre.id,
+        "name": genre.name,
+    }, allgenres))
+    context = {
+        'allgenres': json.dumps(listgenre),
+    }
+    return render(request, 'search.html', context)
