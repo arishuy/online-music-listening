@@ -1,6 +1,6 @@
 {% extends "master.html" %} {% block title %} Search {% endblock %}
- {% block content %} 
- {% include 'navbar.html' %}
+{% block content %}
+{% include 'navbar.html' %}
 
 <div>
   {% include 'header.html' %}
@@ -8,37 +8,50 @@
   <div class="main-content">
     <div class="head-group-title">Tìm kiếm bài hát</div>
     <div class="search-form">
-      <form action="/search" method="GET">
+      <form action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
         <div class="row p-3">
-            <div class="col-md-5">
-                <select id="song-search"  class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+          <div class="col-md-5">
+            <select name="genre" class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              {% for genre in allgenres %}
+              <option value="{{genre.id}}" {% if genre_id and genre_id == genre.id %} selected {% endif %}>
+                {{genre.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-5">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Tên bài hát</span>
+              <input name="text" type="text" class="form-control" placeholder="Nhập gì đó..." aria-label="search"
+                {% if text %} value="{{text}}" {% endif %} aria-describedby="addon-wrapping">
             </div>
-            <div class="col-md-5">
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping">Tên bài hát</span>
-                    <input type="text" class="form-control" placeholder="Nhập gì đó..." aria-label="search" aria-describedby="addon-wrapping">
-                </div>
-            </div>
-            <div class="col-md-1">
-                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-            </div>
-        <!-- <input type="text" name="q" placeholder="Nhập tên bài hát" />
+          </div>
+          <div class="col-md-1">
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+          </div>
+          <!-- <input type="text" name="q" placeholder="Nhập tên bài hát" />
         <button type="submit">Tìm kiếm</button> -->
       </form>
     </div>
     <div class="search-results">
-
-</div>
-<script>
-    const allgenres = JSON.parse("{{allgenres|escapejs}}");
-    console.log(allgenres)
-    document.getElementById("song-search").innerHTML = allgenres.map(genre => `<option value="${genre.id}">${genre.name}</option>`).join("");
-
-</script>
-  {% endblock %}
-</div>
+      <div class="list-musics" style="width: 78vw">
+        {% if songs %}
+        {% for song in songs%}
+        {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+        <div id="{{ song.id }}" class="music-card">
+          <div id="{{ song.id }}" class="music-img">
+            <img id="{{ song.id }}" src="{{ cover_path }}" alt="avatar">
+          </div>
+          <div id="{{ song.id }}" class="music-info">
+            <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
+            <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+          </div>
+        </div>
+        {% endwith %}
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+    {% endblock %}
+  </div>
