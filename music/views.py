@@ -84,7 +84,6 @@ def search(request):
         text = request.POST["text"]
         songs = Song.objects.filter(
             genres__id__contains=genre_id).filter(name__contains=text)
-        print(songs)
         context["text"] = text
         context["genre_id"] = int(genre_id)
         context["songs"] = songs
