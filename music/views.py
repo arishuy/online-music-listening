@@ -9,7 +9,8 @@ import random
 from .models import Playlist
 from .models import Song
 from .models import Genre
-
+from django.views.decorators.csrf import csrf_exempt
+from django.db.models import F
 # Create your views here.
 
 
@@ -90,3 +91,16 @@ def search(request):
         return render(request, 'search.html', context)
 
     return render(request, 'search.html', context)
+
+
+@csrf_exempt
+def stream(request):
+    if request.method == 'POST':
+        song_id = request.POST['song_id']
+        song = Song.objects.get(id=song_id)
+        # using F class to avoid race condition
+        song.stream_count = F('stream_count') + 1
+        song.save()
+        return HttpResponse('success')
+    else:
+        return HttpResponse('unsuccessful')

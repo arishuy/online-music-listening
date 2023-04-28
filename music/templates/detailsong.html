@@ -4,7 +4,10 @@
 {% endblock %}
 {% block content %}
 {% include 'navbar.html' %}
-
+<head>
+  {% load static %}
+  <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+</head>
   <div>
     {% include 'header.html' %}
   <div class="main-content" style="display: flex;align-items: center; justify-content: center;">
@@ -81,6 +84,18 @@
     musicListennings.style.display = "flex";
     playBtn.click();
   }
+
+  audio.addEventListener("ended", () => {
+    $.ajax({
+        type: "POST",
+        url: "../../stream",
+        data: { song_id: song.id},
+        success: function(data) {
+          console.log("Done")
+        }
+      }
+    )
+  })
   audio.addEventListener("loadeddata", () => {
     progressBar.value = 0;
     timeright.innerHTML = formatTime(audio.duration);

@@ -10,4 +10,5 @@ urlpatterns = [
     path('playlist/<int:playlist_id>/',
          views.detail_playlist, name='detail_playlist'),
     path('search/', views.search, name='search'),
+    path('stream', views.stream, name='stream'),
 ]

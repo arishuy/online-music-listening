@@ -5,10 +5,13 @@ Home Page
 {% block content %}
 
 {% include 'navbar.html' %}
-
+<head>
+  {% load static %}
+  <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+</head>
 <div>
   {% include 'header.html' %}
-
+  {% csrf_token %}
   <div class="main-content ">
     <div class="head-group-title">Mới phát hành </div>
     <div class="list-musics" style="width: 78vw">
@@ -117,6 +120,20 @@ Home Page
     isPlaying = true;
     audio.play();
   }
+  audio.addEventListener('ended', event => {
+    current_id = songs[currIdx].id
+    $.ajax(
+    {
+      type:"POST",
+      url: "stream",
+      data: {
+        song_id: current_id
+      },
+      success: function(data) {
+        console.log('Done')
+      }
+    })
+  })
 
   Array.from(musicCards, musicCard => musicCard.addEventListener("click", event => playMusic(event.target.id)));
 
