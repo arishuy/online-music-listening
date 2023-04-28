@@ -4,6 +4,7 @@
 "# migrate after that"
 
 python manage.py makemigrations music
+
 python manage.py migrate
 
 "# load data"
