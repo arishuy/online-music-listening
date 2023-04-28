@@ -1,14 +1,14 @@
+import datetime
 import json
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
-from django.urls import reverse
-from django.views import generic
 from .models import Song
 import random
 from .models import Playlist
 from .models import Song
 from .models import Genre
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -41,13 +41,22 @@ def recent(request):
     return render(request, 'recentlisten.html')
 
 
+@csrf_exempt
 def playlists(request):
     # get by user
-    playlists = Playlist.objects.filter(owner=request.user).values()
-    context = {
-        'playlists': playlists,
-    }
-    return render(request, 'playlists.html', context)
+    if request.method == "GET" and request.user.is_authenticated:
+        playlists = Playlist.objects.filter(owner=request.user).values()
+        context = {
+            'playlists': playlists,
+        }
+        return render(request, 'playlists.html', context)
+    if request.method == "POST" and request.user.is_authenticated:
+        newPlaylist = Playlist()
+        newPlaylist.name = request.POST["name"]
+        newPlaylist.create_date = datetime.datetime.now()
+        newPlaylist.owner = request.user
+        newPlaylist.save()
+        return JsonResponse({'message': 'success'})
 
 
 def detail(request, song_id):
@@ -90,3 +99,25 @@ def search(request):
         return render(request, 'search.html', context)
 
     return render(request, 'search.html', context)
+
+
+@csrf_exempt
+def playlistsBySong(request, song_id):
+    if request.method == "GET" and request.user.is_authenticated:
+        playlists = Playlist.objects.filter(owner=request.user)
+        song_playlists = Playlist.objects.filter(
+            owner=request.user).filter(song_list__id__contains=song_id)
+        playlistsJson = list(map(lambda playlist: {
+            "id": playlist.id,
+            "name": playlist.name,
+            "included": song_playlists.contains(playlist)
+        }, playlists))
+        return JsonResponse({'playlists': playlistsJson})
+
+    if request.method == "POST" and request.user.is_authenticated:
+        song = Song.objects.get(id=song_id)
+        for playlist_id in request.POST.getlist('playlists[]'):
+            playlist = Playlist.objects.get(id=playlist_id)
+            playlist.song_list.add(song)
+            playlist.save()
+        return JsonResponse({'message': 'success'})
