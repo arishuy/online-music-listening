@@ -39,6 +39,7 @@
         {% if songs %}
         {% for song in songs%}
         {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+        <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
         <div id="{{ song.id }}" class="music-card">
           <div id="{{ song.id }}" class="music-img">
             <img id="{{ song.id }}" src="{{ cover_path }}" alt="avatar">
@@ -48,6 +49,7 @@
             <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
           </div>
         </div>
+        </a>
         {% endwith %}
         {% endfor %}
         {% endif %}
