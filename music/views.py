@@ -1,16 +1,16 @@
 import json
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.http import JsonResponse
 from django.urls import reverse
 from django.views import generic
-from .models import Song
+from .models import Song, Playlist, Genre, ListenHistory, Album
 import random
-from .models import Playlist
-from .models import Song
-from .models import Genre
+
+from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import F
+from datetime import datetime
 # Create your views here.
 
 
@@ -35,11 +35,32 @@ def homepage(request):
     if len(songs) < random_count:
         random_count = len(songs)
     suggested_songs = random.sample(list(songs), k=random_count)
-    return render(request, 'homepage.html', {'songs': json.dumps(songJson), 'latest_songs': latest_songs, 'suggested_songs': suggested_songs})
 
+    latest_albums = Album.objects.order_by('-release_day')
+    context = {
+        'songs': json.dumps(songJson),
+        'latest_songs': latest_songs,
+        'suggested_songs': suggested_songs,
+        'latest_albums': latest_albums
+    }
+    return render(request, 'homepage.html', context)
 
 def recent(request):
-    return render(request, 'recentlisten.html')
+    user = request.user
+    if user.id is not None:
+        recent_listen = ListenHistory.objects.filter(owner__id=user.id).order_by('-stream_date')[:10]
+        recent_listenJson = list(map(lambda recent: {
+            "id": recent.song.id,
+            "name": recent.song.name,
+            "cover_path": recent.song.cover_path,
+            "artists": list(map(lambda artist: {
+                "name": artist.name
+            }, recent.song.artists.all())),
+            "audio": recent.song.audio_file.url if recent.song.audio_file else recent.song.audio_link,
+        }, recent_listen))
+        return render(request, 'recentlisten.html', {'recent_listen': recent_listen, 'songs': json.dumps(recent_listenJson)})
+    else:
+        return HttpResponseRedirect(reverse('homepage'))
 
 
 def playlists(request):
@@ -97,10 +118,14 @@ def search(request):
 def stream(request):
     if request.method == 'POST':
         song_id = request.POST['song_id']
+        if request.user.id is not None:
+            listen_history = ListenHistory.objects.create(stream_date=datetime.now(), owner=User(id=request.user.id), song=Song(id=song_id))
+            listen_history.save()
         song = Song.objects.get(id=song_id)
         # using F class to avoid race condition
         song.stream_count = F('stream_count') + 1
         song.save()
+        
         return HttpResponse('success')
     else:
         return HttpResponse('unsuccessful')

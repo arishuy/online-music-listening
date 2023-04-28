@@ -88,7 +88,7 @@
   audio.addEventListener("ended", () => {
     $.ajax({
         type: "POST",
-        url: "../../stream",
+        url: "{% url 'stream' %}",
         data: { song_id: song.id},
         success: function(data) {
           console.log("Done")

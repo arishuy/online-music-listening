@@ -128,6 +128,22 @@
   }
 },
 {
+  "model": "music.artist",
+  "pk": 17,
+  "fields": {
+    "name": "SZA",
+    "about": "A distinct force in contemporary R&B, SZA has set herself apart with a vulnerable and casually poetic songwriting style and a voice conveying a multitude of emotions with subtle twists and turns. She established herself with a trio of spaced-out EPs and collaborations with the likes of , , and , and continued her ascent with Ctrl (2017), a Top Ten album that resulted in five Grammy nominations, including Best New Artist. These accolades proved to be no fluke, as SZA earned almost as many Grammy nominations the next year by assisting  with \"All the Stars,\" a Top Ten hit, only one in a slew of platinum singles she has scored as a headliner or featured artist. She racked up five more Top 40 hits before releasing her second album, SOS (2022)."
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 18,
+  "fields": {
+    "name": "Lana Del Rey",
+    "about": "Lana Del Rey envisioned a Southern California dream world constructed out of sad girls and bad boys, manufactured melancholy, and genuine glamour, and then she came to embody this fantasy. It was a stylized noir-pop vibe she conjured from the start on her 2012 debut, Born to Die. Following a hit remix of her single \"Summertime Sadness,\" she steadily gained not only popularity but respect; her second album, 2014's Ultraviolence, received positive reviews that accompanied its sales, and her imitators (of which there were many) became merely an alluring accessory. With subsequent albums like 2019's Grammy-nominated Norman Fucking Rockwell!, 2021's Blue Banisters, and 2023's Did You Know That There's a Tunnel Under Ocean Blvd, Del Rey grew more and more into the ideal she intended to be: a damaged torch singer designed as the tragic romantic icon for her age.  Lana Del Rey's journey to this stardom was a long, steady climb. Born Elizabeth Woolridge Grant in New York City to a pair of wealthy parents, she was raised in Lake Placid, not starting to pursue music until she was out of high school and living with her aunt and uncle on Long Island. Her uncle taught her how to play guitar and soon she was writing songs and playing New York clubs, sometimes under the name . While she attended Fordham University, she continued to play music and she started getting serious around 2005. In April of that year, a CD of originals was registered under her birth name with the U.S. Copyright Office and recorded elsewhere, finishing up an unreleased folky album called Sirens under the name May Jailer."
+  }
+},
+{
   "model": "music.genre",
   "pk": 1,
   "fields": {
@@ -219,11 +235,21 @@
   }
 },
 {
+  "model": "music.album",
+  "pk": 1,
+  "fields": {
+    "name": "Midnights",
+    "artist": 4,
+    "release_day": "2022-11-21",
+    "cover_path": "midnights.png"
+  }
+},
+{
   "model": "music.song",
   "pk": 2,
   "fields": {
     "name": "Em Của Ngày Hôm Qua",
-    "stream_count": 0,
+    "stream_count": 5,
     "cover_path": "EmCuaNgayHomQua.png",
     "audio_file": "audio/EmCuaNgayHomQua.mp3",
     "audio_link": null,
@@ -263,7 +289,7 @@
   "pk": 4,
   "fields": {
     "name": "Không thể say",
-    "stream_count": 58,
+    "stream_count": 61,
     "cover_path": "KhongTheSay.jpg",
     "audio_file": "audio/KhongTheSay-HIEUTHUHAI-9293024.mp3",
     "audio_link": null,
@@ -283,7 +309,7 @@
   "pk": 5,
   "fields": {
     "name": "Ưng Quá Chừng",
-    "stream_count": 64,
+    "stream_count": 70,
     "cover_path": "UngQuaChung.jpg",
     "audio_file": "audio/UngQuaChung-AMEE-8783624.mp3",
     "audio_link": null,
@@ -303,7 +329,7 @@
   "pk": 6,
   "fields": {
     "name": "Waiting For You",
-    "stream_count": 832,
+    "stream_count": 835,
     "cover_path": "WaitingForYou.jpg",
     "audio_file": "audio/WaitingForYou-MONOOnionn-7733882.mp3",
     "audio_link": null,
@@ -323,7 +349,7 @@
   "pk": 7,
   "fields": {
     "name": "Nếu Lúc Đó",
-    "stream_count": 67,
+    "stream_count": 68,
     "cover_path": "NeuLucDo.jpg",
     "audio_file": "audio/NeuLucDo-tlinh2pillz-8783613.mp3",
     "audio_link": null,
@@ -343,7 +369,7 @@
   "pk": 8,
   "fields": {
     "name": "Hãy Trao Cho Anh",
-    "stream_count": 628,
+    "stream_count": 630,
     "cover_path": "HayTraoChoAnh.jpg",
     "audio_file": "audio/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3",
     "audio_link": null,
@@ -363,7 +389,7 @@
   "pk": 9,
   "fields": {
     "name": "Nàng Thơ",
-    "stream_count": 132,
+    "stream_count": 133,
     "cover_path": "NangTho.jpg",
     "audio_file": "audio/NangTho-HoangDung-6413381.mp3",
     "audio_link": null,
@@ -383,7 +409,7 @@
   "pk": 10,
   "fields": {
     "name": "Đi Đu Đưa Đi",
-    "stream_count": 835,
+    "stream_count": 836,
     "cover_path": "DiDuDuaDi.jpg",
     "audio_file": "audio/DiDuDuaDi-BichPhuong-6059493.mp3",
     "audio_link": null,
@@ -403,7 +429,7 @@
   "pk": 11,
   "fields": {
     "name": "Một Cú Lừa",
-    "stream_count": 744,
+    "stream_count": 745,
     "cover_path": "MotCuLua.jpg",
     "audio_file": "audio/MotCuLua-BichPhuong-6288019.mp3",
     "audio_link": null,
@@ -423,7 +449,7 @@
   "pk": 12,
   "fields": {
     "name": "Ngôi Sao Cô Đơn",
-    "stream_count": 43,
+    "stream_count": 46,
     "cover_path": "NgoiSaoCoDon.jpg",
     "audio_file": "audio/NgoiSaoCoDon-JackJ97-7611601.mp3",
     "audio_link": null,
@@ -443,7 +469,7 @@
   "pk": 13,
   "fields": {
     "name": "Chuyến Xe",
-    "stream_count": 45,
+    "stream_count": 46,
     "cover_path": "ChuyenXe.jpg",
     "audio_file": "audio/ChuyenXe-PhanManhQuynhOrange-9357348.mp3",
     "audio_link": null,
@@ -463,7 +489,7 @@
   "pk": 14,
   "fields": {
     "name": "Anh Ghét Làm Bạn Em",
-    "stream_count": 53,
+    "stream_count": 54,
     "cover_path": "AnhGhetLamBanEm.jpg",
     "audio_file": "audio/AnhGhetLamBanEm-PhanManhQuynh-2664513.mp3",
     "audio_link": null,
@@ -503,7 +529,7 @@
   "pk": 16,
   "fields": {
     "name": "Flower",
-    "stream_count": 467,
+    "stream_count": 479,
     "cover_path": "Flower.jpg",
     "audio_file": "audio/Flower-JISOO-8949069.mp3",
     "audio_link": null,
@@ -515,6 +541,288 @@
     ],
     "genres": [
       2
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 17,
+  "fields": {
+    "name": "Kill Bill",
+    "stream_count": 1,
+    "cover_path": "KillBill.png",
+    "audio_file": "audio/KillBill_Hc5nj2u.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-28",
+    "duration": 200,
+    "album": null,
+    "artists": [
+      17
+    ],
+    "genres": [
+      3,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 18,
+  "fields": {
+    "name": "Lavender Haze",
+    "stream_count": 2,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/01._Lavender_Haze_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 300,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 19,
+  "fields": {
+    "name": "Maroon",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/02._Maroon.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 200,
+    "album": 1,
+    "artists": [
+      3
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 20,
+  "fields": {
+    "name": "Anti Hero",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/03._Anti-Hero_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 100,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 21,
+  "fields": {
+    "name": "Snow On The Beach",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/04._Snow_On_The_Beach_ft._Lana_Del_Rey.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 210,
+    "album": 1,
+    "artists": [
+      4,
+      18
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 22,
+  "fields": {
+    "name": "You're On Your Own, Kid",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/05._Youre_On_Your_Own_Kid.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 210,
+    "album": null,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 23,
+  "fields": {
+    "name": "Midnight Rain",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/06._Midnight_Rain_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 214,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 24,
+  "fields": {
+    "name": "Question...?",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/07._Question....m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 168,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 25,
+  "fields": {
+    "name": "Vigilante Shit",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/08._Vigilante_Shit.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 167,
+    "album": null,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 26,
+  "fields": {
+    "name": "Bejeweled",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/09._Bejeweled.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 201,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 27,
+  "fields": {
+    "name": "Labyrinth",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/10._Labyrinth.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 200,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 28,
+  "fields": {
+    "name": "Karma",
+    "stream_count": 1,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/11._Karma_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 210,
+    "album": null,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 29,
+  "fields": {
+    "name": "Sweet Nothing",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/12._Sweet_Nothing.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 230,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 30,
+  "fields": {
+    "name": "Mastermind",
+    "stream_count": 0,
+    "cover_path": "midnights.png",
+    "audio_file": "audio/13._Mastermind.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 187,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
     ]
   }
 },
@@ -560,6 +868,213 @@
       14,
       15
     ]
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 1,
+  "fields": {
+    "stream_date": "2023-04-28T20:02:55.132Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 2,
+  "fields": {
+    "stream_date": "2023-04-28T20:03:36.403Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 3,
+  "fields": {
+    "stream_date": "2023-04-28T20:04:37.324Z",
+    "song": 4,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 4,
+  "fields": {
+    "stream_date": "2023-04-28T20:05:59.371Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 5,
+  "fields": {
+    "stream_date": "2023-04-28T20:24:03.369Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 6,
+  "fields": {
+    "stream_date": "2023-04-28T20:29:51.988Z",
+    "song": 8,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 7,
+  "fields": {
+    "stream_date": "2023-04-28T20:33:01.080Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 8,
+  "fields": {
+    "stream_date": "2023-04-28T20:43:22.871Z",
+    "song": 6,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 9,
+  "fields": {
+    "stream_date": "2023-04-28T22:07:24.148Z",
+    "song": 6,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 10,
+  "fields": {
+    "stream_date": "2023-04-28T22:09:22.785Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 11,
+  "fields": {
+    "stream_date": "2023-04-28T22:09:47.194Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 12,
+  "fields": {
+    "stream_date": "2023-04-28T22:10:27.826Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 13,
+  "fields": {
+    "stream_date": "2023-04-28T22:11:06.815Z",
+    "song": 2,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 14,
+  "fields": {
+    "stream_date": "2023-04-28T22:12:06.035Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 15,
+  "fields": {
+    "stream_date": "2023-04-28T22:15:02.702Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 16,
+  "fields": {
+    "stream_date": "2023-04-28T22:22:44.490Z",
+    "song": 12,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 17,
+  "fields": {
+    "stream_date": "2023-04-28T22:26:59.906Z",
+    "song": 13,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 18,
+  "fields": {
+    "stream_date": "2023-04-28T22:31:06.993Z",
+    "song": 14,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 19,
+  "fields": {
+    "stream_date": "2023-04-28T23:20:02.674Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 20,
+  "fields": {
+    "stream_date": "2023-04-28T23:25:26.925Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 21,
+  "fields": {
+    "stream_date": "2023-04-28T23:31:06.541Z",
+    "song": 12,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 22,
+  "fields": {
+    "stream_date": "2023-04-28T23:38:53.878Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 23,
+  "fields": {
+    "stream_date": "2023-04-28T23:46:58.477Z",
+    "song": 17,
+    "owner": 6
   }
 }
 ]

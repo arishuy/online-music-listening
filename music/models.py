@@ -61,3 +61,12 @@ class Playlist(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class ListenHistory(models.Model):
+    stream_date = models.DateTimeField()
+    song = models.ForeignKey(Song, on_delete=models.SET_NULL, null=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.song.name
