@@ -1,11 +1,14 @@
 import json
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
+from django.http import JsonResponse
+from django.urls import reverse
 from django.views import generic
 from .models import Song
 import random
 from .models import Playlist
 from .models import Song
+from .models import Genre
 
 # Create your views here.
 
@@ -48,7 +51,13 @@ def playlists(request):
 
 
 def detail(request, song_id):
-    return render(request, 'detailsong.html', {'song_id': song_id})
+    song = Song.objects.get(id=song_id)
+    songJson = {
+        "id": song.id,
+        "audio": song.audio_file.url if song.audio_file else song.audio_link,
+    }
+    songJson = json.dumps(songJson)
+    return render(request, 'detailsong.html', {'song': song, 'songJson': songJson})
 
 
 def detail_playlist(request, playlist_id):
@@ -59,3 +68,25 @@ def detail_playlist(request, playlist_id):
         'songs': songs,
     }
     return render(request, 'detailplaylist.html', context)
+
+
+def search(request):
+    allgenres = Genre.objects.all()
+    listgenre = list(map(lambda genre: {
+        "id": genre.id,
+        "name": genre.name,
+    }, allgenres))
+    context = {
+        'allgenres': listgenre,
+    }
+    if request.method == "POST":
+        genre_id = request.POST["genre"]
+        text = request.POST["text"]
+        songs = Song.objects.filter(
+            genres__id__contains=genre_id).filter(name__contains=text)
+        context["text"] = text
+        context["genre_id"] = int(genre_id)
+        context["songs"] = songs
+        return render(request, 'search.html', context)
+
+    return render(request, 'search.html', context)
