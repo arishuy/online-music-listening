@@ -18,16 +18,22 @@ Home Page
       {% if latest_songs %}
       {% for song in latest_songs%}
         {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
-        <div id="{{ song.id }}" class="music-card">
-          <div id="{{ song.id }}"  class="music-img">
-            <img id="{{ song.id }}" src="{{ cover_path }}" alt="avatar">
-          </div>
-          <div id="{{ song.id }}" class="music-info">
-            <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
-            <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
-          </div>
+      <div class="music-card">
+        <div class="music-img">
+          <img src="{{ cover_path }}" alt="avatar">
         </div>
-        {% endwith %}
+        <div class="music-info">
+          <div class="music-name">{{ song.name }}</div>
+          <div class="music-singer">{{ song.artist_list_str }}</div>
+        </div>
+        <div>
+          <i class="fas fa-play" onclick="playMusic({{ song.id }})"></i>
+        </div>
+        <input type="hidden" id="url-{{song.id}}" data-url="{% url 'song_playlists' song.id %}" />
+        <button type="button" data-bs-toggle="modal" data-bs-target="#song_playlistform"
+          onclick="showPlaylists({{ song.id }})">add</button>
+      </div>
+      {% endwith %}
       {% endfor %}
       {% endif %}
     </div>
@@ -44,11 +50,6 @@ Home Page
         <div id="{{ album.id }}" class="music-info">
           <div id="{{ album.id }}" class="music-name">{{ album.name }}</div>
           <div id="{{ album.id }}" class="music-singer">{{ album.artist.name }}</div>
-        </div>
-      </div>
-      {% endwith %}
-      {% endfor %}
-      {% endif %}
     </div>
   </div>
 
@@ -157,8 +158,6 @@ Home Page
     })
   })
 
-  Array.from(musicCards, musicCard => musicCard.addEventListener("click", event => playMusic(event.target.id)));
-
   nextBtn.addEventListener("click", () => {
     if (currIdx < songs.length - 1) {
       currIdx++;
@@ -229,5 +228,5 @@ Home Page
     return minutes + ":" + seconds;
   }
 </script>
-
+{% include 'song_playlistform.html' %}
 {% endblock %}

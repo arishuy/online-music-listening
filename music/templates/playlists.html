@@ -1,20 +1,16 @@
 {% extends "master.html" %} {% block title %} Playlists {% endblock %}
- {% block content %} 
- {% include 'navbar.html' %}
+{% block content %}
+{% include 'navbar.html' %}
 
 <div>
   {% include 'header.html' %}
-
   <div class="main-content">
     <div class="head-group-title">Danh sách phát của bạn</div>
     <div class="list-musics">
       {% for playlist in playlists %}
       <div class="music-card" onclick="playlist({{playlist.id}})">
         <div class="music-img">
-          <img
-            src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg"
-            alt="avatar"
-          />
+          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar" />
         </div>
         <div class="music-info">
           <div class="music-name">{{playlist.name}}</div>
@@ -22,7 +18,7 @@
         </div>
       </div>
       {% endfor %}
-      <div class="music-card">
+      <button class="music-card" type="button" data-bs-toggle="modal" data-bs-target="#playlistform">
         <div class="music-img">
           <i class="fas fa-plus"></i>
         </div>
@@ -30,7 +26,7 @@
           <div class="music-name">Tạo Playlist mới</div>
           <!-- <div class="music-singer">Mô tả</div> -->
         </div>
-      </div>
+      </button>
     </div>
   </div>
   <script>
@@ -38,5 +34,6 @@
       window.location.href = "/playlist/" + id;
     }
   </script>
+  {% include 'playlistform.html' %}
   {% endblock %}
 </div>
