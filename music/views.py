@@ -1,4 +1,3 @@
-import datetime
 import json
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -78,7 +77,7 @@ def playlists(request):
     if request.method == "POST" and request.user.is_authenticated:
         newPlaylist = Playlist()
         newPlaylist.name = request.POST["name"]
-        newPlaylist.create_date = datetime.datetime.now()
+        newPlaylist.create_date = datetime.now()
         newPlaylist.owner = request.user
         newPlaylist.save()
         return JsonResponse({'message': 'success'})
@@ -127,7 +126,6 @@ def search(request):
 
 
 @csrf_exempt
-
 def stream(request):
     if request.method == 'POST':
         song_id = request.POST['song_id']
@@ -142,7 +140,7 @@ def stream(request):
         return HttpResponse('success')
     else:
         return HttpResponse('unsuccessful')
-
+@csrf_exempt
 def playlistsBySong(request, song_id):
     if request.method == "GET" and request.user.is_authenticated:
         playlists = Playlist.objects.filter(owner=request.user)

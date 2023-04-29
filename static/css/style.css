@@ -194,8 +194,8 @@ body {
   border-radius: 50%;
 }
 .music-card {
-  width: 200px;
-  height: 250px;
+  width: 220px;
+  height: 270px;
   background: #2b2b2b;
   display: flex;
   flex-direction: column;
@@ -395,6 +395,17 @@ progress {
   width: 80vw;
 }
 .music-control-btn i:hover {
+  transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+  cursor: pointer;
+}
+.btn-add-playlist {
+  background: transparent;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  margin: 0 0 0 20px;
+}
+.btn-add-playlist:hover {
   transform: matrix(1.05, 0, 0, 1.05, 0, 0);
   cursor: pointer;
 }
