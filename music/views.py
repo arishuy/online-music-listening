@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.http import JsonResponse
 from django.urls import reverse
 from django.views import generic
-from .models import Song, Playlist, Genre, ListenHistory, Album
+from .models import Song, Playlist, Genre, ListenHistory, Album, Artist
 import random
 from django.views.decorators.csrf import csrf_exempt
 
@@ -140,6 +140,8 @@ def stream(request):
         return HttpResponse('success')
     else:
         return HttpResponse('unsuccessful')
+    
+
 @csrf_exempt
 def playlistsBySong(request, song_id):
     if request.method == "GET" and request.user.is_authenticated:
@@ -161,3 +163,26 @@ def playlistsBySong(request, song_id):
             playlist.save()
         return JsonResponse({'message': 'success'})
 
+
+def artist(request, artist_id):
+    artist = Artist.objects.get(pk=artist_id)
+    songs = Song.objects.filter(artists__id=artist_id)
+    popular_songs = songs.order_by('-stream_count')[:5]
+    latest_albums = Album.objects.filter(artist__id=artist_id).order_by('-release_day')
+    songJson = list(map(lambda song: {
+        "id": song.id,
+        "name": song.name,
+        "cover_path": song.cover_path,
+        "artists": list(map(lambda artist: {
+            "name": artist.name
+        }, song.artists.all())),
+        "audio": song.audio_file.url if song.audio_file else song.audio_link,
+    }, songs))
+    context = {
+        'artist': artist,
+        'songs': songs,
+        'popular_songs': popular_songs,
+        'latest_albums': latest_albums,
+        'songJson': json.dumps(songJson)
+    }
+    return render(request, 'artist.html', context)

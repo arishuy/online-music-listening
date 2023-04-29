@@ -24,7 +24,7 @@ Home Page
         </div>
         <div class="music-info">
           <div class="music-name">{{ song.name }}</div>
-          <div class="music-singer">{{ song.artist_list_str }}</div>
+          <a href="{% url 'artist' song.artists.all.first.id %}" style="text-decoration: none; color: white"><div class="music-singer">{{ song.artist_list_str }}</div></a>
         </div>
         <div>
           <i class="fas fa-play" onclick="playMusic({{ song.id }})" style="font-size: 12px;"></i>

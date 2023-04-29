@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Artist(models.Model):
     name = models.CharField(max_length=50)
     about = models.CharField(max_length=2000)
-
+    cover_path = models.CharField(max_length=100, null=True)
     def __str__(self) -> str:
         return self.name
 
