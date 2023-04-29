@@ -240,12 +240,12 @@ body {
   margin: 20px 0 0 20px;
 }
 .head-group-title {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
   font-size: 26px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 20px 0 0 20px;
 }
 .music-listennings {
@@ -390,8 +390,7 @@ progress {
   right: 10px;
   z-index: 1;
 }
-.main-content
-{
+.main-content {
   width: 80vw;
 }
 .music-control-btn i:hover {
@@ -408,4 +407,16 @@ progress {
 .btn-add-playlist:hover {
   transform: matrix(1.05, 0, 0, 1.05, 0, 0);
   cursor: pointer;
+}
+.album-name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.album-another {
+  color: hsla(0,0%,100%,0.5);
+  font-size: 14px;
+  line-height: 1.75;
 }
