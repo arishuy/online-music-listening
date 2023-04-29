@@ -33,7 +33,6 @@ class Song(models.Model):
     name = models.CharField(max_length=100)
     stream_count = models.IntegerField(default=0)
     cover_path = models.CharField(max_length=100, null=True)
-    # image = models.CharField(max_length=100, default="")
     audio_file = models.FileField(blank=True, null=True, upload_to="audio/")
     audio_link = models.CharField(max_length=100, blank=True, null=True)
     release_day = models.DateField()
@@ -62,3 +61,12 @@ class Playlist(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class ListenHistory(models.Model):
+    stream_date = models.DateTimeField()
+    song = models.ForeignKey(Song, on_delete=models.SET_NULL, null=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.song.name
