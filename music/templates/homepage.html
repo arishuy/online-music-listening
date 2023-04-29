@@ -5,16 +5,19 @@ Home Page
 {% block content %}
 
 {% include 'navbar.html' %}
-
+<head>
+  {% load static %}
+  <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+</head>
 <div>
   {% include 'header.html' %}
-
+  {% csrf_token %}
   <div class="main-content ">
     <div class="head-group-title">Mới phát hành </div>
     <div class="list-musics" style="width: 78vw">
       {% if latest_songs %}
       {% for song in latest_songs%}
-      {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+        {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
       <div class="music-card">
         <div class="music-img">
           <img src="{{ cover_path }}" alt="avatar">
@@ -35,6 +38,21 @@ Home Page
       {% endif %}
     </div>
 
+    <div class="head-group-title">Album mới phát hành </div>
+    <div class="list-musics" style="width: 78vw">
+      {% if latest_albums %}
+      {% for album in latest_albums %}
+      {% with cover_path="../../media/album_cover/"|add:album.cover_path %}
+      <div id="{{ album.id }}" class="music-card">
+        <div id="{{ album.id }}" class="music-img">
+          <img id="{{ album.id }}" src="{{ cover_path }}" alt="avatar">
+        </div>
+        <div id="{{ album.id }}" class="music-info">
+          <div id="{{ album.id }}" class="music-name">{{ album.name }}</div>
+          <div id="{{ album.id }}" class="music-singer">{{ album.artist.name }}</div>
+    </div>
+  </div>
+
     <div class="head-group-title">Danh sách đề xuất </div>
     <div class="list-musics" style="width: 78vw">
       {% if suggested_songs %}
@@ -54,6 +72,8 @@ Home Page
       {% endif %}
     </div>
   </div>
+
+
 
 
   <div class="music-listennings">
@@ -123,6 +143,20 @@ Home Page
     isPlaying = true;
     audio.play();
   }
+  audio.addEventListener('ended', () => {
+    current_id = songs[currIdx].id
+    $.ajax(
+    {
+      type:"POST",
+      url: "{% url 'stream' %}",
+      data: {
+        song_id: current_id
+      },
+      success: function(data) {
+        console.log('Done')
+      }
+    })
+  })
 
   nextBtn.addEventListener("click", () => {
     if (currIdx < songs.length - 1) {

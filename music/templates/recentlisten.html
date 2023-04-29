@@ -6,115 +6,184 @@
 
 {% include 'navbar.html' %}
 
-  <div>
-    {% include 'header.html' %}
-
+<div>
+  {% include 'header.html' %}
   <div class="main-content">
     <div class="head-group-title">Vừa mới nghe</div>
     <div class="list-musics">
-      <div class="music-card">
-        <div class="music-img">
-          <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
+      {% if recent_listen %}
+      {% for recent in recent_listen %}
+        {% with song=recent.song %}
+        {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+        <div id="{{ song.id }}" class="music-card">
+          <div id="{{ song.id }}" class="music-img">
+            <img id="{{ song.id }}" src="{{ cover_path}}" alt="avatar">
+          </div>
+          <div id="{{ song.id }}" class="music-info">
+            <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
+            <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+          </div>
         </div>
-        <div class="music-info">
-          <div class="music-name">Bài hát 1</div>
-          <div class="music-singer">Ca sĩ 1</div>
-      </div>
+        {% endwith %}
+        {% endwith %}
+      {% endfor %}
+      {% endif %}
     </div>
-    <div class="music-card">
+  </div>
+
+  <div class="music-listennings">
+    <div class="music-container">
       <div class="music-img">
-        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
+        <img id="music-img" src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
       </div>
       <div class="music-info">
-        <div class="music-name">Bài hát 1</div>
-        <div class="music-singer">Ca sĩ 1</div>
+        <div id="music-name" class="music-name">Bài hát 1</div>
+        <div id="artist" class="music-singer">Ca sĩ 1</div>
+      </div>
     </div>
-  </div><div class="music-card">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Bài hát 1</div>
-      <div class="music-singer">Ca sĩ 1</div>
-  </div>
-</div>
-<div class="music-card">
-  <div class="music-img">
-    <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-  </div>
-  <div class="music-info">
-    <div class="music-name">Bài hát 1</div>
-    <div class="music-singer">Ca sĩ 1</div>
-</div>
-</div>
-<div class="music-card">
-  <div class="music-img">
-    <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-  </div>
-  <div class="music-info">
-    <div class="music-name">Bài hát 1</div>
-    <div class="music-singer">Ca sĩ 1</div>
-</div>
-</div>
-<div class="music-card">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Bài hát 1</div>
-      <div class="music-singer">Ca sĩ 1</div>
-  </div>
-  </div><div class="music-card">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Bài hát 1</div>
-      <div class="music-singer">Ca sĩ 1</div>
-  </div>
-  </div>
-        
-  </div>
 
+    <div class="music-control">
+      <div class="music-control-btn">
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="music-control-btn">
+        <i class="fas fa-random"></i>
+      </div>
+      <div class="music-control-btn">
+        <i id="previousbtn" class="fas fa-step-backward"></i>
+      </div>
+      <div class="music-control-btn">
+        <i id="playbtn" class="fas fa-play"></i>
+      </div>
+      <div class="music-control-btn">
+        <i id="nextbtn" class="fas fa-step-forward"></i>
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div id="timeleft" class="time-left">00:00</div>
+      <input type="range" class="form-range" id="progressBar">
+      <div id="timeright" class="time-right"></div>
+    </div>
+
+    <div class="music-control-volume">
+      <i class="fas fa-volume-up"></i>
+      <input type="range" class="form-range" id="volumeBar">
+    </div>
+  </div>
 </div>
 
-<!-- <div class="music-listennings">
-  <div class="music-container">
-    <div class="music-img">
-      <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div class="music-name">Bài hát 1</div>
-      <div class="music-singer">Ca sĩ 1</div>
-    </div>
-  </div>
-  <div class="music-control">
-    <div class="music-control-btn">
-      <i class="fas fa-heart"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-random"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-step-backward"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-play"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-step-forward"></i>
-    </div>
-  </div>
+<script>
+  const songs = JSON.parse("{{songs|escapejs}}");
+  var currIdx = 0;
+  var isPlaying = false;
+  const musicName = document.getElementById('music-name');
+  const artist = document.getElementById('artist');
+  const img = document.getElementById('music-img');
+  const audio = new Audio(songs ? songs[currIdx].audio : "");
+  const playBtn = document.getElementById('playbtn');
+  const progressBar = document.getElementById('progressBar');
+  const timeleft = document.getElementById('timeleft');
+  const timeright = document.getElementById('timeright');
+  const volumeBar = document.getElementById('volumeBar');
+  const nextBtn = document.getElementById('nextbtn');
+  const previousBtn = document.getElementById('previousbtn');
+  const musicCards = document.getElementsByClassName('music-card');
+  let mouseDownOnSlider = false;
 
-  <div class="progress-bar">
-    <div class="time-left">00:00</div>
-    <progress value="0" max="1"></progress>
-      <div class="time-right">3:40</div>
-  </div>
-  
-  <div class="music-control-volume">
-    <i class="fas fa-volume-up"></i>
-    <input type="range" class="form-range" id="customRange1">
-  </div>
-</div> -->
+  playMusic = (id) => {
+    currIdx = songs.findIndex(song => song.id == id)
+    audio.src = songs[currIdx].audio;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    playBtn.className = "fas fa-pause";
+    isPlaying = true;
+    audio.play();
+  }
+  audio.addEventListener('ended', () => {
+    current_id = songs[currIdx].id
+    $.ajax(
+    {
+      type:"POST",
+      url: "{% url 'stream' %}",
+      data: {
+        song_id: current_id
+      },
+      success: function(data) {
+        console.log('Done')
+      }
+    })
+  })
+
+  Array.from(musicCards, musicCard => musicCard.addEventListener("click", event => playMusic(event.target.id)));
+
+  nextBtn.addEventListener("click", () => {
+    if (currIdx < songs.length - 1) {
+      currIdx++;
+    } else {
+      currIdx = 0;
+    }
+    audio.src = songs[currIdx].audio;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    if (isPlaying)
+      audio.play();
+  })
+
+  previousBtn.addEventListener("click", () => {
+    if (currIdx > 0) {
+      currIdx--;
+    } else {
+      currIdx = songs.length - 1;
+    }
+    audio.src = songs[currIdx].audio;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    if (isPlaying)
+      audio.play();
+  })
+
+  audio.addEventListener("loadeddata", () => {
+    progressBar.value = 0;
+    timeright.innerHTML = formatTime(audio.duration);
+    audio.volume = volumeBar.value / 100;
+    musicName.innerHTML = songs[currIdx].name;
+    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
+  });
+  audio.addEventListener("timeupdate", () => {
+    if (!mouseDownOnSlider) {
+      progressBar.value = audio.currentTime / audio.duration * 100;
+      timeleft.innerHTML = formatTime(audio.currentTime);
+    }
+  });
+  audio.addEventListener("ended", () => {
+    nextBtn.click();
+  });
+
+  playBtn.addEventListener("click", () => {
+    audio.paused ? audio.play() : audio.pause();
+    isPlaying = !audio.paused;
+    playBtn.className = audio.paused ? "fas fa-play" : "fas fa-pause";
+  });
+
+  progressBar.addEventListener("change", () => {
+    audio.currentTime = (audio.duration || 0) * progressBar.value / 100;
+  });
+  progressBar.addEventListener("mousedown", () => {
+    mouseDownOnSlider = true;
+  });
+  progressBar.addEventListener("mouseup", () => {
+    mouseDownOnSlider = false;
+  });
+
+  volumeBar.addEventListener("change", () => {
+    audio.volume = volumeBar.value / 100;
+  });
+
+  function formatTime(seconds) {
+    minutes = Math.floor(seconds / 60);
+    minutes = (minutes >= 10) ? minutes : "0" + minutes;
+    seconds = Math.floor(seconds % 60);
+    seconds = (seconds >= 10) ? seconds : "0" + seconds;
+    return minutes + ":" + seconds;
+  }
+</script>
 {% endblock %}
