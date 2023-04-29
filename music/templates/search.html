@@ -13,7 +13,7 @@
         <div class="row p-3">
           <div class="col-md-5">
             <select name="genre" class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
+              <option selected>Chọn thể loại nhạc</option>
               {% for genre in allgenres %}
               <option value="{{genre.id}}" {% if genre_id and genre_id == genre.id %} selected {% endif %}>
                 {{genre.name}}</option>
@@ -27,7 +27,7 @@
                 {% if text %} value="{{text}}" {% endif %} aria-describedby="addon-wrapping">
             </div>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-2">
             <button type="submit" class="btn btn-primary">Tìm kiếm</button>
           </div>
           <!-- <input type="text" name="q" placeholder="Nhập tên bài hát" />
