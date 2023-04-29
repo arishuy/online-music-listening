@@ -57,6 +57,7 @@ artist
         {% if latest_albums %}
             {% for album in latest_albums %}
                 {% with cover_path="../../media/album_cover/"|add:album.cover_path %}
+                <a href="{% url 'album' album.id %}" style="text-decoration: none">
                 <div id="{{ album.id }}" class="music-card">
                 <div id="{{ album.id }}" class="music-img">
                     <img id="{{ album.id }}" src="{{ cover_path }}" alt="avatar">
@@ -66,6 +67,7 @@ artist
                         <div id="{{ album.id }}" class="music-singer">{{ album.artist.name }}</div>
                     </div>
                 </div>
+                </a>
                 {% endwith %}
             {% endfor %}
         {% endif %}

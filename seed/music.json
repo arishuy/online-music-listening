@@ -162,6 +162,15 @@
   }
 },
 {
+  "model": "music.artist",
+  "pk": 19,
+  "fields": {
+    "name": "Harry Styles",
+    "about": "Harry Styles’ third solo album, Harry's House, is breaking new ground for one of the most creative forces in pop music, a star who keeps refusing to stand still. It’s a deeply personal statement from an artist who has never sounded this joyous, this confident, this fearless in facing the future. Harry’s House debuted at Number One on the Billboard Charts and moved 521,00 equivalent album units in its first week. Harry's House is currently the best-selling album of 2022. “As It Was,” the critically acclaimed lead single, dropped on April 1st and became an instant record-breaking hit, debuting at Number One in both the U.S. and the U.K. “As It Was” became the most-streamed song in the U.S. in a single day in Spotify history and the most-streamed song globally in a single day of 2022. The British singer-songwriter dropped his blockbuster sophomore album Fine Line on Columbia Records in December 2019. It combined critical acclaim with record-setting commercial success, debuting at Number One on the Billboard charts. “Watermelon Sugar” became his first Number One single, winning Styles his first Grammy, for Best Pop Solo Performance and a 2021 BRIT Award for Best British Single. When Rolling Stone released its comprehensive list of the 500 Greatest Albums of All Time, Fine Line was the most recent album honored, taking its place in history. Harry is taking Love on Tour worldwide through 2022, in the aftermath of his historic Coachella set, in support of Harry’s House.",
+    "cover_path": "harrystyles.jpg"
+  }
+},
+{
   "model": "music.genre",
   "pk": 1,
   "fields": {
@@ -260,6 +269,16 @@
     "artist": 4,
     "release_day": "2022-11-21",
     "cover_path": "midnights.png"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 2,
+  "fields": {
+    "name": "Harry's House",
+    "artist": 19,
+    "release_day": "2022-05-22",
+    "cover_path": "harryshouse.jpg"
   }
 },
 {
@@ -840,6 +859,293 @@
       4
     ],
     "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 31,
+  "fields": {
+    "name": "Music For a Sushi Restaurant",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/01_Music_For_a_Sushi_Restaurant_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      8,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 32,
+  "fields": {
+    "name": "Late Night Talking",
+    "stream_count": 1,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/02_Late_Night_Talking_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      11,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 33,
+  "fields": {
+    "name": "Grapejuice",
+    "stream_count": 1,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/03_Grapejuice_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 189,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 34,
+  "fields": {
+    "name": "As It Was",
+    "stream_count": 4296,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/04_As_It_Was_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-04-01",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      8,
+      10,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 35,
+  "fields": {
+    "name": "Daylight",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/05_Daylight_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 239,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 36,
+  "fields": {
+    "name": "Little Freak",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/06_Little_Freak_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 37,
+  "fields": {
+    "name": "Matilda",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/07_Matilda_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 38,
+  "fields": {
+    "name": "Cinema",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/08_Cinema_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 244,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 39,
+  "fields": {
+    "name": "Daydreaming",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/09_Daydreaming_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 211,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 40,
+  "fields": {
+    "name": "Keep Driving",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/10_Keep_Driving_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 152,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      11,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 41,
+  "fields": {
+    "name": "Satellite",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/11_Satellite_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 190,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 42,
+  "fields": {
+    "name": "Boyfriends",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/12_Boyfriends_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 131,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 43,
+  "fields": {
+    "name": "Love Of My Life",
+    "stream_count": 0,
+    "cover_path": "harryshouse.jpg",
+    "audio_file": "audio/13_Love_Of_My_Life_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 291,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      7,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 44,
+  "fields": {
+    "name": "Watermelon Sugar",
+    "stream_count": 200,
+    "cover_path": "watermelonsugar.png",
+    "audio_file": "audio/Harry_Styles_-_Watermelon_Sugar.mp3",
+    "audio_link": null,
+    "release_day": "2019-11-16",
+    "duration": 193,
+    "album": null,
+    "artists": [
+      19
+    ],
+    "genres": [
+      10,
       15
     ]
   }
@@ -1488,6 +1794,42 @@
   "fields": {
     "stream_date": "2023-04-29T18:19:07.952Z",
     "song": 29,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 68,
+  "fields": {
+    "stream_date": "2023-04-29T19:04:01.916Z",
+    "song": 34,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 69,
+  "fields": {
+    "stream_date": "2023-04-29T19:07:35.371Z",
+    "song": 32,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 70,
+  "fields": {
+    "stream_date": "2023-04-29T19:10:48.314Z",
+    "song": 33,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 71,
+  "fields": {
+    "stream_date": "2023-04-29T19:13:35.808Z",
+    "song": 34,
     "owner": 6
   }
 }

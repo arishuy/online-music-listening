@@ -20,7 +20,10 @@
           <h1>{{song.name}}</h1>
         </div>
         <div class="detail_song_singer">
-          <h2>{{song.artist_list_str}}</h2>
+          <a href="{% url 'artist' song.artists.all.first.id%}" style="text-decoration: none; color: white">
+            <h2>{{song.artist_list_str}}</h2>
+          </a>
+          
         </div>
         <button class="btn btn-primary" onclick="showMusicListennings()">Nghe bài hát</button>
       </div>
