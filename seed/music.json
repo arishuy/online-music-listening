@@ -4,7 +4,8 @@
   "pk": 1,
   "fields": {
     "name": "Sơn Tùng MTP",
-    "about": "The most popular artist of Vpop"
+    "about": "The most popular artist of Vpop",
+    "cover_path": "sontungmtp.jpg"
   }
 },
 {
@@ -12,7 +13,8 @@
   "pk": 2,
   "fields": {
     "name": "Justin Bieber",
-    "about": "Justin's recent album JUSTICE includes the chart-topping global smashes \"Peaches feat. Daniel Caesar & Giveon\", \"Holy\" feat. Chance The Rapper, \"Lonely\" feat. Benny Blanco, \"Anyone,\" and \"Hold On.\" The album also features guest appearances from The Kid LAROI, Dominic Fike, Khalid, Beam, Burna Boy, Lil Uzi Vert, Jaden, Quavo + more. The JUSTICE campaign has reasserted Justin's dominance as a live performer; from his triumphant return to the live stage with his T-Mobile-sponsored NYE livestream co"
+    "about": "Justin's recent album JUSTICE includes the chart-topping global smashes \"Peaches feat. Daniel Caesar & Giveon\", \"Holy\" feat. Chance The Rapper, \"Lonely\" feat. Benny Blanco, \"Anyone,\" and \"Hold On.\" The album also features guest appearances from The Kid LAROI, Dominic Fike, Khalid, Beam, Burna Boy, Lil Uzi Vert, Jaden, Quavo + more. The JUSTICE campaign has reasserted Justin's dominance as a live performer; from his triumphant return to the live stage with his T-Mobile-sponsored NYE livestream co",
+    "cover_path": "justinbeiber.jpg"
   }
 },
 {
@@ -20,7 +22,8 @@
   "pk": 3,
   "fields": {
     "name": "The Weeknd",
-    "about": "The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of the most successful & significant artists of the modern era. 2012’s 3X platinum  collated 3 breakout mixtapes—House of Balloons, Thursday & Echoes of Silence—into his 1st chart-topping collection followed by his debut LP  in 2013. Two years later, “Earned It (Fifty Shades of Grey)” won “Best R&B Performance” &"
+    "about": "The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of the most successful & significant artists of the modern era. 2012’s 3X platinum  collated 3 breakout mixtapes—House of Balloons, Thursday & Echoes of Silence—into his 1st chart-topping collection followed by his debut LP  in 2013. Two years later, “Earned It (Fifty Shades of Grey)” won “Best R&B Performance” &",
+    "cover_path": "theweeknd.jpg"
   }
 },
 {
@@ -28,7 +31,8 @@
   "pk": 4,
   "fields": {
     "name": "Taylor Swift",
-    "about": "Taylor Swift is that rarest of pop phenomena: a superstar who managed to completely cross over from country to the mainstream. Others have performed similar moves -- notably,  and  both became enduring pop culture icons based on their 1970s work -- but Swift shed her country roots like they were a second skin; it was a necessary molting to reveal she was perhaps the sharpest, savviest populist singer/songwriter of her generation, one who could harness the zeitgeist, make it personal and, just as impressively, perform the reverse. These skills were evident on her earliest hits, especially the neo-tribute \"Tim McGraw,\" but her second album, 2008's Fearless, showcased a songwriter discovering who she was and, in the process, finding a mass audience. Fearless wound up having considerable legs not only in the U.S., where it racked up six platinum singles on the strength of the Top Ten hits \"Love Story\" and \"You Belong with Me,\" but throughout the world, performing particularly well in the U.K., Canada, and Australia. Speak Now, delivered almost two years later, consolidated that success and moved Swift into the stratosphere of superstardom. Her popularity only increased over her next three albums -- Red (2012), 1989 (2014), Reputation (2017) -- and found her moving assuredly into a pop realm where she already belonged. Even when she scaled back her approach with 2020's stripped-down sibling releases folklore and Evermore, she remained atop the pop world, a position she maintained with re-recordings of her back catalog along with Midnights, a moody album released in 2022."
+    "about": "Taylor Swift is that rarest of pop phenomena: a superstar who managed to completely cross over from country to the mainstream. Others have performed similar moves -- notably,  and  both became enduring pop culture icons based on their 1970s work -- but Swift shed her country roots like they were a second skin; it was a necessary molting to reveal she was perhaps the sharpest, savviest populist singer/songwriter of her generation, one who could harness the zeitgeist, make it personal and, just as impressively, perform the reverse. These skills were evident on her earliest hits, especially the neo-tribute \"Tim McGraw,\" but her second album, 2008's Fearless, showcased a songwriter discovering who she was and, in the process, finding a mass audience. Fearless wound up having considerable legs not only in the U.S., where it racked up six platinum singles on the strength of the Top Ten hits \"Love Story\" and \"You Belong with Me,\" but throughout the world, performing particularly well in the U.K., Canada, and Australia. Speak Now, delivered almost two years later, consolidated that success and moved Swift into the stratosphere of superstardom. Her popularity only increased over her next three albums -- Red (2012), 1989 (2014), Reputation (2017) -- and found her moving assuredly into a pop realm where she already belonged. Even when she scaled back her approach with 2020's stripped-down sibling releases folklore and Evermore, she remained atop the pop world, a position she maintained with re-recordings of her back catalog along with Midnights, a moody album released in 2022.",
+    "cover_path": "taylorswift.jpg"
   }
 },
 {
@@ -36,7 +40,8 @@
   "pk": 5,
   "fields": {
     "name": "Adele",
-    "about": "Since the release of her debut album ‘19’, in 2008, Adele has become one of the most successful British artists of her generation. Her critically acclaimed debut album garnered over 6.5 million sales worldwide whilst the album has gone 8x Platinum in the UK. At the age of 19, Adele became the first-ever recipient of the BRITS Critics’ Choice Award. The accolades received by Adele only multiplied as the following year saw her claim Best New Artist and Best Female Pop Vocal Performance at the GRAMMYs.  As Adele embarks on her next chapter, she holds 15 GRAMMYs, 9 BRITS, 18 Billboard Awards, 2 IVORs, 1 Golden Globe, 1 Academy Award and 5 American Music Awards under her belt. The British singer-songwriter has received 11.5 million Album sales in the UK alone and 48 million Worldwide Album sales."
+    "about": "Since the release of her debut album ‘19’, in 2008, Adele has become one of the most successful British artists of her generation. Her critically acclaimed debut album garnered over 6.5 million sales worldwide whilst the album has gone 8x Platinum in the UK. At the age of 19, Adele became the first-ever recipient of the BRITS Critics’ Choice Award. The accolades received by Adele only multiplied as the following year saw her claim Best New Artist and Best Female Pop Vocal Performance at the GRAMMYs.  As Adele embarks on her next chapter, she holds 15 GRAMMYs, 9 BRITS, 18 Billboard Awards, 2 IVORs, 1 Golden Globe, 1 Academy Award and 5 American Music Awards under her belt. The British singer-songwriter has received 11.5 million Album sales in the UK alone and 48 million Worldwide Album sales.",
+    "cover_path": "adele.jpg"
   }
 },
 {
@@ -44,7 +49,8 @@
   "pk": 6,
   "fields": {
     "name": "MONO",
-    "about": "MONO (Nguyen Viet Hoang), who was born in 21/01/2000, is an artist representing dynamic but profound young people. MONO constantly explores new life experiences or perspectives by immersing in these. Not choosing to be the center of a game or a story, MONO chooses to take it in, in order to appreciate it as well as deliver everyone the most genuine and meaningful perspectives. Bringing a poly-dimensional view of the human, nature and living, MONO believes that only when we sincerely become one with the subject then we could deeply understand and touch it. ‘MONO’ also represents the uncompromising determination of his artistic journey and belief."
+    "about": "MONO (Nguyen Viet Hoang), who was born in 21/01/2000, is an artist representing dynamic but profound young people. MONO constantly explores new life experiences or perspectives by immersing in these. Not choosing to be the center of a game or a story, MONO chooses to take it in, in order to appreciate it as well as deliver everyone the most genuine and meaningful perspectives. Bringing a poly-dimensional view of the human, nature and living, MONO believes that only when we sincerely become one with the subject then we could deeply understand and touch it. ‘MONO’ also represents the uncompromising determination of his artistic journey and belief.",
+    "cover_path": "mono.jpg"
   }
 },
 {
@@ -52,7 +58,8 @@
   "pk": 7,
   "fields": {
     "name": "Billie Eilish",
-    "about": "With the release of her highly anticipated sophomore album ‘Happier Than Ever,’ the 19-year-old Los Angeles native remains one of the biggest stars to emerge in the 21st century. Since the release of her debut single “ocean eyes” in 2015, Eilish continues to shatter the ceiling of music with her genre-defying sound. Fast forward from her humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? debuted at No. 1 on the Billboard 200 in the U.S as well as 17 additional countries around the world upon release in 2019, and was the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? was written, produced and recorded entirely by Billie Eilish and brother FINNEAS in their childhood home of Los Angeles. Billie Eilish went on to make history as the youngest artist to receive nominations and win in all the major categories at the 62nd GRAMMY® Awards, receiving an award for Best New Artist, Album of the Year, Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie Eilish is also the youngest artist to write and record an official James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish was nominated for four additional awards at the 63rd Annual GRAMMY Awards in 2021, and took home both Record of the Year for 'everything i wanted,' and Best Song Written For Visual Media for 'No Time To Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by Billie and her brother FINNEAS, who also produced the album."
+    "about": "With the release of her highly anticipated sophomore album ‘Happier Than Ever,’ the 19-year-old Los Angeles native remains one of the biggest stars to emerge in the 21st century. Since the release of her debut single “ocean eyes” in 2015, Eilish continues to shatter the ceiling of music with her genre-defying sound. Fast forward from her humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? debuted at No. 1 on the Billboard 200 in the U.S as well as 17 additional countries around the world upon release in 2019, and was the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? was written, produced and recorded entirely by Billie Eilish and brother FINNEAS in their childhood home of Los Angeles. Billie Eilish went on to make history as the youngest artist to receive nominations and win in all the major categories at the 62nd GRAMMY® Awards, receiving an award for Best New Artist, Album of the Year, Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie Eilish is also the youngest artist to write and record an official James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish was nominated for four additional awards at the 63rd Annual GRAMMY Awards in 2021, and took home both Record of the Year for 'everything i wanted,' and Best Song Written For Visual Media for 'No Time To Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by Billie and her brother FINNEAS, who also produced the album.",
+    "cover_path": "billieeilish.jpg"
   }
 },
 {
@@ -60,7 +67,8 @@
   "pk": 8,
   "fields": {
     "name": "H-Kray",
-    "about": "Nghệ sĩ mới"
+    "about": "Nghệ sĩ mới",
+    "cover_path": "hkray.jpg"
   }
 },
 {
@@ -68,7 +76,8 @@
   "pk": 9,
   "fields": {
     "name": "HIEUTHUHAI",
-    "about": "Nghệ sĩ Việt Nam"
+    "about": "Nghệ sĩ Việt Nam",
+    "cover_path": "hieuthuhai.jpg"
   }
 },
 {
@@ -76,7 +85,8 @@
   "pk": 10,
   "fields": {
     "name": "Amee",
-    "about": "Nghệ sĩ Việt Nam"
+    "about": "Nghệ sĩ Việt Nam",
+    "cover_path": "amee.jpg"
   }
 },
 {
@@ -84,7 +94,8 @@
   "pk": 11,
   "fields": {
     "name": "tlinh",
-    "about": "Nghệ sĩ Việt Nam"
+    "about": "Nghệ sĩ Việt Nam",
+    "cover_path": "tlinh.jpg"
   }
 },
 {
@@ -92,7 +103,8 @@
   "pk": 12,
   "fields": {
     "name": "Hoàng Dũng",
-    "about": "N"
+    "about": "N",
+    "cover_path": "hoangdung.jpg"
   }
 },
 {
@@ -100,7 +112,8 @@
   "pk": 13,
   "fields": {
     "name": "Bích Phương",
-    "about": "Nghệ sĩ mới"
+    "about": "Nghệ sĩ mới",
+    "cover_path": "bichphuong.jpg"
   }
 },
 {
@@ -108,7 +121,8 @@
   "pk": 14,
   "fields": {
     "name": "Jack",
-    "about": "Nghệ sĩ mới"
+    "about": "Nghệ sĩ mới",
+    "cover_path": "jack.jpg"
   }
 },
 {
@@ -116,7 +130,8 @@
   "pk": 15,
   "fields": {
     "name": "Phan Mạnh Quỳnh",
-    "about": "Nghệ sĩ mới"
+    "about": "Nghệ sĩ mới",
+    "cover_path": "phanmanhquynh.jpg"
   }
 },
 {
@@ -124,7 +139,8 @@
   "pk": 16,
   "fields": {
     "name": "JISOO",
-    "about": "Nghệ sĩ Hàn Quốc"
+    "about": "Nghệ sĩ Hàn Quốc",
+    "cover_path": "jisoo.jpg"
   }
 },
 {
@@ -132,7 +148,8 @@
   "pk": 17,
   "fields": {
     "name": "SZA",
-    "about": "A distinct force in contemporary R&B, SZA has set herself apart with a vulnerable and casually poetic songwriting style and a voice conveying a multitude of emotions with subtle twists and turns. She established herself with a trio of spaced-out EPs and collaborations with the likes of , , and , and continued her ascent with Ctrl (2017), a Top Ten album that resulted in five Grammy nominations, including Best New Artist. These accolades proved to be no fluke, as SZA earned almost as many Grammy nominations the next year by assisting  with \"All the Stars,\" a Top Ten hit, only one in a slew of platinum singles she has scored as a headliner or featured artist. She racked up five more Top 40 hits before releasing her second album, SOS (2022)."
+    "about": "A distinct force in contemporary R&B, SZA has set herself apart with a vulnerable and casually poetic songwriting style and a voice conveying a multitude of emotions with subtle twists and turns. She established herself with a trio of spaced-out EPs and collaborations with the likes of , , and , and continued her ascent with Ctrl (2017), a Top Ten album that resulted in five Grammy nominations, including Best New Artist. These accolades proved to be no fluke, as SZA earned almost as many Grammy nominations the next year by assisting  with \"All the Stars,\" a Top Ten hit, only one in a slew of platinum singles she has scored as a headliner or featured artist. She racked up five more Top 40 hits before releasing her second album, SOS (2022).",
+    "cover_path": "sza.jpg"
   }
 },
 {
@@ -140,7 +157,8 @@
   "pk": 18,
   "fields": {
     "name": "Lana Del Rey",
-    "about": "Lana Del Rey envisioned a Southern California dream world constructed out of sad girls and bad boys, manufactured melancholy, and genuine glamour, and then she came to embody this fantasy. It was a stylized noir-pop vibe she conjured from the start on her 2012 debut, Born to Die. Following a hit remix of her single \"Summertime Sadness,\" she steadily gained not only popularity but respect; her second album, 2014's Ultraviolence, received positive reviews that accompanied its sales, and her imitators (of which there were many) became merely an alluring accessory. With subsequent albums like 2019's Grammy-nominated Norman Fucking Rockwell!, 2021's Blue Banisters, and 2023's Did You Know That There's a Tunnel Under Ocean Blvd, Del Rey grew more and more into the ideal she intended to be: a damaged torch singer designed as the tragic romantic icon for her age.  Lana Del Rey's journey to this stardom was a long, steady climb. Born Elizabeth Woolridge Grant in New York City to a pair of wealthy parents, she was raised in Lake Placid, not starting to pursue music until she was out of high school and living with her aunt and uncle on Long Island. Her uncle taught her how to play guitar and soon she was writing songs and playing New York clubs, sometimes under the name . While she attended Fordham University, she continued to play music and she started getting serious around 2005. In April of that year, a CD of originals was registered under her birth name with the U.S. Copyright Office and recorded elsewhere, finishing up an unreleased folky album called Sirens under the name May Jailer."
+    "about": "Lana Del Rey envisioned a Southern California dream world constructed out of sad girls and bad boys, manufactured melancholy, and genuine glamour, and then she came to embody this fantasy. It was a stylized noir-pop vibe she conjured from the start on her 2012 debut, Born to Die. Following a hit remix of her single \"Summertime Sadness,\" she steadily gained not only popularity but respect; her second album, 2014's Ultraviolence, received positive reviews that accompanied its sales, and her imitators (of which there were many) became merely an alluring accessory. With subsequent albums like 2019's Grammy-nominated Norman Fucking Rockwell!, 2021's Blue Banisters, and 2023's Did You Know That There's a Tunnel Under Ocean Blvd, Del Rey grew more and more into the ideal she intended to be: a damaged torch singer designed as the tragic romantic icon for her age.  Lana Del Rey's journey to this stardom was a long, steady climb. Born Elizabeth Woolridge Grant in New York City to a pair of wealthy parents, she was raised in Lake Placid, not starting to pursue music until she was out of high school and living with her aunt and uncle on Long Island. Her uncle taught her how to play guitar and soon she was writing songs and playing New York clubs, sometimes under the name . While she attended Fordham University, she continued to play music and she started getting serious around 2005. In April of that year, a CD of originals was registered under her birth name with the U.S. Copyright Office and recorded elsewhere, finishing up an unreleased folky album called Sirens under the name May Jailer.",
+    "cover_path": "lanadelrey.jpg"
   }
 },
 {
@@ -529,7 +547,7 @@
   "pk": 16,
   "fields": {
     "name": "Flower",
-    "stream_count": 479,
+    "stream_count": 483,
     "cover_path": "Flower.jpg",
     "audio_file": "audio/Flower-JISOO-8949069.mp3",
     "audio_link": null,
@@ -549,7 +567,7 @@
   "pk": 17,
   "fields": {
     "name": "Kill Bill",
-    "stream_count": 1,
+    "stream_count": 6,
     "cover_path": "KillBill.png",
     "audio_file": "audio/KillBill_Hc5nj2u.mp3",
     "audio_link": null,
@@ -570,7 +588,7 @@
   "pk": 18,
   "fields": {
     "name": "Lavender Haze",
-    "stream_count": 2,
+    "stream_count": 6,
     "cover_path": "midnights.png",
     "audio_file": "audio/01._Lavender_Haze_2.m4a",
     "audio_link": null,
@@ -590,7 +608,7 @@
   "pk": 19,
   "fields": {
     "name": "Maroon",
-    "stream_count": 0,
+    "stream_count": 1,
     "cover_path": "midnights.png",
     "audio_file": "audio/02._Maroon.m4a",
     "audio_link": null,
@@ -598,7 +616,7 @@
     "duration": 200,
     "album": 1,
     "artists": [
-      3
+      4
     ],
     "genres": [
       15
@@ -610,7 +628,7 @@
   "pk": 20,
   "fields": {
     "name": "Anti Hero",
-    "stream_count": 0,
+    "stream_count": 1,
     "cover_path": "midnights.png",
     "audio_file": "audio/03._Anti-Hero_2.m4a",
     "audio_link": null,
@@ -630,7 +648,7 @@
   "pk": 21,
   "fields": {
     "name": "Snow On The Beach",
-    "stream_count": 0,
+    "stream_count": 1,
     "cover_path": "midnights.png",
     "audio_file": "audio/04._Snow_On_The_Beach_ft._Lana_Del_Rey.m4a",
     "audio_link": null,
@@ -651,13 +669,13 @@
   "pk": 22,
   "fields": {
     "name": "You're On Your Own, Kid",
-    "stream_count": 0,
+    "stream_count": 7,
     "cover_path": "midnights.png",
     "audio_file": "audio/05._Youre_On_Your_Own_Kid.m4a",
     "audio_link": null,
     "release_day": "2022-11-21",
     "duration": 210,
-    "album": null,
+    "album": 1,
     "artists": [
       4
     ],
@@ -671,7 +689,7 @@
   "pk": 23,
   "fields": {
     "name": "Midnight Rain",
-    "stream_count": 0,
+    "stream_count": 2,
     "cover_path": "midnights.png",
     "audio_file": "audio/06._Midnight_Rain_2.m4a",
     "audio_link": null,
@@ -691,7 +709,7 @@
   "pk": 24,
   "fields": {
     "name": "Question...?",
-    "stream_count": 0,
+    "stream_count": 1,
     "cover_path": "midnights.png",
     "audio_file": "audio/07._Question....m4a",
     "audio_link": null,
@@ -711,13 +729,13 @@
   "pk": 25,
   "fields": {
     "name": "Vigilante Shit",
-    "stream_count": 0,
+    "stream_count": 1,
     "cover_path": "midnights.png",
     "audio_file": "audio/08._Vigilante_Shit.m4a",
     "audio_link": null,
     "release_day": "2022-11-21",
     "duration": 167,
-    "album": null,
+    "album": 1,
     "artists": [
       4
     ],
@@ -731,7 +749,7 @@
   "pk": 26,
   "fields": {
     "name": "Bejeweled",
-    "stream_count": 0,
+    "stream_count": 2,
     "cover_path": "midnights.png",
     "audio_file": "audio/09._Bejeweled.m4a",
     "audio_link": null,
@@ -771,13 +789,13 @@
   "pk": 28,
   "fields": {
     "name": "Karma",
-    "stream_count": 1,
+    "stream_count": 14,
     "cover_path": "midnights.png",
     "audio_file": "audio/11._Karma_2.m4a",
     "audio_link": null,
     "release_day": "2022-11-21",
     "duration": 210,
-    "album": null,
+    "album": 1,
     "artists": [
       4
     ],
@@ -791,7 +809,7 @@
   "pk": 29,
   "fields": {
     "name": "Sweet Nothing",
-    "stream_count": 0,
+    "stream_count": 2,
     "cover_path": "midnights.png",
     "audio_file": "audio/12._Sweet_Nothing.m4a",
     "audio_link": null,
@@ -811,7 +829,7 @@
   "pk": 30,
   "fields": {
     "name": "Mastermind",
-    "stream_count": 0,
+    "stream_count": 1,
     "cover_path": "midnights.png",
     "audio_file": "audio/13._Mastermind.m4a",
     "audio_link": null,
@@ -1074,6 +1092,402 @@
   "fields": {
     "stream_date": "2023-04-28T23:46:58.477Z",
     "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 24,
+  "fields": {
+    "stream_date": "2023-04-29T00:09:02.852Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 25,
+  "fields": {
+    "stream_date": "2023-04-29T00:13:48.267Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 26,
+  "fields": {
+    "stream_date": "2023-04-29T00:20:33.586Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 27,
+  "fields": {
+    "stream_date": "2023-04-29T00:23:09.207Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 28,
+  "fields": {
+    "stream_date": "2023-04-29T00:27:10.183Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 29,
+  "fields": {
+    "stream_date": "2023-04-29T00:30:53.794Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 30,
+  "fields": {
+    "stream_date": "2023-04-29T00:35:17.074Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 31,
+  "fields": {
+    "stream_date": "2023-04-29T00:39:21.994Z",
+    "song": 23,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 32,
+  "fields": {
+    "stream_date": "2023-04-29T00:42:47.379Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 33,
+  "fields": {
+    "stream_date": "2023-04-29T00:46:01.703Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 34,
+  "fields": {
+    "stream_date": "2023-04-29T00:49:26.690Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 35,
+  "fields": {
+    "stream_date": "2023-04-29T00:52:02.331Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 36,
+  "fields": {
+    "stream_date": "2023-04-29T00:55:27.330Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 37,
+  "fields": {
+    "stream_date": "2023-04-29T00:58:49.929Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 38,
+  "fields": {
+    "stream_date": "2023-04-29T01:02:14.915Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 39,
+  "fields": {
+    "stream_date": "2023-04-29T01:04:50.552Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 40,
+  "fields": {
+    "stream_date": "2023-04-29T01:11:01.225Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 41,
+  "fields": {
+    "stream_date": "2023-04-29T10:31:31.524Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 42,
+  "fields": {
+    "stream_date": "2023-04-29T10:35:36.520Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 43,
+  "fields": {
+    "stream_date": "2023-04-29T10:39:07.309Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 44,
+  "fields": {
+    "stream_date": "2023-04-29T10:49:42.487Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 45,
+  "fields": {
+    "stream_date": "2023-04-29T10:53:07.544Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 46,
+  "fields": {
+    "stream_date": "2023-04-29T10:55:43.215Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 47,
+  "fields": {
+    "stream_date": "2023-04-29T10:59:08.240Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 48,
+  "fields": {
+    "stream_date": "2023-04-29T11:02:22.694Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 49,
+  "fields": {
+    "stream_date": "2023-04-29T11:05:17.030Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 50,
+  "fields": {
+    "stream_date": "2023-04-29T11:08:42.052Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 51,
+  "fields": {
+    "stream_date": "2023-04-29T11:11:36.353Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 52,
+  "fields": {
+    "stream_date": "2023-04-29T11:14:11.969Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 53,
+  "fields": {
+    "stream_date": "2023-04-29T11:17:36.916Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 54,
+  "fields": {
+    "stream_date": "2023-04-29T17:28:52.299Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 55,
+  "fields": {
+    "stream_date": "2023-04-29T17:32:01.636Z",
+    "song": 29,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 56,
+  "fields": {
+    "stream_date": "2023-04-29T17:35:13.623Z",
+    "song": 30,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 57,
+  "fields": {
+    "stream_date": "2023-04-29T17:38:52.584Z",
+    "song": 19,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 58,
+  "fields": {
+    "stream_date": "2023-04-29T17:42:15.104Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 59,
+  "fields": {
+    "stream_date": "2023-04-29T17:45:36.639Z",
+    "song": 20,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 60,
+  "fields": {
+    "stream_date": "2023-04-29T17:49:52.931Z",
+    "song": 21,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 61,
+  "fields": {
+    "stream_date": "2023-04-29T17:53:07.972Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 62,
+  "fields": {
+    "stream_date": "2023-04-29T17:56:03.492Z",
+    "song": 23,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 63,
+  "fields": {
+    "stream_date": "2023-04-29T17:59:34.568Z",
+    "song": 24,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 64,
+  "fields": {
+    "stream_date": "2023-04-29T18:02:20.111Z",
+    "song": 25,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 65,
+  "fields": {
+    "stream_date": "2023-04-29T18:05:35.048Z",
+    "song": 26,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 66,
+  "fields": {
+    "stream_date": "2023-04-29T18:15:59.295Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 67,
+  "fields": {
+    "stream_date": "2023-04-29T18:19:07.952Z",
+    "song": 29,
     "owner": 6
   }
 }
