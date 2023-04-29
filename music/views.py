@@ -67,6 +67,25 @@ def album(request, album_id):
     }
     return render(request, 'album.html', context)
 
+def chart(request):
+    # get 10 songs with highest listen count
+    songs = Song.objects.order_by('-stream_count')[:10]
+    print(songs[0])
+    songJson = list(map(lambda song: {
+        "id": song.id,
+        "name": song.name,
+        "cover_path": song.cover_path,
+        "artists": list(map(lambda artist: {
+            "name": artist.name
+        }, song.artists.all())),
+        "audio": song.audio_file.url if song.audio_file else song.audio_link,
+    }, songs))
+    context = {
+        'songs': json.dumps(songJson),
+        'songs': songs,
+    }
+    return render(request, 'chart.html', context)
+
 def recent(request):
     user = request.user
     if user.id is not None:

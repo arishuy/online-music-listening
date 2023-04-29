@@ -420,3 +420,24 @@ progress {
   font-size: 14px;
   line-height: 1.75;
 }
+.top-1 th {
+  color: red;
+  font-size: 35px;
+}
+.top-1 {
+  font-size: 35px;
+}
+.top-2 th {
+  color: green;
+  font-size: 35px;
+}
+.top-2 {
+  font-size: 30px;
+}
+.top-3 th {
+  color: orange;
+  font-size: 35px;
+}
+.top-3 {
+  font-size: 25px;
+}
