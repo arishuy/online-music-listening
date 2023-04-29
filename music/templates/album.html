@@ -1,7 +1,7 @@
 {% extends "master.html" %} {% block title %} Album: {{ album.name }} {% endblock %} 
 {% block content %} {% include 'navbar.html' %}
 
-<div style="width: 80vw">
+<div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
   {% include 'header.html' %}
 
   <div class="main-content">

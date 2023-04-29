@@ -7,10 +7,10 @@ artist
 
 {% include 'navbar.html' %}
 
-<div style="position: relative; right: 15px;">
+<div style="max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
     {% include 'header.html' %}
-    <div class="cover-container" style="position: relative; color: white; height: 350px; width: 100%;">
-        <img src="../../media/artist_cover/{{artist.cover_path}}" alt="" style="height: 100%; width: 100%; margin: 20px; position: relative;">
+    <div class="cover-container" style="position: relative; color: white; height: 350px; width: 80vw;">
+        <img src="../../media/artist_cover/{{artist.cover_path}}" alt="" style="height: 100%; width: 100%; margin:auto; position: relative;">
         <div class="artist-name-banner" style="position: absolute; top:50%; transform: translateY(-50%); left: 40px; font-size: 80px; font-weight: 700;">{{ artist.name}}</div>
     </div>
     <div class="music-container" style="width: 100%; position: relative; margin: 20px 10px;">
@@ -101,14 +101,14 @@ artist
             {% endif %}
         </div>
     </div>
-    <div>
+    <div class="pb-5">
         <div class="head-group-title" >About</div>
         <div style="margin-right: 20px; border: 1px groove burlywood; margin: 10px; background-color: var(--bs-table-bg); border-radius: 8px;">
             <p style="text-align: justify; margin: 15px; font: 20px Ariel, sans-serif; color: whitesmoke"> {{ artist.about }}</p>
         </div>
         
     </div>
-    <div class="music-listennings">
+    <div class="music-listennings" style="display: none">
         <div class="music-container">
           <div class="music-img">
             <img id="music-img" src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg" alt="avatar">
@@ -165,9 +165,11 @@ artist
     const nextBtn = document.getElementById('nextbtn');
     const previousBtn = document.getElementById('previousbtn');
     const musicCards = document.getElementsByClassName('music-card');
+    const musicListennings = document.querySelector(".music-listennings");
     let mouseDownOnSlider = false;
   
     playMusic = (id) => {
+    musicListennings.style.display = "flex";
       currIdx = songs.findIndex(song => song.id == id)
       audio.src = songs[currIdx].audio;
       img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
