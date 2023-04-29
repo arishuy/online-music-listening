@@ -9,7 +9,8 @@ Home Page
   {% load static %}
   <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
 </head>
-<div>
+<div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
+
   {% include 'header.html' %}
   {% csrf_token %}
   <div class="main-content ">
