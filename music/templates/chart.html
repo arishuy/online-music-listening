@@ -10,8 +10,8 @@
     {% include 'header.html' %}
 
   <div class="main-content">
-    <div class="head-group-title" style="display: flex">Danh sách bài hát:
-      <button type="button" class="btn btn-primary" style="margin-left: auto; margin-right: 20px;">Phát tất cả</button>
+    <div class="head-group-title" style="display: flex">Bài hát được nghe nhiều nhất:
+      <!-- <button type="button" class="btn btn-primary" style="margin-left: auto; margin-right: 20px;">Phát tất cả</button> -->
     </div>
     <div class="group-song d-flex justify-content-center">
     <div class="list-songs pt-3" style="width: 78vw">
@@ -27,8 +27,9 @@
         </thead>
         <tbody>
           {% for song in songs %}
-          <tr>
-            <th scope="row">{{forloop.counter}}</th>
+          
+          <tr class="top-{{forloop.counter}}">
+            <th scope="row">{{ forloop.counter }}</th>
             <td>
               <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
               <img src="../../media/song_cover/{{song.cover_path}}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">

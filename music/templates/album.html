@@ -38,7 +38,7 @@
               <tbody>
                 {% for song in songs %}
                 <tr onclick="playMusic({{ song.id }})">
-                  <td scope="row">{{song.id}}</td>
+                  <td scope="row">{{forloop.counter}}</td>
                   <td>
                       <img
                         src="../../media/song_cover/{{song.cover_path}}"
