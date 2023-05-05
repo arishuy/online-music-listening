@@ -7,7 +7,9 @@ from django.contrib.auth.models import User
 class Artist(models.Model):
     name = models.CharField(max_length=50)
     about = models.CharField(max_length=2000)
-    cover_path = models.ImageField(blank=True, null=True, upload_to='artist_cover/')
+    cover_path = models.ImageField(
+        blank=True, null=True, upload_to='artist_cover/')
+
     def __str__(self) -> str:
         return self.name
 
@@ -32,7 +34,8 @@ class Album(models.Model):
 class Song(models.Model):
     name = models.CharField(max_length=100)
     stream_count = models.IntegerField(default=0)
-    cover_path = models.ImageField(blank=True, null=True, upload_to='song_cover/')
+    cover_path = models.ImageField(
+        blank=True, null=True, upload_to='song_cover/')
     audio_file = models.FileField(blank=True, null=True, upload_to="audio/")
     audio_link = models.CharField(max_length=100, blank=True, null=True)
     release_day = models.DateField()
@@ -44,7 +47,6 @@ class Song(models.Model):
 
     def __str__(self) -> str:
         return self.name
-    
 
     def artist_list_str(self) -> str:
         result = []
@@ -52,7 +54,7 @@ class Song(models.Model):
             result.append(artist.name)
 
         return ', '.join(result)
-    
+
     def get_cover_path(self) -> str:
         if not self.cover_path:
             return self.album.cover_path.url
@@ -62,7 +64,7 @@ class Song(models.Model):
 
 class Playlist(models.Model):
     name = models.CharField(max_length=100)
-    song_list = models.ManyToManyField(Song)
+    song_list = models.ManyToManyField(Song, related_name='song_playlists')
     create_date = models.DateField()
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
 

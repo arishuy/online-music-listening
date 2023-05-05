@@ -67,6 +67,7 @@ def album(request, album_id):
     }
     return render(request, 'album.html', context)
 
+
 def chart(request):
     # get 10 songs with highest listen count
     songs = Song.objects.order_by('-stream_count')[:10]
@@ -86,10 +87,12 @@ def chart(request):
     }
     return render(request, 'chart.html', context)
 
+
 def recent(request):
     user = request.user
     if user.id is not None:
-        recent_listen = ListenHistory.objects.filter(owner__id=user.id).order_by('-stream_date')[:10]
+        recent_listen = ListenHistory.objects.filter(
+            owner__id=user.id).order_by('-stream_date')[:10]
         recent_listenJson = list(map(lambda recent: {
             "id": recent.song.id,
             "name": recent.song.name,
@@ -169,37 +172,47 @@ def stream(request):
     if request.method == 'POST':
         song_id = request.POST['song_id']
         if request.user.id is not None:
-            listen_history = ListenHistory.objects.create(stream_date=datetime.now(), owner=User(id=request.user.id), song=Song(id=song_id))
+            listen_history = ListenHistory.objects.create(
+                stream_date=datetime.now(), owner=User(id=request.user.id), song=Song(id=song_id))
             listen_history.save()
         song = Song.objects.get(id=song_id)
         # using F class to avoid race condition
         song.stream_count = F('stream_count') + 1
         song.save()
-        
+
         return HttpResponse('success')
     else:
         return HttpResponse('unsuccessful')
-    
+
 
 @csrf_exempt
 def playlistsBySong(request, song_id):
     if request.method == "GET" and request.user.is_authenticated:
         playlists = Playlist.objects.filter(owner=request.user)
-        song_playlists = Playlist.objects.filter(
-            owner=request.user).filter(song_list__id__contains=song_id)
+        song = Song.objects.get(pk=song_id)
         playlistsJson = list(map(lambda playlist: {
             "id": playlist.id,
             "name": playlist.name,
-            "included": song_playlists.contains(playlist)
+            "included": True if song in playlist.song_list.all() else False
         }, playlists))
         return JsonResponse({'playlists': playlistsJson})
 
     if request.method == "POST" and request.user.is_authenticated:
         song = Song.objects.get(id=song_id)
-        for playlist_id in request.POST.getlist('playlists[]'):
-            playlist = Playlist.objects.get(id=playlist_id)
-            playlist.song_list.add(song)
-            playlist.save()
+        curr_song_playlists_id = set(
+            map(lambda playlist: str(playlist['id']), song.song_playlists.all().values('id')))
+        new_song_playlists_id = set(request.POST.getlist('playlists[]'))
+        for playlist_id in curr_song_playlists_id.union(new_song_playlists_id):
+            if playlist_id in curr_song_playlists_id.intersection(new_song_playlists_id):
+                continue
+            elif playlist_id in new_song_playlists_id:
+                playlist = Playlist.objects.get(pk=playlist_id)
+                playlist.song_list.add(song)
+                playlist.save()
+            else:
+                playlist = Playlist.objects.get(pk=playlist_id)
+                playlist.song_list.remove(song)
+                playlist.save()
         return JsonResponse({'message': 'success'})
 
 
@@ -207,7 +220,8 @@ def artist(request, artist_id):
     artist = Artist.objects.get(pk=artist_id)
     songs = Song.objects.filter(artists__id=artist_id)
     popular_songs = songs.order_by('-stream_count')[:5]
-    latest_albums = Album.objects.filter(artist__id=artist_id).order_by('-release_day')
+    latest_albums = Album.objects.filter(
+        artist__id=artist_id).order_by('-release_day')
     songJson = list(map(lambda song: {
         "id": song.id,
         "name": song.name,
