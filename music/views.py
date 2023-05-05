@@ -135,7 +135,7 @@ def detail(request, song_id):
 def detail_playlist(request, playlist_id):
     # get all song in playlist
     query = Playlist.objects.get(id=playlist_id)
-    songs = query.song_list.all().values()
+    songs = query.song_list.all()
     context = {
         'songs': songs,
     }
