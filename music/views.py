@@ -22,16 +22,7 @@ def music(request):
 
 def homepage(request):
     songs = Song.objects.all()
-    # print(songs)
-    songJson = list(map(lambda song: {
-        "id": song.id,
-        "name": song.name,
-        "cover_path": song.get_cover_path(),
-        "artists": list(map(lambda artist: {
-            "name": artist.name
-        }, song.artists.all())),
-        "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }, songs.order_by('-release_day')))
+    songJson = get_songJson(songs.order_by('-release_day'))
     latest_songs = Song.objects.order_by('-release_day')[:10]
     random_count = 5
     if len(songs) < random_count:
@@ -40,7 +31,7 @@ def homepage(request):
 
     latest_albums = Album.objects.order_by('-release_day')
     context = {
-        'songs': json.dumps(songJson),
+        'songJson': json.dumps(songJson),
         'latest_songs': latest_songs,
         'suggested_songs': suggested_songs,
         'latest_albums': latest_albums
@@ -51,15 +42,7 @@ def homepage(request):
 def album(request, album_id):
     album = Album.objects.get(id=album_id)
     songs = Song.objects.filter(album__id=album_id)
-    songJson = list(map(lambda song: {
-        "id": song.id,
-        "name": song.name,
-        "cover_path": song.get_cover_path(),
-        "artists": list(map(lambda artist: {
-            "name": artist.name
-        }, song.artists.all())),
-        "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }, songs))
+    songJson = get_songJson(songs)
     context = {
         'album': album,
         'songJson': json.dumps(songJson),
@@ -72,15 +55,7 @@ def chart(request):
     # get 10 songs with highest listen count
     songs = Song.objects.order_by('-stream_count')[:10]
     print(songs[0])
-    songJson = list(map(lambda song: {
-        "id": song.id,
-        "name": song.name,
-        "cover_path": song.cover_path.url,
-        "artists": list(map(lambda artist: {
-            "name": artist.name
-        }, song.artists.all())),
-        "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }, songs))
+    songJson = get_songJson(songs)
     context = {
         'songs': json.dumps(songJson),
         'songs': songs,
@@ -93,16 +68,9 @@ def recent(request):
     if user.id is not None:
         recent_listen = ListenHistory.objects.filter(
             owner__id=user.id).order_by('-stream_date')[:10]
-        recent_listenJson = list(map(lambda recent: {
-            "id": recent.song.id,
-            "name": recent.song.name,
-            "cover_path": recent.song.get_cover_path(),
-            "artists": list(map(lambda artist: {
-                "name": artist.name
-            }, recent.song.artists.all())),
-            "audio": recent.song.audio_file.url if recent.song.audio_file else recent.song.audio_link,
-        }, recent_listen))
-        return render(request, 'recentlisten.html', {'recent_listen': recent_listen, 'songs': json.dumps(recent_listenJson)})
+        recent_listenJson = get_songJson(
+            list(map(lambda x: x.song, recent_listen)))
+        return render(request, 'recentlisten.html', {'recent_listen': recent_listen, 'songJson': json.dumps(recent_listenJson)})
     else:
         return HttpResponseRedirect(reverse('homepage'))
 
@@ -127,10 +95,7 @@ def playlists(request):
 
 def detail(request, song_id):
     song = Song.objects.get(id=song_id)
-    songJson = {
-        "id": song.id,
-        "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }
+    songJson = get_songJson([song])
     songJson = json.dumps(songJson)
     return render(request, 'detailsong.html', {'song': song, 'songJson': songJson})
 
@@ -139,8 +104,11 @@ def detail_playlist(request, playlist_id):
     # get all song in playlist
     query = Playlist.objects.get(id=playlist_id)
     songs = query.song_list.all()
+    songJson = get_songJson(songs)
     context = {
+        'playlist_id': playlist_id,
         'songs': songs,
+        'songJson': json.dumps(songJson)
     }
     return render(request, 'detailplaylist.html', context)
 
@@ -190,10 +158,11 @@ def playlistsBySong(request, song_id):
     if request.method == "GET" and request.user.is_authenticated:
         playlists = Playlist.objects.filter(owner=request.user)
         song = Song.objects.get(pk=song_id)
+        song_playlists = song.song_playlists.all()
         playlistsJson = list(map(lambda playlist: {
             "id": playlist.id,
             "name": playlist.name,
-            "included": True if song in playlist.song_list.all() else False
+            "included": playlist in song_playlists
         }, playlists))
         return JsonResponse({'playlists': playlistsJson})
 
@@ -214,6 +183,7 @@ def playlistsBySong(request, song_id):
                 playlist.song_list.remove(song)
                 playlist.save()
         return JsonResponse({'message': 'success'})
+    return JsonResponse({'message': 'error'})
 
 
 def artist(request, artist_id):
@@ -222,15 +192,7 @@ def artist(request, artist_id):
     popular_songs = songs.order_by('-stream_count')[:5]
     latest_albums = Album.objects.filter(
         artist__id=artist_id).order_by('-release_day')
-    songJson = list(map(lambda song: {
-        "id": song.id,
-        "name": song.name,
-        "cover_path": song.get_cover_path(),
-        "artists": list(map(lambda artist: {
-            "name": artist.name
-        }, song.artists.all())),
-        "audio": song.audio_file.url if song.audio_file else song.audio_link,
-    }, songs))
+    songJson = get_songJson(songs)
     context = {
         'artist': artist,
         'songs': songs,
@@ -239,3 +201,29 @@ def artist(request, artist_id):
         'songJson': json.dumps(songJson)
     }
     return render(request, 'artist.html', context)
+
+
+def song_in_playlist(request, playlist_id, song_id):
+    print(request.method)
+    if request.method == 'POST':
+        song = Song.objects.get(pk=song_id)
+        playlist = Playlist.objects.get(pk=playlist_id)
+        if song in playlist.song_list.all():
+            playlist.song_list.remove(song)
+            playlist.save()
+        return HttpResponseRedirect(
+            reverse('detail_playlist', args=(playlist_id,)))
+    return HttpResponseRedirect(
+        reverse('detail_playlist', args=(playlist_id,)))
+
+
+def get_songJson(songs):
+    return list(map(lambda song: {
+        "id": song.id,
+        "name": song.name,
+        "cover_path": song.get_cover_path(),
+        "artists": list(map(lambda artist: {
+            "name": artist.name
+        }, song.artists.all())),
+        "audio": song.audio_file.url if song.audio_file else song.audio_link,
+    }, songs))
