@@ -14,7 +14,7 @@
   <div class="main-content" style="display: flex;align-items: center; justify-content: center;">
     <div class="detail_song">
       <div class="detail_song_img">
-        <img src="../../media/song_cover/{{song.cover_path}}" alt="detail_song_img">
+        <img src="{{ song.get_cover_path }}" alt="detail_song_img">
       </div>
       <div class="detail_song_info">
         <div class="detail_song_name">
@@ -35,7 +35,7 @@
 <div class="music-listennings" style="display: none">
   <div class="music-container">
     <div class="music-img">
-      <img id="music-img" src="../../media/song_cover/{{song.cover_path}}" alt="avatar">
+      <img id="music-img" src="{{ song.get_cover_path }}" alt="avatar">
     </div>
     <div class="music-info">
       <div id="music-name" class="music-name">{{song.name}}</div>

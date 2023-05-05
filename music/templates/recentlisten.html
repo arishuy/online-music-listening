@@ -14,17 +14,17 @@
       {% if recent_listen %}
       {% for recent in recent_listen %}
         {% with song=recent.song %}
-        {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
         <div id="{{ song.id }}" class="music-card">
           <div id="{{ song.id }}" class="music-img">
-            <img id="{{ song.id }}" src="{{ cover_path}}" alt="avatar">
+            <img id="{{ song.id }}" src="{{ song.get_cover_path }}" alt="avatar">
           </div>
           <div id="{{ song.id }}" class="music-info">
             <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
-            <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+            <a href="{% url 'artist' song.artists.all.first.id %}" style="text-decoration: none;">
+              <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+            </a>                  
           </div>
         </div>
-        {% endwith %}
         {% endwith %}
       {% endfor %}
       {% endif %}
@@ -94,7 +94,7 @@
   playMusic = (id) => {
     currIdx = songs.findIndex(song => song.id == id)
     audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     playBtn.className = "fas fa-pause";
     isPlaying = true;
     audio.play();
@@ -123,7 +123,7 @@
       currIdx = 0;
     }
     audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     if (isPlaying)
       audio.play();
   })
@@ -135,7 +135,7 @@
       currIdx = songs.length - 1;
     }
     audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     if (isPlaying)
       audio.play();
   })
@@ -145,7 +145,7 @@
     timeright.innerHTML = formatTime(audio.duration);
     audio.volume = volumeBar.value / 100;
     musicName.innerHTML = songs[currIdx].name;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
   });
   audio.addEventListener("timeupdate", () => {

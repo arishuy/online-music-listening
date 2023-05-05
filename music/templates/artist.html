@@ -10,7 +10,7 @@ artist
 <div style="max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
     {% include 'header.html' %}
     <div class="cover-container" style="position: relative; color: white; height: 350px; width: 80vw;">
-        <img src="../../media/artist_cover/{{artist.cover_path}}" alt="" style="height: 100%; width: 100%; margin:auto; position: relative;">
+        <img src="{{ artist.cover_path.url }}" alt="" style="height: 100%; width: 100%; margin:auto; position: relative;">
         <div class="artist-name-banner" style="position: absolute; top:50%; transform: translateY(-50%); left: 40px; font-size: 80px; font-weight: 700;">{{ artist.name}}</div>
     </div>
     <div class="music-container" style="width: 100%; position: relative; margin: 20px 10px;">
@@ -34,7 +34,7 @@ artist
                         <th scope="row">{{forloop.counter}}</th>
                         <td style="text-align: left;">
                           <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
-                          <img src="../../media/song_cover/{{song.cover_path}}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+                          <img src="{{ song.get_cover_path }}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">
                           {{song.name}}
                           </a>
                         </td>
@@ -56,11 +56,11 @@ artist
         <div class="list-musics" style="width: 78vw">
         {% if latest_albums %}
             {% for album in latest_albums %}
-                {% with cover_path="../../media/album_cover/"|add:album.cover_path %}
+                <!-- {% with cover_path="../../media/album_cover/"|add:album.cover_path %} -->
                 <a href="{% url 'album' album.id %}" style="text-decoration: none">
                 <div id="{{ album.id }}" class="music-card">
                 <div id="{{ album.id }}" class="music-img">
-                    <img id="{{ album.id }}" src="{{ cover_path }}" alt="avatar">
+                    <img id="{{ album.id }}" src="{{ album.cover_path.url }}" alt="avatar">
                 </div>
                     <div id="{{ album.id }}" class="music-info">
                         <div id="{{ album.id }}" class="music-name">{{ album.name }}</div>
@@ -79,10 +79,10 @@ artist
         <div class="list-musics" style="width: 78vw">
             {% if songs %}
                 {% for song in songs %}
-                    {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+                    <!-- {% with cover_path="../../media/song_cover/"|add:song.cover_path %} -->
                     <div id="{{ song.id }}" class="music-card">
                     <div id="{{ song.id }}" class="music-img">
-                        <img id="{{ song.id }}" src="{{ cover_path }}" alt="avatar">
+                        <img id="{{ song.id }}" src="{{ song.get_cover_path }}" alt="avatar">
                     </div>
                         <div id="{{ song.id }}" class="music-info">
                             <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
@@ -172,7 +172,7 @@ artist
     musicListennings.style.display = "flex";
       currIdx = songs.findIndex(song => song.id == id)
       audio.src = songs[currIdx].audio;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       playBtn.className = "fas fa-pause";
       isPlaying = true;
       audio.play();
@@ -199,7 +199,7 @@ artist
         currIdx = 0;
       }
       audio.src = songs[currIdx].audio;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       if (isPlaying)
         audio.play();
     })
@@ -211,7 +211,7 @@ artist
         currIdx = songs.length - 1;
       }
       audio.src = songs[currIdx].audio;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       if (isPlaying)
         audio.play();
     })
@@ -221,7 +221,7 @@ artist
       timeright.innerHTML = formatTime(audio.duration);
       audio.volume = volumeBar.value / 100;
       musicName.innerHTML = songs[currIdx].name;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
     });
     audio.addEventListener("timeupdate", () => {

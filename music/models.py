@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Artist(models.Model):
     name = models.CharField(max_length=50)
     about = models.CharField(max_length=2000)
-    cover_path = models.CharField(max_length=100, null=True)
+    cover_path = models.ImageField(blank=True, null=True, upload_to='artist_cover/')
     def __str__(self) -> str:
         return self.name
 
@@ -23,7 +23,7 @@ class Album(models.Model):
     name = models.CharField(max_length=50)
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
     release_day = models.DateField()
-    cover_path = models.CharField(max_length=100, null=True)
+    cover_path = models.ImageField(null=True, upload_to='album_cover/')
 
     def __str__(self) -> str:
         return self.name
@@ -32,7 +32,7 @@ class Album(models.Model):
 class Song(models.Model):
     name = models.CharField(max_length=100)
     stream_count = models.IntegerField(default=0)
-    cover_path = models.CharField(max_length=100, null=True)
+    cover_path = models.ImageField(blank=True, null=True, upload_to='song_cover/')
     audio_file = models.FileField(blank=True, null=True, upload_to="audio/")
     audio_link = models.CharField(max_length=100, blank=True, null=True)
     release_day = models.DateField()
@@ -52,6 +52,13 @@ class Song(models.Model):
             result.append(artist.name)
 
         return ', '.join(result)
+    
+    def get_cover_path(self) -> str:
+        if not self.cover_path:
+            return self.album.cover_path.url
+        else:
+            return self.cover_path.url
+
 
 class Playlist(models.Model):
     name = models.CharField(max_length=100)

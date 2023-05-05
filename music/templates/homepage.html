@@ -18,10 +18,10 @@ Home Page
     <div class="list-musics" style="width: 78vw">
       {% if latest_songs %}
       {% for song in latest_songs%}
-        {% with cover_path="../../media/song_cover/"|add:song.cover_path %}
+        <!-- {% with cover_path="../../media/song_cover/"|add:song.cover_path %} -->
       <div class="music-card">
         <div class="music-img">
-          <img src="{{ cover_path }}" alt="avatar">
+          <img src="{{ song.get_cover_path }}" alt="avatar">
         </div>
         <div class="music-info">
           <div class="music-name">{{ song.name }}</div>
@@ -44,11 +44,11 @@ Home Page
     <div class="list-musics" style="width: 78vw">
       {% if latest_albums %}
       {% for album in latest_albums %}
-      {% with cover_path="../../media/album_cover/"|add:album.cover_path %}
+      <!-- {% with cover_path="../../media/album_cover/"|add:album.cover_path %} -->
       <a href="{% url 'album' album.id %}" style="text-decoration: none; color: white">
       <div id="{{ album.id }}" class="music-card">
         <div id="{{ album.id }}" class="music-img">
-          <img id="{{ album.id }}" src="{{ cover_path }}" alt="avatar">
+          <img id="{{ album.id }}" src="{{ album.cover_path.url }}" alt="avatar">
         </div>
         <div id="{{ album.id }}" class="music-info">
           <div id="{{ album.id }}" class="music-name">{{ album.name }}</div>
@@ -127,7 +127,7 @@ Home Page
   playMusic = (id) => {
     currIdx = songs.findIndex(song => song.id == id)
     audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     playBtn.className = "fas fa-pause";
     isPlaying = true;
     audio.play();
@@ -154,7 +154,7 @@ Home Page
       currIdx = 0;
     }
     audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     if (isPlaying)
       audio.play();
   })
@@ -166,7 +166,7 @@ Home Page
       currIdx = songs.length - 1;
     }
     audio.src = songs[currIdx].audio;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     if (isPlaying)
       audio.play();
   })
@@ -176,7 +176,7 @@ Home Page
     timeright.innerHTML = formatTime(audio.duration);
     audio.volume = volumeBar.value / 100;
     musicName.innerHTML = songs[currIdx].name;
-    img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+    img.src = songs[currIdx].cover_path;
     artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
   });
   audio.addEventListener("timeupdate", () => {

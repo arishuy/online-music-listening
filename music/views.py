@@ -26,7 +26,7 @@ def homepage(request):
     songJson = list(map(lambda song: {
         "id": song.id,
         "name": song.name,
-        "cover_path": song.cover_path,
+        "cover_path": song.get_cover_path(),
         "artists": list(map(lambda artist: {
             "name": artist.name
         }, song.artists.all())),
@@ -54,7 +54,7 @@ def album(request, album_id):
     songJson = list(map(lambda song: {
         "id": song.id,
         "name": song.name,
-        "cover_path": song.cover_path,
+        "cover_path": song.get_cover_path(),
         "artists": list(map(lambda artist: {
             "name": artist.name
         }, song.artists.all())),
@@ -74,7 +74,7 @@ def chart(request):
     songJson = list(map(lambda song: {
         "id": song.id,
         "name": song.name,
-        "cover_path": song.cover_path,
+        "cover_path": song.cover_path.url,
         "artists": list(map(lambda artist: {
             "name": artist.name
         }, song.artists.all())),
@@ -93,7 +93,7 @@ def recent(request):
         recent_listenJson = list(map(lambda recent: {
             "id": recent.song.id,
             "name": recent.song.name,
-            "cover_path": recent.song.cover_path,
+            "cover_path": recent.song.get_cover_path(),
             "artists": list(map(lambda artist: {
                 "name": artist.name
             }, recent.song.artists.all())),
@@ -211,7 +211,7 @@ def artist(request, artist_id):
     songJson = list(map(lambda song: {
         "id": song.id,
         "name": song.name,
-        "cover_path": song.cover_path,
+        "cover_path": song.get_cover_path(),
         "artists": list(map(lambda artist: {
             "name": artist.name
         }, song.artists.all())),
