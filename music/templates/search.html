@@ -40,19 +40,20 @@
         {% if songs %}
         {% for song in songs%}
         <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
-        <div id="{{ song.id }}" class="music-card">
-          <div id="{{ song.id }}" class="music-img">
-            <img id="{{ song.id }}" src="{{ song.get_cover_path }}" alt="avatar">
+          <div id="{{ song.id }}" class="music-card">
+            <div id="{{ song.id }}" class="music-img">
+              <img id="{{ song.id }}" src="{{ song.get_cover_path }}" alt="avatar">
+            </div>
+            <div id="{{ song.id }}" class="music-info">
+              <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
+              <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+            </div>
           </div>
-          <div id="{{ song.id }}" class="music-info">
-            <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
-            <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
-          </div>
-        </div>
         </a>
         {% endfor %}
         {% endif %}
       </div>
     </div>
-    {% endblock %}
   </div>
+</div>
+{% endblock %}

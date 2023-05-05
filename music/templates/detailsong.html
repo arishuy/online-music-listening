@@ -1,16 +1,17 @@
 {% extends "master.html" %}
 {% block title %}
-  {{song.name}}
+{{song.name}}
 {% endblock %}
 {% block content %}
 {% include 'navbar.html' %}
+
 <head>
   {% load static %}
   <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
 </head>
 <div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
-  
-    {% include 'header.html' %}
+
+  {% include 'header.html' %}
   <div class="main-content" style="display: flex;align-items: center; justify-content: center;">
     <div class="detail_song">
       <div class="detail_song_img">
@@ -24,118 +25,23 @@
           <a href="{% url 'artist' song.artists.all.first.id%}" style="text-decoration: none; color: white">
             <h2>{{song.artist_list_str}}</h2>
           </a>
-          
+
         </div>
-        <button class="btn btn-primary" onclick="showMusicListennings()">Nghe bài hát</button>
+        <button class="btn btn-primary" onclick="showMusicPlayer()">Nghe bài hát</button>
       </div>
     </div>
+  </div>
+
 </div>
-        
-</div>
-<div class="music-listennings" style="display: none">
-  <div class="music-container">
-    <div class="music-img">
-      <img id="music-img" src="{{ song.get_cover_path }}" alt="avatar">
-    </div>
-    <div class="music-info">
-      <div id="music-name" class="music-name">{{song.name}}</div>
-      <div id="artist" class="music-singer">{{song.artist_list_str}}</div>
-    </div>
-  </div>
-
-  <div class="music-control" >
-    <div class="music-control-btn">
-      <i class="fas fa-heart"></i>
-    </div>
-    <div class="music-control-btn">
-      <i class="fas fa-random"></i>
-    </div>
-    <div class="music-control-btn">
-      <i id="previousbtn" class="fas fa-step-backward"></i>
-    </div>
-    <div class="music-control-btn">
-      <i id="playbtn" class="fas fa-play"></i>
-    </div>
-    <div class="music-control-btn">
-      <i id="nextbtn" class="fas fa-step-forward"></i>
-    </div>
-  </div>
-
-  <div class="progress-bar">
-    <div id="timeleft" class="time-left">00:00</div>
-    <input type="range" class="form-range" id="progressBar">
-    <div id="timeright" class="time-right"></div>
-  </div>
-
-  <div class="music-control-volume">
-    <i class="fas fa-volume-up"></i>
-    <input type="range" class="form-range" id="volumeBar">
-  </div>
+<div id="music-player" style="display: none;">
+  {% include 'music_player.html' %}
 </div>
 <script>
-  const song = JSON.parse('{{songJson|escapejs}}');
-  let mouseDownOnSlider = false;
-  var isPlaying = false;
-  const playBtn = document.getElementById('playbtn');
-  const progressBar = document.getElementById('progressBar');
-  const timeleft = document.getElementById('timeleft');
-  const timeright = document.getElementById('timeright');
-  const volumeBar = document.getElementById('volumeBar');
-  var musicListennings = document.querySelector(".music-listennings");
-  var musicControlVolume = document.querySelector(".music-control-volume");
-  const audio = new Audio(song ? song.audio : "");
-  function showMusicListennings() {
-    musicListennings.style.display = "flex";
+  const musicPlayer = document.getElementById("music-player")
+
+  function showMusicPlayer() {
+    musicPlayer.style.display = "flex";
     playBtn.click();
-  }
-
-  audio.addEventListener("ended", () => {
-    $.ajax({
-        type: "POST",
-        url: "{% url 'stream' %}",
-        data: { song_id: song.id},
-        success: function(data) {
-          console.log("Done")
-        }
-      }
-    )
-  })
-  audio.addEventListener("loadeddata", () => {
-    progressBar.value = 0;
-    timeright.innerHTML = formatTime(audio.duration);
-    audio.volume = volumeBar.value / 100;
-  });
-  audio.addEventListener("timeupdate", () => {
-    if (!mouseDownOnSlider) {
-      progressBar.value = audio.currentTime / audio.duration * 100;
-      timeleft.innerHTML = formatTime(audio.currentTime);
-    }
-  });
-  playBtn.addEventListener("click", () => {
-    audio.paused ? audio.play() : audio.pause();
-    isPlaying = !audio.paused;
-    playBtn.className = audio.paused ? "fas fa-play" : "fas fa-pause";
-  });
-
-  progressBar.addEventListener("change", () => {
-    audio.currentTime = (audio.duration || 0) * progressBar.value / 100;
-  });
-  progressBar.addEventListener("mousedown", () => {
-    mouseDownOnSlider = true;
-  });
-  progressBar.addEventListener("mouseup", () => {
-    mouseDownOnSlider = false;
-  });
-
-  volumeBar.addEventListener("change", () => {
-    audio.volume = volumeBar.value / 100;
-  });
-  function formatTime(seconds) {
-    minutes = Math.floor(seconds / 60);
-    minutes = (minutes >= 10) ? minutes : "0" + minutes;
-    seconds = Math.floor(seconds % 60);
-    seconds = (seconds >= 10) ? seconds : "0" + seconds;
-    return minutes + ":" + seconds;
   }
 </script>
 
