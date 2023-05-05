@@ -32,7 +32,7 @@
             <th scope="row">{{ forloop.counter }}</th>
             <td>
               <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
-              <img src="../../media/song_cover/{{song.cover_path}}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+              <img src="{{ song.get_cover_path }}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">
               {{song.name}}
               </a>
             </td>

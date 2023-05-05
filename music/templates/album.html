@@ -12,7 +12,7 @@
           class="col-md-3 d-flex align-items-center pt-3 flex-column text-white"
         >
           <img
-            src="../../media/album_cover/{{album.cover_path}}"
+            src="{{ album.cover_path.url }}"
             alt="avatar"
             style="width: 300px; height: 300px; border-radius: 10%"
           />
@@ -43,8 +43,7 @@
                   <td scope="row">{{forloop.counter}}</td>
                   <td>
                       <img
-                        src="../../media/song_cover/{{song.cover_path}}"
-                        alt="avatar"
+                        src="{{ song.get_cover_path }}"
                         style="width: 50px; height: 50px; border-radius: 50%"
                       />
                       {{song.name}}
@@ -128,7 +127,7 @@
         musicListennings.style.display = "flex";
         currIdx = 0;
         audio.src = songs[currIdx].audio;
-        img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+        img.src = songs[currIdx].cover_path;
         playBtn.className = "fas fa-pause";
         play_album.className = "fas fa-pause px-2";
         isPlaying = true;
@@ -139,7 +138,7 @@
     musicListennings.style.display = "flex";
       currIdx = songs.findIndex(song => song.id == id)
       audio.src = songs[currIdx].audio;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       playBtn.className = "fas fa-pause";
     play_album.className = "fas fa-pause px-2";
       isPlaying = true;
@@ -167,7 +166,7 @@
         currIdx = 0;
       }
       audio.src = songs[currIdx].audio;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       if (isPlaying)
         audio.play();
     })
@@ -179,7 +178,7 @@
         currIdx = songs.length - 1;
       }
       audio.src = songs[currIdx].audio;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       if (isPlaying)
         audio.play();
     })
@@ -189,7 +188,7 @@
       timeright.innerHTML = formatTime(audio.duration);
       audio.volume = volumeBar.value / 100;
       musicName.innerHTML = songs[currIdx].name;
-      img.src = "../../media/song_cover/" + songs[currIdx].cover_path;
+      img.src = songs[currIdx].cover_path;
       artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
     });
     audio.addEventListener("timeupdate", () => {
