@@ -15,7 +15,7 @@
             <i class="fas fa-heart"></i>
         </div>
         <div class="music-control-btn">
-            <i class="fas fa-random"></i>
+            <i id="randombtn" class="fas fa-random"></i>
         </div>
         <div class="music-control-btn">
             <i id="previousbtn" class="fas fa-step-backward"></i>
@@ -43,10 +43,12 @@
     const songs = JSON.parse("{{songJson|escapejs}}");
     var currIdx = 0;
     var isPlaying = false;
+    var isRandom = false;
     const musicName = document.getElementById('music-name');
     const artist = document.getElementById('artist');
     const img = document.getElementById('music-img');
     const audio = new Audio(songs ? songs[currIdx].audio : "");
+    const randomBtn = document.getElementById('randombtn');
     const playBtn = document.getElementById('playbtn');
     const progressBar = document.getElementById('progressBar');
     const timeleft = document.getElementById('timeleft');
@@ -79,11 +81,20 @@
         })
     })
 
+    randomBtn.addEventListener("click", () => {
+        isRandom = !isRandom
+        randomBtn.style.color = isRandom ? "yellow" : "white"
+    })
+
     nextBtn.addEventListener("click", () => {
-        if (currIdx < songs.length - 1) {
-            currIdx++;
+        if (isRandom) {
+            currIdx = getRandomIndex(currIdx, songs.length)
         } else {
-            currIdx = 0;
+            if (currIdx < songs.length - 1) {
+                currIdx++;
+            } else {
+                currIdx = 0;
+            }
         }
         audio.src = songs[currIdx].audio;
         img.src = songs[currIdx].cover_path;
@@ -92,10 +103,14 @@
     })
 
     previousBtn.addEventListener("click", () => {
-        if (currIdx > 0) {
-            currIdx--;
+        if (isRandom) {
+            currIdx = getRandomIndex(currIdx, songs.length)
         } else {
-            currIdx = songs.length - 1;
+            if (currIdx > 0) {
+                currIdx--;
+            } else {
+                currIdx = songs.length - 1;
+            }
         }
         audio.src = songs[currIdx].audio;
         img.src = songs[currIdx].cover_path;
@@ -147,5 +162,10 @@
         seconds = Math.floor(seconds % 60);
         seconds = (seconds >= 10) ? seconds : "0" + seconds;
         return minutes + ":" + seconds;
+    }
+
+    function getRandomIndex(currIdx, length) {
+        idxes = [...Array(length).keys()].filter(idx => idx !== currIdx);
+        return idxes[Math.floor((Math.random() * idxes.length))];
     }
 </script>

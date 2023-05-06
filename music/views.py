@@ -204,7 +204,6 @@ def artist(request, artist_id):
 
 
 def song_in_playlist(request, playlist_id, song_id):
-    print(request.method)
     if request.method == 'POST':
         song = Song.objects.get(pk=song_id)
         playlist = Playlist.objects.get(pk=playlist_id)
