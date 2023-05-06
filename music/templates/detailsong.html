@@ -27,7 +27,13 @@
           </a>
 
         </div>
+        <div class="d-flex justify-content-evenly w-100">
         <button class="btn btn-primary" onclick="showMusicPlayer()">Nghe bài hát</button>
+        <input type="hidden" id="url-{{song.id}}" data-url="{% url 'song_playlists' song.id %}" />
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#song_playlistform"
+            onclick="showPlaylists({{ song.id }})">
+            Thêm vào Playlist</button>
+      </div>
       </div>
     </div>
   </div>
@@ -36,6 +42,7 @@
 <div id="music-player" style="display: none;">
   {% include 'music_player.html' %}
 </div>
+{% include 'song_playlistform.html' %}
 <script>
   const musicPlayer = document.getElementById("music-player")
 

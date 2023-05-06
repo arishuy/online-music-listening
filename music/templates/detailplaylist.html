@@ -8,10 +8,9 @@ Playlists
 <div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
 
   {% include 'header.html' %}
-
   <div class="main-content">
     <div class="head-group-title" style="display: flex">Danh sách bài hát:
-      <button type="button" class="btn btn-primary" style="margin-left: auto; margin-right: 20px;">Phát tất cả</button>
+      <button type="button" class="btn btn-primary" style="margin-left: auto; margin-right: 20px;" onclick="playAll()">Phát tất cả</button>
     </div>
     <div class="group-song d-flex justify-content-center">
       <div class="list-songs pt-3" style="width: 78vw">
@@ -41,11 +40,15 @@ Playlists
               <td>{{song.release_day}}</td>
               <td>{{song.duration}}</td>
               <td>
-                <form action="{% url 'song_in_playlist' playlist_id song.id %}" method="post">
-                  {% csrf_token %}
-                  <button type="submit">delete</button>
-                </form>
-                <i class="fas fa-play" onclick="playMusic({{ song.id }})" style="font-size: 12px;"></i>
+                <div class="d-flex justify-content-around align-items-center">
+                  <i class="fas fa-play" onclick="playMusic({{ song.id }})" style="font-size: 12px;"></i>
+                  <form action="{% url 'song_in_playlist' playlist_id song.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" style="background: none; color:white">
+                      <i class="fas fa-x" style="font-size: 12px;"></i>
+                    </button>
+                  </form>
+                </div>
               </td>
             </tr>
             {% endfor %}
@@ -59,4 +62,10 @@ Playlists
   </div>
   {% include 'music_player.html' %}
 </div>
+<script>
+  const musicPlayer = document.getElementById("music-player")
+  function playAll() {
+    playBtn.click();
+  }
+</script>
 {% endblock %}
