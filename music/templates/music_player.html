@@ -165,6 +165,9 @@
     }
 
     function getRandomIndex(currIdx, length) {
+        if (length <= 1) {
+            return currIdx
+        }
         idxes = [...Array(length).keys()].filter(idx => idx !== currIdx);
         return idxes[Math.floor((Math.random() * idxes.length))];
     }
