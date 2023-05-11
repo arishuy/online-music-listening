@@ -1,13 +1,25 @@
 <div class="main-container">
   <div class="header-content">
     {% if user.is_authenticated %}
-    <div class="avatar">
+    <div class="avatar d-flex"> 
       <img
-        src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg"
+        src= "{{avatar}}"
         alt="avatar"
-      />
-      <span class="p-2 text-white">{{ user.username }}</span>
+        />
+      <ul class="navbar-nav mx-3">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="text-white">{{ user.username }}</span> 
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/change-password">Đổi mật khẩu</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+      
     {% endif %}
 
   </div>
