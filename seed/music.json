@@ -286,7 +286,7 @@
   "pk": 2,
   "fields": {
     "name": "Em Của Ngày Hôm Qua",
-    "stream_count": 5,
+    "stream_count": 6,
     "cover_path": "song_cover/EmCuaNgayHomQua.png",
     "audio_file": "audio/EmCuaNgayHomQua_Z0bLHyJ.mp3",
     "audio_link": null,
@@ -466,7 +466,7 @@
   "pk": 11,
   "fields": {
     "name": "Một Cú Lừa",
-    "stream_count": 745,
+    "stream_count": 746,
     "cover_path": "song_cover/MotCuLua.jpg",
     "audio_file": "audio/MotCuLua-BichPhuong-6288019.mp3",
     "audio_link": null,
@@ -1151,6 +1151,26 @@
   }
 },
 {
+  "model": "music.song",
+  "pk": 45,
+  "fields": {
+    "name": "MAKING MY WAY",
+    "stream_count": 87836621,
+    "cover_path": "song_cover/MakingMyWay.jpg",
+    "audio_file": "audio/SON_TUNG_M-TP__MAKING_MY_WAY__OFFICIAL_VISUALIZER.mp3",
+    "audio_link": null,
+    "release_day": "2023-05-05",
+    "duration": 412,
+    "album": null,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
   "model": "music.playlist",
   "pk": 3,
   "fields": {
@@ -1206,6 +1226,18 @@
       28,
       34,
       44
+    ]
+  }
+},
+{
+  "model": "music.playlist",
+  "pk": 7,
+  "fields": {
+    "name": "Huy Bui",
+    "create_date": "2023-05-11",
+    "owner": 7,
+    "song_list": [
+      45
     ]
   }
 },
@@ -2098,6 +2130,40 @@
     "stream_date": "2023-04-30T00:36:34.384Z",
     "song": 28,
     "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 100,
+  "fields": {
+    "stream_date": "2023-05-05T12:30:15.598Z",
+    "song": 2,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 101,
+  "fields": {
+    "stream_date": "2023-05-06T10:05:53.352Z",
+    "song": 11,
+    "owner": 6
+  }
+},
+{
+  "model": "music.userinfo",
+  "pk": 1,
+  "fields": {
+    "user": 7,
+    "avatar": "https://s3.ap-northeast-1.amazonaws.com/h.files/images/1682162862941_CPhAyKYGsx.jpeg"
+  }
+},
+{
+  "model": "music.userinfo",
+  "pk": 2,
+  "fields": {
+    "user": 6,
+    "avatar": "https://s3.ap-northeast-1.amazonaws.com/h.files/images/1683809231914_X3EOrY3gym.png"
   }
 }
 ]

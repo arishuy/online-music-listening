@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, SetPasswordForm
 from django.contrib.auth.models import User
 
 
@@ -55,3 +55,8 @@ class NewUserForm(UserCreationForm):
 
     def __str__(self) -> str:
         return f"{self.username} {self.email}"
+    
+class PasswordChangeForm(SetPasswordForm):
+    class Meta:
+        model = User
+        fields = ('old_password', 'new_password1', 'new_password2')

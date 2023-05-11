@@ -79,3 +79,12 @@ class ListenHistory(models.Model):
 
     def __str__(self) -> str:
         return self.song.name
+    
+class UserInfo(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    avatar = models.CharField(max_length=100, blank=True, null=True)
+    
+    def __str__(self) -> str:
+        return self.user.username
+    
+    
