@@ -171,6 +171,24 @@
   }
 },
 {
+  "model": "music.artist",
+  "pk": 20,
+  "fields": {
+    "name": "RPT MCK",
+    "about": "Rapper",
+    "cover_path": "artist_cover/RPTMCK_8EJjSDt.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 21,
+  "fields": {
+    "name": "GREY D",
+    "about": "Nghệ sĩ mới",
+    "cover_path": "artist_cover/GREYD.jpg"
+  }
+},
+{
   "model": "music.genre",
   "pk": 1,
   "fields": {
@@ -282,17 +300,37 @@
   }
 },
 {
+  "model": "music.album",
+  "pk": 3,
+  "fields": {
+    "name": "ME",
+    "artist": 16,
+    "release_day": "2023-03-31",
+    "cover_path": "album_cover/me_NrUzYCd.jpg"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 4,
+  "fields": {
+    "name": "MTP",
+    "artist": 1,
+    "release_day": "2023-05-13",
+    "cover_path": "album_cover/mtp.jpg"
+  }
+},
+{
   "model": "music.song",
   "pk": 2,
   "fields": {
     "name": "Em Của Ngày Hôm Qua",
-    "stream_count": 6,
+    "stream_count": 1724,
     "cover_path": "song_cover/EmCuaNgayHomQua.png",
     "audio_file": "audio/EmCuaNgayHomQua_Z0bLHyJ.mp3",
     "audio_link": null,
-    "release_day": "2023-04-23",
-    "duration": 20,
-    "album": null,
+    "release_day": "2013-04-23",
+    "duration": 247,
+    "album": 4,
     "artists": [
       1
     ],
@@ -326,12 +364,12 @@
   "pk": 4,
   "fields": {
     "name": "Không thể say",
-    "stream_count": 62,
+    "stream_count": 8766,
     "cover_path": "song_cover/KhongTheSay.jpg",
     "audio_file": "audio/KhongTheSay-HIEUTHUHAI-9293024.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 69,
+    "release_day": "2023-04-19",
+    "duration": 287,
     "album": null,
     "artists": [
       9
@@ -346,12 +384,12 @@
   "pk": 5,
   "fields": {
     "name": "Ưng Quá Chừng",
-    "stream_count": 72,
+    "stream_count": 7503,
     "cover_path": "song_cover/UngQuaChung.jpg",
     "audio_file": "audio/UngQuaChung-AMEE-8783624.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 95,
+    "release_day": "2023-03-13",
+    "duration": 245,
     "album": null,
     "artists": [
       10
@@ -366,12 +404,12 @@
   "pk": 6,
   "fields": {
     "name": "Waiting For You",
-    "stream_count": 836,
+    "stream_count": 86425,
     "cover_path": "song_cover/WaitingForYou.jpg",
     "audio_file": "audio/WaitingForYou-MONOOnionn-7733882.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 85,
+    "release_day": "2022-08-18",
+    "duration": 265,
     "album": null,
     "artists": [
       6
@@ -406,13 +444,13 @@
   "pk": 8,
   "fields": {
     "name": "Hãy Trao Cho Anh",
-    "stream_count": 630,
+    "stream_count": 8624,
     "cover_path": "song_cover/HayTraoChoAnh.jpg",
     "audio_file": "audio/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 75,
-    "album": null,
+    "release_day": "2019-01-07",
+    "duration": 268,
+    "album": 4,
     "artists": [
       1
     ],
@@ -426,12 +464,12 @@
   "pk": 9,
   "fields": {
     "name": "Nàng Thơ",
-    "stream_count": 133,
+    "stream_count": 1435,
     "cover_path": "song_cover/NangTho.jpg",
     "audio_file": "audio/NangTho-HoangDung-6413381.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 546,
+    "release_day": "2020-08-03",
+    "duration": 254,
     "album": null,
     "artists": [
       12
@@ -446,12 +484,12 @@
   "pk": 10,
   "fields": {
     "name": "Đi Đu Đưa Đi",
-    "stream_count": 836,
+    "stream_count": 8365,
     "cover_path": "song_cover/DiDuDuaDi.jpg",
     "audio_file": "audio/DiDuDuaDi-BichPhuong-6059493.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 673,
+    "release_day": "2019-08-28",
+    "duration": 223,
     "album": null,
     "artists": [
       13
@@ -466,12 +504,12 @@
   "pk": 11,
   "fields": {
     "name": "Một Cú Lừa",
-    "stream_count": 746,
+    "stream_count": 7464,
     "cover_path": "song_cover/MotCuLua.jpg",
     "audio_file": "audio/MotCuLua-BichPhuong-6288019.mp3",
     "audio_link": null,
-    "release_day": "2023-04-24",
-    "duration": 654,
+    "release_day": "2020-05-31",
+    "duration": 210,
     "album": null,
     "artists": [
       13
@@ -486,12 +524,12 @@
   "pk": 12,
   "fields": {
     "name": "Ngôi Sao Cô Đơn",
-    "stream_count": 46,
+    "stream_count": 4608,
     "cover_path": "song_cover/NgoiSaoCoDon.jpg",
     "audio_file": "audio/NgoiSaoCoDon-JackJ97-7611601.mp3",
     "audio_link": null,
-    "release_day": "2023-04-19",
-    "duration": 635,
+    "release_day": "2022-07-19",
+    "duration": 304,
     "album": null,
     "artists": [
       14
@@ -506,12 +544,12 @@
   "pk": 13,
   "fields": {
     "name": "Chuyến Xe",
-    "stream_count": 46,
+    "stream_count": 464,
     "cover_path": "song_cover/ChuyenXe.jpg",
     "audio_file": "audio/ChuyenXe-PhanManhQuynhOrange-9357348.mp3",
     "audio_link": null,
-    "release_day": "2023-04-27",
-    "duration": 734,
+    "release_day": "2023-04-26",
+    "duration": 290,
     "album": null,
     "artists": [
       15
@@ -530,8 +568,8 @@
     "cover_path": "song_cover/AnhGhetLamBanEm.jpg",
     "audio_file": "audio/AnhGhetLamBanEm-PhanManhQuynh-2664513.mp3",
     "audio_link": null,
-    "release_day": "2023-04-27",
-    "duration": 662,
+    "release_day": "2014-10-14",
+    "duration": 270,
     "album": null,
     "artists": [
       15
@@ -550,8 +588,8 @@
     "cover_path": "song_cover/CoChangTraiVietLenCay.jpg",
     "audio_file": "audio/CoChangTraiVietLenCayMatBiecOst-PhanManhQuynh-6181112.mp3",
     "audio_link": null,
-    "release_day": "2023-04-27",
-    "duration": 636,
+    "release_day": "2019-12-11",
+    "duration": 304,
     "album": null,
     "artists": [
       15
@@ -572,7 +610,7 @@
     "audio_link": null,
     "release_day": "2023-04-27",
     "duration": 774,
-    "album": null,
+    "album": 3,
     "artists": [
       16
     ],
@@ -1160,10 +1198,230 @@
     "audio_file": "audio/SON_TUNG_M-TP__MAKING_MY_WAY__OFFICIAL_VISUALIZER.mp3",
     "audio_link": null,
     "release_day": "2023-05-05",
-    "duration": 412,
-    "album": null,
+    "duration": 258,
+    "album": 4,
     "artists": [
       1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 46,
+  "fields": {
+    "name": "All Eyes On Me",
+    "stream_count": 29820,
+    "cover_path": "song_cover/AllEyesOnMe.jpg",
+    "audio_file": "audio/AllEyesOnMe-JISOO-8949070.mp3",
+    "audio_link": null,
+    "release_day": "2023-03-31",
+    "duration": 163,
+    "album": 3,
+    "artists": [
+      16
+    ],
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 47,
+  "fields": {
+    "name": "Cơn Mưa Ngang Qua",
+    "stream_count": 87920,
+    "cover_path": "song_cover/ConMuaNgangQua.jpg",
+    "audio_file": "audio/ConMuaNgangQua-SonTungMTP-2944936.mp3",
+    "audio_link": null,
+    "release_day": "2013-04-14",
+    "duration": 234,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 48,
+  "fields": {
+    "name": "Anh Sai Rồi",
+    "stream_count": 2696,
+    "cover_path": "song_cover/AnhSaiRoi.jpg",
+    "audio_file": "audio/AnhSaiRoi-MTP-2647024.mp3",
+    "audio_link": null,
+    "release_day": "2012-05-12",
+    "duration": 262,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 49,
+  "fields": {
+    "name": "Nắng Ấm Xa Dần",
+    "stream_count": 3598,
+    "cover_path": "song_cover/NangAmXaDan.jpg",
+    "audio_file": "audio/Nang-Am-Xa-Dan-MTP.mp3",
+    "audio_link": null,
+    "release_day": "2016-07-25",
+    "duration": 192,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 50,
+  "fields": {
+    "name": "Lạc Trôi",
+    "stream_count": 8650,
+    "cover_path": "song_cover/LacTroi.jpg",
+    "audio_file": "audio/LacTroiTripleDRemix-SonTungMTP-5164670.mp3",
+    "audio_link": null,
+    "release_day": "2017-01-01",
+    "duration": 261,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 51,
+  "fields": {
+    "name": "Chúng Ta Không Thuộc Về Nhau",
+    "stream_count": 9742,
+    "cover_path": "song_cover/ChungTaKhongThuocVeNhau.jpg",
+    "audio_file": "audio/ChungTaKhongThuocVeNhau-SonTungMTP-4528181.mp3",
+    "audio_link": null,
+    "release_day": "2016-08-03",
+    "duration": 233,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 52,
+  "fields": {
+    "name": "Nơi Này Có Anh",
+    "stream_count": 20984,
+    "cover_path": "song_cover/NoiNayCoAnh.jpg",
+    "audio_file": "audio/Noi-Nay-Co-Anh-Masew-Bootleg-Son-Tung-M-TP-Masew.mp3",
+    "audio_link": null,
+    "release_day": "2017-02-14",
+    "duration": 257,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 53,
+  "fields": {
+    "name": "Buông Đôi Tay Nhau Ra",
+    "stream_count": 8724,
+    "cover_path": "song_cover/BuongDoiTayNhauRa.jpg",
+    "audio_file": "audio/BuongDoiTayNhauRa-SonTungMTP-4184408.mp3",
+    "audio_link": null,
+    "release_day": "2015-12-02",
+    "duration": 226,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 54,
+  "fields": {
+    "name": "Không Phải Dạng Vừa Đâu",
+    "stream_count": 5928,
+    "cover_path": "song_cover/KhongPhaiDangVuaDau.jpg",
+    "audio_file": "audio/KhongPhaiDangVuaDau-SonTungMTP-3753840.mp3",
+    "audio_link": null,
+    "release_day": "2014-04-24",
+    "duration": 246,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 55,
+  "fields": {
+    "name": "Tại Vì Sao",
+    "stream_count": 2740,
+    "cover_path": "song_cover/TaiViSao.jpg",
+    "audio_file": "audio/TaiViSao-MCK-7963973.mp3",
+    "audio_link": null,
+    "release_day": "2022-09-23",
+    "duration": 231,
+    "album": null,
+    "artists": [
+      20
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 56,
+  "fields": {
+    "name": "Đưa Em Về Nhà",
+    "stream_count": 23593,
+    "cover_path": "song_cover/DuaEmVeNha.jpg",
+    "audio_file": "audio/DuaEmVeNhaa-GREYDChillies-9214678.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-24",
+    "duration": 240,
+    "album": null,
+    "artists": [
+      21
     ],
     "genres": [
       1
@@ -2151,19 +2409,12 @@
   }
 },
 {
-  "model": "music.userinfo",
-  "pk": 1,
+  "model": "music.listenhistory",
+  "pk": 102,
   "fields": {
-    "user": 7,
-    "avatar": "https://s3.ap-northeast-1.amazonaws.com/h.files/images/1682162862941_CPhAyKYGsx.jpeg"
-  }
-},
-{
-  "model": "music.userinfo",
-  "pk": 2,
-  "fields": {
-    "user": 6,
-    "avatar": "https://s3.ap-northeast-1.amazonaws.com/h.files/images/1683809231914_X3EOrY3gym.png"
+    "stream_date": "2023-05-13T10:56:10.638Z",
+    "song": 56,
+    "owner": 6
   }
 }
 ]

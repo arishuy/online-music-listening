@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.http import JsonResponse
 from django.urls import reverse
 from django.views import generic
-from .models import Song, Playlist, Genre, ListenHistory, Album, Artist, UserInfo
+from .models import Song, Playlist, Genre, ListenHistory, Album, Artist
 import random
 from django.views.decorators.csrf import csrf_exempt
 
@@ -19,17 +19,9 @@ from datetime import datetime
 def music(request):
     return HttpResponse("Hello, world. You're at the music index.")
 
-def get_avatar(request):
-    user = request.user
-    if user.id is not None:
-        avatar = UserInfo.objects.get(user=user).avatar
-    else:
-        avatar = None
-    return avatar
-
 def homepage(request):
     # get avatar user from Userinfo
-    avatar = get_avatar(request)
+
     songs = Song.objects.all()
     songJson = get_songJson(songs.order_by('-release_day'))
     latest_songs = Song.objects.order_by('-release_day')[:10]
@@ -44,13 +36,13 @@ def homepage(request):
         'latest_songs': latest_songs,
         'suggested_songs': suggested_songs,
         'latest_albums': latest_albums,
-        'avatar': avatar,
+        
     }
     return render(request, 'homepage.html', context)
 
 
 def album(request, album_id):
-    avatar = get_avatar(request)
+
     
     album = Album.objects.get(id=album_id)
     songs = Song.objects.filter(album__id=album_id)
@@ -59,13 +51,13 @@ def album(request, album_id):
         'album': album,
         'songJson': json.dumps(songJson),
         'songs': songs,
-        'avatar': avatar
+        
     }
     return render(request, 'album.html', context)
 
 
 def chart(request):
-    avatar = get_avatar(request)
+
 
     # get 10 songs with highest listen count
     songs = Song.objects.order_by('-stream_count')[:10]
@@ -74,13 +66,13 @@ def chart(request):
     context = {
         'songs': json.dumps(songJson),
         'songs': songs,
-        'avatar': avatar
+        
     }
     return render(request, 'chart.html', context)
 
 
 def recent(request):
-    avatar = get_avatar(request)
+
 
     user = request.user
     if user.id is not None:
@@ -88,21 +80,21 @@ def recent(request):
             owner__id=user.id).order_by('-stream_date')[:10]
         recent_listenJson = get_songJson(
             list(map(lambda x: x.song, recent_listen)))
-        return render(request, 'recentlisten.html', {'recent_listen': recent_listen, 'songJson': json.dumps(recent_listenJson), 'avatar': avatar})
+        return render(request, 'recentlisten.html', {'recent_listen': recent_listen, 'songJson': json.dumps(recent_listenJson), })
     else:
         return HttpResponseRedirect(reverse('homepage'))
 
 
 @csrf_exempt
 def playlists(request):
-    avatar = get_avatar(request)
+
 
     # get by user
     if request.method == "GET" and request.user.is_authenticated:
         playlists = Playlist.objects.filter(owner=request.user).values()
         context = {
             'playlists': playlists,
-        'avatar': avatar
+        
         }
         return render(request, 'playlists.html', context)
     if request.method == "POST" and request.user.is_authenticated:
@@ -115,16 +107,16 @@ def playlists(request):
 
 
 def detail(request, song_id):
-    avatar = get_avatar(request)
+
 
     song = Song.objects.get(id=song_id)
     songJson = get_songJson([song])
     songJson = json.dumps(songJson)
-    return render(request, 'detailsong.html', {'song': song, 'songJson': songJson, 'avatar': avatar})
+    return render(request, 'detailsong.html', {'song': song, 'songJson': songJson, })
 
 
 def detail_playlist(request, playlist_id):
-    avatar = get_avatar(request)
+
 
     # get all song in playlist
     query = Playlist.objects.get(id=playlist_id)
@@ -134,13 +126,13 @@ def detail_playlist(request, playlist_id):
         'playlist_id': playlist_id,
         'songs': songs,
         'songJson': json.dumps(songJson),
-        'avatar': avatar
+        
     }
     return render(request, 'detailplaylist.html', context)
 
 
 def search(request):
-    avatar = get_avatar(request)
+
 
     allgenres = Genre.objects.all()
     listgenre = list(map(lambda genre: {
@@ -149,7 +141,7 @@ def search(request):
     }, allgenres))
     context = {
         'allgenres': listgenre,
-        'avatar': avatar
+        
     }
     if request.method == "POST":
         genre_id = request.POST["genre"]
@@ -166,7 +158,7 @@ def search(request):
 
 @csrf_exempt
 def stream(request):
-    avatar = get_avatar(request)
+
 
     if request.method == 'POST':
         song_id = request.POST['song_id']
@@ -186,7 +178,7 @@ def stream(request):
 
 @csrf_exempt
 def playlistsBySong(request, song_id):
-    avatar = get_avatar(request)
+
 
     if request.method == "GET" and request.user.is_authenticated:
         playlists = Playlist.objects.filter(owner=request.user)
@@ -220,7 +212,7 @@ def playlistsBySong(request, song_id):
 
 
 def artist(request, artist_id):
-    avatar = get_avatar(request)
+
 
     artist = Artist.objects.get(pk=artist_id)
     songs = Song.objects.filter(artists__id=artist_id)
@@ -234,13 +226,13 @@ def artist(request, artist_id):
         'popular_songs': popular_songs,
         'latest_albums': latest_albums,
         'songJson': json.dumps(songJson),
-        'avatar': avatar
+        
     }
     return render(request, 'artist.html', context)
 
 
 def song_in_playlist(request, playlist_id, song_id):
-    avatar = get_avatar(request)
+
     if request.method == 'POST':
         song = Song.objects.get(pk=song_id)
         playlist = Playlist.objects.get(pk=playlist_id)
@@ -249,12 +241,12 @@ def song_in_playlist(request, playlist_id, song_id):
             playlist.save()
         return HttpResponseRedirect(
             reverse('detail_playlist', args=(playlist_id,), context={
-                'avatar': avatar,
+                
             }))
     return HttpResponseRedirect(
         reverse('detail_playlist', args=(playlist_id,),
                 context={
-                'avatar': avatar,
+                
             }))
 
 
