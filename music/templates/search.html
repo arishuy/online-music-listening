@@ -1,0 +1,59 @@
+{% extends "master.html" %} {% block title %} Search {% endblock %}
+{% block content %}
+{% include 'navbar.html' %}
+
+<div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
+
+  {% include 'header.html' %}
+
+  <div class="main-content">
+    <div class="head-group-title">Tìm kiếm bài hát</div>
+    <div class="search-form">
+      <form action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <div class="row p-3">
+          <div class="col-md-5">
+            <select name="genre" class="form-select" aria-label="Default select example">
+              <option selected>Chọn thể loại nhạc</option>
+              {% for genre in allgenres %}
+              <option value="{{genre.id}}" {% if genre_id and genre_id == genre.id %} selected {% endif %}>
+                {{genre.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-5">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Tên bài hát</span>
+              <input name="text" type="text" class="form-control" placeholder="Nhập gì đó..." aria-label="search"
+                {% if text %} value="{{text}}" {% endif %} aria-describedby="addon-wrapping">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+          </div>
+          <!-- <input type="text" name="q" placeholder="Nhập tên bài hát" />
+        <button type="submit">Tìm kiếm</button> -->
+      </form>
+    </div>
+    <div class="search-results">
+      <div class="list-musics" style="width: 78vw">
+        {% if songs %}
+        {% for song in songs%}
+        <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
+          <div id="{{ song.id }}" class="music-card">
+            <div id="{{ song.id }}" class="music-img">
+              <img id="{{ song.id }}" src="{{ song.get_cover_path }}" alt="avatar">
+            </div>
+            <div id="{{ song.id }}" class="music-info">
+              <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
+              <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

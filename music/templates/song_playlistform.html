@@ -1,0 +1,52 @@
+<div class="modal fade" id="song_playlistform" tabindex="-1" aria-labelledby="song_playlistform" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Playlists</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="save()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let url
+    showPlaylists = (song_id) => {
+        url = document.getElementById(`url-${song_id}`).getAttribute('data-url');
+        $.ajax({
+            type: "GET",
+            url: url,
+            success: (data) => {
+                document.querySelector(".modal-body").innerHTML = data['playlists'].map(playlist =>
+                        `<input type="checkbox" name="playlists[]" value="${playlist.id}"
+                         ${playlist.included ? 'checked' : ''} >
+                        <label for="${playlist.id}">${playlist.name}</label>`)
+                    .join('<br>');
+            }
+        })
+    }
+
+    save = () => {
+        var playlists = []
+        $(":checked").each(function () {
+            playlists.push($(this).val());
+        });
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {
+                'playlists': playlists
+            },
+            success: (data) => {
+                $('#song_playlistform').modal('hide');
+            }
+        })
+    }
+</script>

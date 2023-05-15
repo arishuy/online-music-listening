@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.shortcuts import redirect
-from .forms import NewUserForm
+from .forms import NewUserForm, PasswordChangeForm
 
 # Create your views here.
 
@@ -40,3 +40,16 @@ def register_request(request):
             request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
     return render(request=request, template_name="register.html", context={"register_form": form})
+
+def change_password(request):
+    user = request.user
+    if request.method == "POST":
+        form = PasswordChangeForm(user, request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Doi mat khau thanh cong!")
+            return redirect('/login')
+        else:
+            messages.error(request, "Doi mat khau that bai. Thong tin khong hop le!")
+    form = PasswordChangeForm(user)
+    return render(request, 'change_password.html', {'form': form})

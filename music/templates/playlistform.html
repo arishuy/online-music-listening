@@ -1,0 +1,35 @@
+<div class="modal fade" id="playlistform" tabindex="-1" aria-labelledby="playlistform" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Playlist</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" placeholder="Playlist Name" id="name" />
+                <input type="hidden" id="url" data-url="{% url 'playlists' %}" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="save()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    save = () => {
+        const name = document.getElementById('name').value;
+        const url = document.getElementById('url').getAttribute('data-url').value;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {
+                name: name
+            },
+            success: (data) => {
+                location.reload();
+            }
+        })
+    }
+</script>

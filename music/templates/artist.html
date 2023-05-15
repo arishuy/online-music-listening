@@ -1,0 +1,267 @@
+{% extends "master.html" %}
+{% block title %}
+{{artist.name}}
+{% endblock %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<div style="max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
+    {% include 'header.html' %}
+    <div class="cover-container" style="position: relative; color: white; height: 350px; width: 80vw;">
+        <img src="{{ artist.cover_path.url }}" alt="" style="height: 100%; width: 100%; margin:auto; position: relative;">
+        <div class="artist-name-banner" style="position: absolute; top:50%; transform: translateY(-50%); left: 40px; font-size: 80px; font-weight: 700;">{{ artist.name}}</div>
+    </div>
+    <div class="music-container" style="width: 100%; position: relative; margin: 20px 10px;">
+        <div class="music-popular-container" style="margin: 10px; color: white">
+            <div class="head-group-title" style="font-size: 30px; height: 40px; position: absolute; ">Phổ biến</div>
+            <div class="group-song d-flex justify-content-center" style="margin-top: 40px;">
+                <div class="list-songs pt-3" style="width: 78vw">
+                  <table class="table table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col" style="text-align: left;">Tên bài hát</th>
+                        <th scope="col">Lượt nghe</th>
+                        <!-- <th scope="col">Ngày phát hành</th> -->
+                        <th scope="col">Thời lượng</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for song in popular_songs %}
+                      <tr onclick="playMusic({{ song.id }})">
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td style="text-align: left;">
+                          <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
+                          <img src="{{ song.get_cover_path }}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+                          {{song.name}}
+                          </a>
+                        </td>
+                        <td>{{song.stream_count}}</td>
+                        <!-- <td>{{song.release_day}}</td> -->
+                        <td>{{song.duration}}</td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>
+                </div>
+                      
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="head-group-title">Album gần đây</div>
+        <div class="list-musics" style="width: 78vw">
+        {% if latest_albums %}
+            {% for album in latest_albums %}
+                <!-- {% with cover_path="../../media/album_cover/"|add:album.cover_path %} -->
+                <a href="{% url 'album' album.id %}" style="text-decoration: none">
+                <div id="{{ album.id }}" class="music-card">
+                <div id="{{ album.id }}" class="music-img">
+                    <img id="{{ album.id }}" src="{{ album.cover_path.url }}" alt="avatar">
+                </div>
+                    <div id="{{ album.id }}" class="music-info">
+                        <div id="{{ album.id }}" class="music-name">{{ album.name }}</div>
+                        <div id="{{ album.id }}" class="music-singer">{{ album.artist.name }}</div>
+                    </div>
+                </div>
+                </a>
+                {% endwith %}
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+
+    <div>
+        <div class="head-group-title">Tất cả bài hát</div>
+        <div class="list-musics" style="width: 78vw">
+            {% if songs %}
+                {% for song in songs %}
+                    <!-- {% with cover_path="../../media/song_cover/"|add:song.cover_path %} -->
+                    <div id="{{ song.id }}" class="music-card">
+                    <div id="{{ song.id }}" class="music-img">
+                        <img id="{{ song.id }}" src="{{ song.get_cover_path }}" alt="avatar">
+                    </div>
+                        <div id="{{ song.id }}" class="music-info">
+                            <div id="{{ song.id }}" class="music-name">{{ song.name }}</div>
+                            <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-play" onclick="playMusic({{ song.id }})" style="font-size: 12px;"></i>
+                            <input type="hidden" id="url-{{song.id}}" data-url="{% url 'song_playlists' song.id %}" />
+                            <button class="btn-add-playlist" type="button" data-bs-toggle="modal" data-bs-target="#song_playlistform"
+                              onclick="showPlaylists({{ song.id }})">
+                              <i class="fas fa-plus" style="font-size: 12px;"></i>
+                          </div>
+                    </div>
+                    {% endwith %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="pb-5">
+        <div class="head-group-title" >About</div>
+        <div style="margin-right: 20px; border: 1px groove burlywood; margin: 10px; background-color: var(--bs-table-bg); border-radius: 8px;">
+            <p style="text-align: justify; margin: 15px; font: 20px Ariel, sans-serif; color: whitesmoke"> {{ artist.about }}</p>
+        </div>
+        
+    </div>
+    <div class="music-listennings" style="display: none">
+        <div class="music-container">
+          <div class="music-img">
+            <img id="music-img" src="https://yt3.googleusercontent.com/vCqmJ7cdUYpvR0bqLpWIe8ktaor4QafQLlfQyTuZy-M9W_YafT8Wo9kdsKL2St1BrkMRpVSJgA=s900-c-k-c0x00ffffff-no-rj" alt="avatar">
+          </div>
+          <div class="music-info">
+            <div id="music-name" class="music-name">Bài hát 1</div>
+            <div id="artist" class="music-singer">Ca sĩ 1</div>
+          </div>
+        </div>
+    
+        <div class="music-control">
+          <div class="music-control-btn">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="music-control-btn">
+            <i class="fas fa-random"></i>
+          </div>
+          <div class="music-control-btn">
+            <i id="previousbtn" class="fas fa-step-backward"></i>
+          </div>
+          <div class="music-control-btn">
+            <i id="playbtn" class="fas fa-play"></i>
+          </div>
+          <div class="music-control-btn">
+            <i id="nextbtn" class="fas fa-step-forward"></i>
+          </div>
+        </div>
+    
+        <div class="progress-bar">
+          <div id="timeleft" class="time-left">00:00</div>
+          <input type="range" class="form-range" id="progressBar">
+          <div id="timeright" class="time-right"></div>
+        </div>
+    
+        <div class="music-control-volume">
+          <i class="fas fa-volume-up"></i>
+          <input type="range" class="form-range" id="volumeBar">
+        </div>
+      </div>
+</div>
+<script>
+    const songs = JSON.parse("{{songJson|escapejs}}");
+    var currIdx = 0;
+    var isPlaying = false;
+    const musicName = document.getElementById('music-name');
+    const artist = document.getElementById('artist');
+    const img = document.getElementById('music-img');
+    const audio = new Audio(songs ? songs[currIdx].audio : "");
+    const playBtn = document.getElementById('playbtn');
+    const progressBar = document.getElementById('progressBar');
+    const timeleft = document.getElementById('timeleft');
+    const timeright = document.getElementById('timeright');
+    const volumeBar = document.getElementById('volumeBar');
+    const nextBtn = document.getElementById('nextbtn');
+    const previousBtn = document.getElementById('previousbtn');
+    const musicCards = document.getElementsByClassName('music-card');
+    const musicListennings = document.querySelector(".music-listennings");
+    let mouseDownOnSlider = false;
+  
+    playMusic = (id) => {
+    musicListennings.style.display = "flex";
+      currIdx = songs.findIndex(song => song.id == id)
+      audio.src = songs[currIdx].audio;
+      img.src = songs[currIdx].cover_path;
+      playBtn.className = "fas fa-pause";
+      isPlaying = true;
+      audio.play();
+    }
+    audio.addEventListener('ended', () => {
+      current_id = songs[currIdx].id
+      $.ajax(
+      {
+        type:"POST",
+        url: "{% url 'stream' %}",
+        data: {
+          song_id: current_id
+        },
+        success: function(data) {
+          console.log('Done')
+        }
+      })
+    })
+  
+    nextBtn.addEventListener("click", () => {
+      if (currIdx < songs.length - 1) {
+        currIdx++;
+      } else {
+        currIdx = 0;
+      }
+      audio.src = songs[currIdx].audio;
+      img.src = songs[currIdx].cover_path;
+      if (isPlaying)
+        audio.play();
+    })
+  
+    previousBtn.addEventListener("click", () => {
+      if (currIdx > 0) {
+        currIdx--;
+      } else {
+        currIdx = songs.length - 1;
+      }
+      audio.src = songs[currIdx].audio;
+      img.src = songs[currIdx].cover_path;
+      if (isPlaying)
+        audio.play();
+    })
+  
+    audio.addEventListener("loadeddata", () => {
+      progressBar.value = 0;
+      timeright.innerHTML = formatTime(audio.duration);
+      audio.volume = volumeBar.value / 100;
+      musicName.innerHTML = songs[currIdx].name;
+      img.src = songs[currIdx].cover_path;
+      artist.innerHTML = songs[currIdx].artists.map(artist => artist.name).join(", ");
+    });
+    audio.addEventListener("timeupdate", () => {
+      if (!mouseDownOnSlider) {
+        progressBar.value = audio.currentTime / audio.duration * 100;
+        timeleft.innerHTML = formatTime(audio.currentTime);
+      }
+    });
+    audio.addEventListener("ended", () => {
+      nextBtn.click();
+    });
+  
+    playBtn.addEventListener("click", () => {
+      audio.paused ? audio.play() : audio.pause();
+      isPlaying = !audio.paused;
+      playBtn.className = audio.paused ? "fas fa-play" : "fas fa-pause";
+    });
+  
+    progressBar.addEventListener("change", () => {
+      audio.currentTime = (audio.duration || 0) * progressBar.value / 100;
+    });
+    progressBar.addEventListener("mousedown", () => {
+      mouseDownOnSlider = true;
+    });
+    progressBar.addEventListener("mouseup", () => {
+      mouseDownOnSlider = false;
+    });
+  
+    volumeBar.addEventListener("change", () => {
+      audio.volume = volumeBar.value / 100;
+    });
+  
+    function formatTime(seconds) {
+      minutes = Math.floor(seconds / 60);
+      minutes = (minutes >= 10) ? minutes : "0" + minutes;
+      seconds = Math.floor(seconds % 60);
+      seconds = (seconds >= 10) ? seconds : "0" + seconds;
+      return minutes + ":" + seconds;
+    }
+  </script>
+
+{% include 'song_playlistform.html' %}
+{% endblock %}

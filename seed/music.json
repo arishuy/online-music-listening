@@ -1,0 +1,2420 @@
+[
+{
+  "model": "music.artist",
+  "pk": 1,
+  "fields": {
+    "name": "Sơn Tùng MTP",
+    "about": "The most popular artist of Vpop",
+    "cover_path": "artist_cover/sontungmtp.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 2,
+  "fields": {
+    "name": "Justin Bieber",
+    "about": "Justin's recent album JUSTICE includes the chart-topping global smashes \"Peaches feat. Daniel Caesar & Giveon\", \"Holy\" feat. Chance The Rapper, \"Lonely\" feat. Benny Blanco, \"Anyone,\" and \"Hold On.\" The album also features guest appearances from The Kid LAROI, Dominic Fike, Khalid, Beam, Burna Boy, Lil Uzi Vert, Jaden, Quavo + more. The JUSTICE campaign has reasserted Justin's dominance as a live performer; from his triumphant return to the live stage with his T-Mobile-sponsored NYE livestream co",
+    "cover_path": "artist_cover/justinbeiber.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 3,
+  "fields": {
+    "name": "The Weeknd",
+    "about": "The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of the most successful & significant artists of the modern era. 2012’s 3X platinum  collated 3 breakout mixtapes—House of Balloons, Thursday & Echoes of Silence—into his 1st chart-topping collection followed by his debut LP  in 2013. Two years later, “Earned It (Fifty Shades of Grey)” won “Best R&B Performance” &",
+    "cover_path": "artist_cover/theweeknd.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 4,
+  "fields": {
+    "name": "Taylor Swift",
+    "about": "Taylor Swift is that rarest of pop phenomena: a superstar who managed to completely cross over from country to the mainstream. Others have performed similar moves -- notably,  and  both became enduring pop culture icons based on their 1970s work -- but Swift shed her country roots like they were a second skin; it was a necessary molting to reveal she was perhaps the sharpest, savviest populist singer/songwriter of her generation, one who could harness the zeitgeist, make it personal and, just as impressively, perform the reverse. These skills were evident on her earliest hits, especially the neo-tribute \"Tim McGraw,\" but her second album, 2008's Fearless, showcased a songwriter discovering who she was and, in the process, finding a mass audience. Fearless wound up having considerable legs not only in the U.S., where it racked up six platinum singles on the strength of the Top Ten hits \"Love Story\" and \"You Belong with Me,\" but throughout the world, performing particularly well in the U.K., Canada, and Australia. Speak Now, delivered almost two years later, consolidated that success and moved Swift into the stratosphere of superstardom. Her popularity only increased over her next three albums -- Red (2012), 1989 (2014), Reputation (2017) -- and found her moving assuredly into a pop realm where she already belonged. Even when she scaled back her approach with 2020's stripped-down sibling releases folklore and Evermore, she remained atop the pop world, a position she maintained with re-recordings of her back catalog along with Midnights, a moody album released in 2022.",
+    "cover_path": "artist_cover/taylorswift.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 5,
+  "fields": {
+    "name": "Adele",
+    "about": "Since the release of her debut album ‘19’, in 2008, Adele has become one of the most successful British artists of her generation. Her critically acclaimed debut album garnered over 6.5 million sales worldwide whilst the album has gone 8x Platinum in the UK. At the age of 19, Adele became the first-ever recipient of the BRITS Critics’ Choice Award. The accolades received by Adele only multiplied as the following year saw her claim Best New Artist and Best Female Pop Vocal Performance at the GRAMMYs.  As Adele embarks on her next chapter, she holds 15 GRAMMYs, 9 BRITS, 18 Billboard Awards, 2 IVORs, 1 Golden Globe, 1 Academy Award and 5 American Music Awards under her belt. The British singer-songwriter has received 11.5 million Album sales in the UK alone and 48 million Worldwide Album sales.",
+    "cover_path": "artist_cover/adele.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 6,
+  "fields": {
+    "name": "MONO",
+    "about": "MONO (Nguyen Viet Hoang), who was born in 21/01/2000, is an artist representing dynamic but profound young people. MONO constantly explores new life experiences or perspectives by immersing in these. Not choosing to be the center of a game or a story, MONO chooses to take it in, in order to appreciate it as well as deliver everyone the most genuine and meaningful perspectives. Bringing a poly-dimensional view of the human, nature and living, MONO believes that only when we sincerely become one with the subject then we could deeply understand and touch it. ‘MONO’ also represents the uncompromising determination of his artistic journey and belief.",
+    "cover_path": "artist_cover/mono.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 7,
+  "fields": {
+    "name": "Billie Eilish",
+    "about": "With the release of her highly anticipated sophomore album ‘Happier Than Ever,’ the 19-year-old Los Angeles native remains one of the biggest stars to emerge in the 21st century. Since the release of her debut single “ocean eyes” in 2015, Eilish continues to shatter the ceiling of music with her genre-defying sound. Fast forward from her humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? debuted at No. 1 on the Billboard 200 in the U.S as well as 17 additional countries around the world upon release in 2019, and was the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? was written, produced and recorded entirely by Billie Eilish and brother FINNEAS in their childhood home of Los Angeles. Billie Eilish went on to make history as the youngest artist to receive nominations and win in all the major categories at the 62nd GRAMMY® Awards, receiving an award for Best New Artist, Album of the Year, Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie Eilish is also the youngest artist to write and record an official James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish was nominated for four additional awards at the 63rd Annual GRAMMY Awards in 2021, and took home both Record of the Year for 'everything i wanted,' and Best Song Written For Visual Media for 'No Time To Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by Billie and her brother FINNEAS, who also produced the album.",
+    "cover_path": "artist_cover/billieeilish.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 8,
+  "fields": {
+    "name": "H-Kray",
+    "about": "Nghệ sĩ mới",
+    "cover_path": "artist_cover/hkray.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 9,
+  "fields": {
+    "name": "HIEUTHUHAI",
+    "about": "Nghệ sĩ Việt Nam",
+    "cover_path": "artist_cover/hieuthuhai.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 10,
+  "fields": {
+    "name": "Amee",
+    "about": "Nghệ sĩ Việt Nam",
+    "cover_path": "artist_cover/amee.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 11,
+  "fields": {
+    "name": "tlinh",
+    "about": "Nghệ sĩ Việt Nam",
+    "cover_path": "artist_cover/tlinh.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 12,
+  "fields": {
+    "name": "Hoàng Dũng",
+    "about": "N",
+    "cover_path": "artist_cover/hoangdung.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 13,
+  "fields": {
+    "name": "Bích Phương",
+    "about": "Nghệ sĩ mới",
+    "cover_path": "artist_cover/bichphuong.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 14,
+  "fields": {
+    "name": "Jack",
+    "about": "Nghệ sĩ mới",
+    "cover_path": "artist_cover/jack.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 15,
+  "fields": {
+    "name": "Phan Mạnh Quỳnh",
+    "about": "Nghệ sĩ mới",
+    "cover_path": "artist_cover/phanmanhquynh.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 16,
+  "fields": {
+    "name": "JISOO",
+    "about": "Nghệ sĩ Hàn Quốc",
+    "cover_path": "artist_cover/jisoo.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 17,
+  "fields": {
+    "name": "SZA",
+    "about": "A distinct force in contemporary R&B, SZA has set herself apart with a vulnerable and casually poetic songwriting style and a voice conveying a multitude of emotions with subtle twists and turns. She established herself with a trio of spaced-out EPs and collaborations with the likes of , , and , and continued her ascent with Ctrl (2017), a Top Ten album that resulted in five Grammy nominations, including Best New Artist. These accolades proved to be no fluke, as SZA earned almost as many Grammy nominations the next year by assisting  with \"All the Stars,\" a Top Ten hit, only one in a slew of platinum singles she has scored as a headliner or featured artist. She racked up five more Top 40 hits before releasing her second album, SOS (2022).",
+    "cover_path": "artist_cover/sza_JIDFFvH.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 18,
+  "fields": {
+    "name": "Lana Del Rey",
+    "about": "Lana Del Rey envisioned a Southern California dream world constructed out of sad girls and bad boys, manufactured melancholy, and genuine glamour, and then she came to embody this fantasy. It was a stylized noir-pop vibe she conjured from the start on her 2012 debut, Born to Die. Following a hit remix of her single \"Summertime Sadness,\" she steadily gained not only popularity but respect; her second album, 2014's Ultraviolence, received positive reviews that accompanied its sales, and her imitators (of which there were many) became merely an alluring accessory. With subsequent albums like 2019's Grammy-nominated Norman Fucking Rockwell!, 2021's Blue Banisters, and 2023's Did You Know That There's a Tunnel Under Ocean Blvd, Del Rey grew more and more into the ideal she intended to be: a damaged torch singer designed as the tragic romantic icon for her age.  Lana Del Rey's journey to this stardom was a long, steady climb. Born Elizabeth Woolridge Grant in New York City to a pair of wealthy parents, she was raised in Lake Placid, not starting to pursue music until she was out of high school and living with her aunt and uncle on Long Island. Her uncle taught her how to play guitar and soon she was writing songs and playing New York clubs, sometimes under the name . While she attended Fordham University, she continued to play music and she started getting serious around 2005. In April of that year, a CD of originals was registered under her birth name with the U.S. Copyright Office and recorded elsewhere, finishing up an unreleased folky album called Sirens under the name May Jailer.",
+    "cover_path": "artist_cover/lanadelrey.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 19,
+  "fields": {
+    "name": "Harry Styles",
+    "about": "Harry Styles’ third solo album, Harry's House, is breaking new ground for one of the most creative forces in pop music, a star who keeps refusing to stand still. It’s a deeply personal statement from an artist who has never sounded this joyous, this confident, this fearless in facing the future. Harry’s House debuted at Number One on the Billboard Charts and moved 521,00 equivalent album units in its first week. Harry's House is currently the best-selling album of 2022. “As It Was,” the critically acclaimed lead single, dropped on April 1st and became an instant record-breaking hit, debuting at Number One in both the U.S. and the U.K. “As It Was” became the most-streamed song in the U.S. in a single day in Spotify history and the most-streamed song globally in a single day of 2022. The British singer-songwriter dropped his blockbuster sophomore album Fine Line on Columbia Records in December 2019. It combined critical acclaim with record-setting commercial success, debuting at Number One on the Billboard charts. “Watermelon Sugar” became his first Number One single, winning Styles his first Grammy, for Best Pop Solo Performance and a 2021 BRIT Award for Best British Single. When Rolling Stone released its comprehensive list of the 500 Greatest Albums of All Time, Fine Line was the most recent album honored, taking its place in history. Harry is taking Love on Tour worldwide through 2022, in the aftermath of his historic Coachella set, in support of Harry’s House.",
+    "cover_path": "artist_cover/harrystyles.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 20,
+  "fields": {
+    "name": "RPT MCK",
+    "about": "Rapper",
+    "cover_path": "artist_cover/RPTMCK_8EJjSDt.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 21,
+  "fields": {
+    "name": "GREY D",
+    "about": "Nghệ sĩ mới",
+    "cover_path": "artist_cover/GREYD.jpg"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 1,
+  "fields": {
+    "name": "VPOP"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 2,
+  "fields": {
+    "name": "KPOP"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 3,
+  "fields": {
+    "name": "R&B"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Rock"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Ballad"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Electronic"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Country"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Dance"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Jazz"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Funk"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Latin"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 14,
+  "fields": {
+    "name": "JPOP"
+  }
+},
+{
+  "model": "music.genre",
+  "pk": 15,
+  "fields": {
+    "name": "Pop"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 1,
+  "fields": {
+    "name": "Midnights",
+    "artist": 4,
+    "release_day": "2022-11-21",
+    "cover_path": "album_cover/midnights.png"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 2,
+  "fields": {
+    "name": "Harry's House",
+    "artist": 19,
+    "release_day": "2022-05-22",
+    "cover_path": "album_cover/harryshouse.jpg"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 3,
+  "fields": {
+    "name": "ME",
+    "artist": 16,
+    "release_day": "2023-03-31",
+    "cover_path": "album_cover/me_NrUzYCd.jpg"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 4,
+  "fields": {
+    "name": "MTP",
+    "artist": 1,
+    "release_day": "2023-05-13",
+    "cover_path": "album_cover/mtp.jpg"
+  }
+},
+{
+  "model": "music.song",
+  "pk": 2,
+  "fields": {
+    "name": "Em Của Ngày Hôm Qua",
+    "stream_count": 1724,
+    "cover_path": "song_cover/EmCuaNgayHomQua.png",
+    "audio_file": "audio/EmCuaNgayHomQua_Z0bLHyJ.mp3",
+    "audio_link": null,
+    "release_day": "2013-04-23",
+    "duration": 247,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 3,
+  "fields": {
+    "name": "Tấm Lòng Son",
+    "stream_count": 20,
+    "cover_path": "song_cover/TamLongSon.jpg",
+    "audio_file": "audio/TamLongSonRemix-HKrayDaiMeo-7887396.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-23",
+    "duration": 50,
+    "album": null,
+    "artists": [
+      8
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 4,
+  "fields": {
+    "name": "Không thể say",
+    "stream_count": 8766,
+    "cover_path": "song_cover/KhongTheSay.jpg",
+    "audio_file": "audio/KhongTheSay-HIEUTHUHAI-9293024.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-19",
+    "duration": 287,
+    "album": null,
+    "artists": [
+      9
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 5,
+  "fields": {
+    "name": "Ưng Quá Chừng",
+    "stream_count": 7503,
+    "cover_path": "song_cover/UngQuaChung.jpg",
+    "audio_file": "audio/UngQuaChung-AMEE-8783624.mp3",
+    "audio_link": null,
+    "release_day": "2023-03-13",
+    "duration": 245,
+    "album": null,
+    "artists": [
+      10
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 6,
+  "fields": {
+    "name": "Waiting For You",
+    "stream_count": 86425,
+    "cover_path": "song_cover/WaitingForYou.jpg",
+    "audio_file": "audio/WaitingForYou-MONOOnionn-7733882.mp3",
+    "audio_link": null,
+    "release_day": "2022-08-18",
+    "duration": 265,
+    "album": null,
+    "artists": [
+      6
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 7,
+  "fields": {
+    "name": "Nếu Lúc Đó",
+    "stream_count": 69,
+    "cover_path": "song_cover/NeuLucDo.jpg",
+    "audio_file": "audio/NeuLucDo-tlinh2pillz-8783613.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-24",
+    "duration": 63,
+    "album": null,
+    "artists": [
+      11
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 8,
+  "fields": {
+    "name": "Hãy Trao Cho Anh",
+    "stream_count": 8624,
+    "cover_path": "song_cover/HayTraoChoAnh.jpg",
+    "audio_file": "audio/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3",
+    "audio_link": null,
+    "release_day": "2019-01-07",
+    "duration": 268,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 9,
+  "fields": {
+    "name": "Nàng Thơ",
+    "stream_count": 1435,
+    "cover_path": "song_cover/NangTho.jpg",
+    "audio_file": "audio/NangTho-HoangDung-6413381.mp3",
+    "audio_link": null,
+    "release_day": "2020-08-03",
+    "duration": 254,
+    "album": null,
+    "artists": [
+      12
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 10,
+  "fields": {
+    "name": "Đi Đu Đưa Đi",
+    "stream_count": 8365,
+    "cover_path": "song_cover/DiDuDuaDi.jpg",
+    "audio_file": "audio/DiDuDuaDi-BichPhuong-6059493.mp3",
+    "audio_link": null,
+    "release_day": "2019-08-28",
+    "duration": 223,
+    "album": null,
+    "artists": [
+      13
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 11,
+  "fields": {
+    "name": "Một Cú Lừa",
+    "stream_count": 7464,
+    "cover_path": "song_cover/MotCuLua.jpg",
+    "audio_file": "audio/MotCuLua-BichPhuong-6288019.mp3",
+    "audio_link": null,
+    "release_day": "2020-05-31",
+    "duration": 210,
+    "album": null,
+    "artists": [
+      13
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 12,
+  "fields": {
+    "name": "Ngôi Sao Cô Đơn",
+    "stream_count": 4608,
+    "cover_path": "song_cover/NgoiSaoCoDon.jpg",
+    "audio_file": "audio/NgoiSaoCoDon-JackJ97-7611601.mp3",
+    "audio_link": null,
+    "release_day": "2022-07-19",
+    "duration": 304,
+    "album": null,
+    "artists": [
+      14
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 13,
+  "fields": {
+    "name": "Chuyến Xe",
+    "stream_count": 464,
+    "cover_path": "song_cover/ChuyenXe.jpg",
+    "audio_file": "audio/ChuyenXe-PhanManhQuynhOrange-9357348.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-26",
+    "duration": 290,
+    "album": null,
+    "artists": [
+      15
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 14,
+  "fields": {
+    "name": "Anh Ghét Làm Bạn Em",
+    "stream_count": 54,
+    "cover_path": "song_cover/AnhGhetLamBanEm.jpg",
+    "audio_file": "audio/AnhGhetLamBanEm-PhanManhQuynh-2664513.mp3",
+    "audio_link": null,
+    "release_day": "2014-10-14",
+    "duration": 270,
+    "album": null,
+    "artists": [
+      15
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 15,
+  "fields": {
+    "name": "Có Chàng Trai Viết Lên Cây",
+    "stream_count": 568,
+    "cover_path": "song_cover/CoChangTraiVietLenCay.jpg",
+    "audio_file": "audio/CoChangTraiVietLenCayMatBiecOst-PhanManhQuynh-6181112.mp3",
+    "audio_link": null,
+    "release_day": "2019-12-11",
+    "duration": 304,
+    "album": null,
+    "artists": [
+      15
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 16,
+  "fields": {
+    "name": "Flower",
+    "stream_count": 486,
+    "cover_path": "song_cover/Flower.jpg",
+    "audio_file": "audio/Flower-JISOO-8949069.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-27",
+    "duration": 774,
+    "album": 3,
+    "artists": [
+      16
+    ],
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 17,
+  "fields": {
+    "name": "Kill Bill",
+    "stream_count": 6,
+    "cover_path": "song_cover/KillBill.png",
+    "audio_file": "audio/KillBill_Hc5nj2u.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-28",
+    "duration": 200,
+    "album": null,
+    "artists": [
+      17
+    ],
+    "genres": [
+      3,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 18,
+  "fields": {
+    "name": "Lavender Haze",
+    "stream_count": 11,
+    "cover_path": "",
+    "audio_file": "audio/01._Lavender_Haze_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 300,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 19,
+  "fields": {
+    "name": "Maroon",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/02._Maroon.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 200,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 20,
+  "fields": {
+    "name": "Anti Hero",
+    "stream_count": 4,
+    "cover_path": "song_cover/midnights.png",
+    "audio_file": "audio/03._Anti-Hero_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 100,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 21,
+  "fields": {
+    "name": "Snow On The Beach",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/04._Snow_On_The_Beach_ft._Lana_Del_Rey.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 210,
+    "album": 1,
+    "artists": [
+      4,
+      18
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 22,
+  "fields": {
+    "name": "You're On Your Own, Kid",
+    "stream_count": 8,
+    "cover_path": "",
+    "audio_file": "audio/05._Youre_On_Your_Own_Kid.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 210,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 23,
+  "fields": {
+    "name": "Midnight Rain",
+    "stream_count": 3,
+    "cover_path": "",
+    "audio_file": "audio/06._Midnight_Rain_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 214,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 24,
+  "fields": {
+    "name": "Question...?",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/07._Question....m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 168,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 25,
+  "fields": {
+    "name": "Vigilante Shit",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/08._Vigilante_Shit.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 167,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 26,
+  "fields": {
+    "name": "Bejeweled",
+    "stream_count": 3,
+    "cover_path": "",
+    "audio_file": "audio/09._Bejeweled.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 201,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 27,
+  "fields": {
+    "name": "Labyrinth",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/10._Labyrinth.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 200,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 28,
+  "fields": {
+    "name": "Karma",
+    "stream_count": 17,
+    "cover_path": "",
+    "audio_file": "audio/11._Karma_2.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 210,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 29,
+  "fields": {
+    "name": "Sweet Nothing",
+    "stream_count": 2,
+    "cover_path": "",
+    "audio_file": "audio/12._Sweet_Nothing.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 230,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 30,
+  "fields": {
+    "name": "Mastermind",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/13._Mastermind.m4a",
+    "audio_link": null,
+    "release_day": "2022-11-21",
+    "duration": 187,
+    "album": 1,
+    "artists": [
+      4
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 31,
+  "fields": {
+    "name": "Music For a Sushi Restaurant",
+    "stream_count": 2,
+    "cover_path": "",
+    "audio_file": "audio/01_Music_For_a_Sushi_Restaurant_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      8,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 32,
+  "fields": {
+    "name": "Late Night Talking",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/02_Late_Night_Talking_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      11,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 33,
+  "fields": {
+    "name": "Grapejuice",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/03_Grapejuice_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 189,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 34,
+  "fields": {
+    "name": "As It Was",
+    "stream_count": 4298,
+    "cover_path": "song_cover/harryshouse.jpg",
+    "audio_file": "audio/04_As_It_Was_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-04-01",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      8,
+      10,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 35,
+  "fields": {
+    "name": "Daylight",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/05_Daylight_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 239,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 36,
+  "fields": {
+    "name": "Little Freak",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/06_Little_Freak_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 37,
+  "fields": {
+    "name": "Matilda",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/07_Matilda_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 200,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 38,
+  "fields": {
+    "name": "Cinema",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/08_Cinema_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 244,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 39,
+  "fields": {
+    "name": "Daydreaming",
+    "stream_count": 1,
+    "cover_path": "",
+    "audio_file": "audio/09_Daydreaming_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 211,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 40,
+  "fields": {
+    "name": "Keep Driving",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/10_Keep_Driving_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 152,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      11,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 41,
+  "fields": {
+    "name": "Satellite",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/11_Satellite_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 190,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 42,
+  "fields": {
+    "name": "Boyfriends",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/12_Boyfriends_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 131,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 43,
+  "fields": {
+    "name": "Love Of My Life",
+    "stream_count": 0,
+    "cover_path": "",
+    "audio_file": "audio/13_Love_Of_My_Life_-_SongsLover.com.mp3",
+    "audio_link": null,
+    "release_day": "2022-05-20",
+    "duration": 291,
+    "album": 2,
+    "artists": [
+      19
+    ],
+    "genres": [
+      7,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 44,
+  "fields": {
+    "name": "Watermelon Sugar",
+    "stream_count": 201,
+    "cover_path": "song_cover/watermelonsugar.png",
+    "audio_file": "audio/Harry_Styles_-_Watermelon_Sugar.mp3",
+    "audio_link": null,
+    "release_day": "2019-11-16",
+    "duration": 193,
+    "album": null,
+    "artists": [
+      19
+    ],
+    "genres": [
+      10,
+      15
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 45,
+  "fields": {
+    "name": "MAKING MY WAY",
+    "stream_count": 87836621,
+    "cover_path": "song_cover/MakingMyWay.jpg",
+    "audio_file": "audio/SON_TUNG_M-TP__MAKING_MY_WAY__OFFICIAL_VISUALIZER.mp3",
+    "audio_link": null,
+    "release_day": "2023-05-05",
+    "duration": 258,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 46,
+  "fields": {
+    "name": "All Eyes On Me",
+    "stream_count": 29820,
+    "cover_path": "song_cover/AllEyesOnMe.jpg",
+    "audio_file": "audio/AllEyesOnMe-JISOO-8949070.mp3",
+    "audio_link": null,
+    "release_day": "2023-03-31",
+    "duration": 163,
+    "album": 3,
+    "artists": [
+      16
+    ],
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 47,
+  "fields": {
+    "name": "Cơn Mưa Ngang Qua",
+    "stream_count": 87920,
+    "cover_path": "song_cover/ConMuaNgangQua.jpg",
+    "audio_file": "audio/ConMuaNgangQua-SonTungMTP-2944936.mp3",
+    "audio_link": null,
+    "release_day": "2013-04-14",
+    "duration": 234,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 48,
+  "fields": {
+    "name": "Anh Sai Rồi",
+    "stream_count": 2696,
+    "cover_path": "song_cover/AnhSaiRoi.jpg",
+    "audio_file": "audio/AnhSaiRoi-MTP-2647024.mp3",
+    "audio_link": null,
+    "release_day": "2012-05-12",
+    "duration": 262,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 49,
+  "fields": {
+    "name": "Nắng Ấm Xa Dần",
+    "stream_count": 3598,
+    "cover_path": "song_cover/NangAmXaDan.jpg",
+    "audio_file": "audio/Nang-Am-Xa-Dan-MTP.mp3",
+    "audio_link": null,
+    "release_day": "2016-07-25",
+    "duration": 192,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 50,
+  "fields": {
+    "name": "Lạc Trôi",
+    "stream_count": 8650,
+    "cover_path": "song_cover/LacTroi.jpg",
+    "audio_file": "audio/LacTroiTripleDRemix-SonTungMTP-5164670.mp3",
+    "audio_link": null,
+    "release_day": "2017-01-01",
+    "duration": 261,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 51,
+  "fields": {
+    "name": "Chúng Ta Không Thuộc Về Nhau",
+    "stream_count": 9742,
+    "cover_path": "song_cover/ChungTaKhongThuocVeNhau.jpg",
+    "audio_file": "audio/ChungTaKhongThuocVeNhau-SonTungMTP-4528181.mp3",
+    "audio_link": null,
+    "release_day": "2016-08-03",
+    "duration": 233,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 52,
+  "fields": {
+    "name": "Nơi Này Có Anh",
+    "stream_count": 20984,
+    "cover_path": "song_cover/NoiNayCoAnh.jpg",
+    "audio_file": "audio/Noi-Nay-Co-Anh-Masew-Bootleg-Son-Tung-M-TP-Masew.mp3",
+    "audio_link": null,
+    "release_day": "2017-02-14",
+    "duration": 257,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 53,
+  "fields": {
+    "name": "Buông Đôi Tay Nhau Ra",
+    "stream_count": 8724,
+    "cover_path": "song_cover/BuongDoiTayNhauRa.jpg",
+    "audio_file": "audio/BuongDoiTayNhauRa-SonTungMTP-4184408.mp3",
+    "audio_link": null,
+    "release_day": "2015-12-02",
+    "duration": 226,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 54,
+  "fields": {
+    "name": "Không Phải Dạng Vừa Đâu",
+    "stream_count": 5928,
+    "cover_path": "song_cover/KhongPhaiDangVuaDau.jpg",
+    "audio_file": "audio/KhongPhaiDangVuaDau-SonTungMTP-3753840.mp3",
+    "audio_link": null,
+    "release_day": "2014-04-24",
+    "duration": 246,
+    "album": 4,
+    "artists": [
+      1
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 55,
+  "fields": {
+    "name": "Tại Vì Sao",
+    "stream_count": 2740,
+    "cover_path": "song_cover/TaiViSao.jpg",
+    "audio_file": "audio/TaiViSao-MCK-7963973.mp3",
+    "audio_link": null,
+    "release_day": "2022-09-23",
+    "duration": 231,
+    "album": null,
+    "artists": [
+      20
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 56,
+  "fields": {
+    "name": "Đưa Em Về Nhà",
+    "stream_count": 23593,
+    "cover_path": "song_cover/DuaEmVeNha.jpg",
+    "audio_file": "audio/DuaEmVeNhaa-GREYDChillies-9214678.mp3",
+    "audio_link": null,
+    "release_day": "2023-04-24",
+    "duration": 240,
+    "album": null,
+    "artists": [
+      21
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.playlist",
+  "pk": 3,
+  "fields": {
+    "name": "Nhạc đá",
+    "create_date": "2023-04-24",
+    "owner": 6,
+    "song_list": [
+      2,
+      3,
+      5,
+      7,
+      8,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "music.playlist",
+  "pk": 4,
+  "fields": {
+    "name": "Nhạc của Jack",
+    "create_date": "2023-04-27",
+    "owner": 6,
+    "song_list": [
+      12
+    ]
+  }
+},
+{
+  "model": "music.playlist",
+  "pk": 5,
+  "fields": {
+    "name": "Phan Mạnh Quỳnh Playlist",
+    "create_date": "2023-04-27",
+    "owner": 6,
+    "song_list": [
+      13,
+      14,
+      15
+    ]
+  }
+},
+{
+  "model": "music.playlist",
+  "pk": 6,
+  "fields": {
+    "name": "USUK",
+    "create_date": "2023-05-05",
+    "owner": 6,
+    "song_list": [
+      17,
+      28,
+      34,
+      44
+    ]
+  }
+},
+{
+  "model": "music.playlist",
+  "pk": 7,
+  "fields": {
+    "name": "Huy Bui",
+    "create_date": "2023-05-11",
+    "owner": 7,
+    "song_list": [
+      45
+    ]
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 1,
+  "fields": {
+    "stream_date": "2023-04-28T20:02:55.132Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 2,
+  "fields": {
+    "stream_date": "2023-04-28T20:03:36.403Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 3,
+  "fields": {
+    "stream_date": "2023-04-28T20:04:37.324Z",
+    "song": 4,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 4,
+  "fields": {
+    "stream_date": "2023-04-28T20:05:59.371Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 5,
+  "fields": {
+    "stream_date": "2023-04-28T20:24:03.369Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 6,
+  "fields": {
+    "stream_date": "2023-04-28T20:29:51.988Z",
+    "song": 8,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 7,
+  "fields": {
+    "stream_date": "2023-04-28T20:33:01.080Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 8,
+  "fields": {
+    "stream_date": "2023-04-28T20:43:22.871Z",
+    "song": 6,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 9,
+  "fields": {
+    "stream_date": "2023-04-28T22:07:24.148Z",
+    "song": 6,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 10,
+  "fields": {
+    "stream_date": "2023-04-28T22:09:22.785Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 11,
+  "fields": {
+    "stream_date": "2023-04-28T22:09:47.194Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 12,
+  "fields": {
+    "stream_date": "2023-04-28T22:10:27.826Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 13,
+  "fields": {
+    "stream_date": "2023-04-28T22:11:06.815Z",
+    "song": 2,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 14,
+  "fields": {
+    "stream_date": "2023-04-28T22:12:06.035Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 15,
+  "fields": {
+    "stream_date": "2023-04-28T22:15:02.702Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 16,
+  "fields": {
+    "stream_date": "2023-04-28T22:22:44.490Z",
+    "song": 12,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 17,
+  "fields": {
+    "stream_date": "2023-04-28T22:26:59.906Z",
+    "song": 13,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 18,
+  "fields": {
+    "stream_date": "2023-04-28T22:31:06.993Z",
+    "song": 14,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 19,
+  "fields": {
+    "stream_date": "2023-04-28T23:20:02.674Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 20,
+  "fields": {
+    "stream_date": "2023-04-28T23:25:26.925Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 21,
+  "fields": {
+    "stream_date": "2023-04-28T23:31:06.541Z",
+    "song": 12,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 22,
+  "fields": {
+    "stream_date": "2023-04-28T23:38:53.878Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 23,
+  "fields": {
+    "stream_date": "2023-04-28T23:46:58.477Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 24,
+  "fields": {
+    "stream_date": "2023-04-29T00:09:02.852Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 25,
+  "fields": {
+    "stream_date": "2023-04-29T00:13:48.267Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 26,
+  "fields": {
+    "stream_date": "2023-04-29T00:20:33.586Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 27,
+  "fields": {
+    "stream_date": "2023-04-29T00:23:09.207Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 28,
+  "fields": {
+    "stream_date": "2023-04-29T00:27:10.183Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 29,
+  "fields": {
+    "stream_date": "2023-04-29T00:30:53.794Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 30,
+  "fields": {
+    "stream_date": "2023-04-29T00:35:17.074Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 31,
+  "fields": {
+    "stream_date": "2023-04-29T00:39:21.994Z",
+    "song": 23,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 32,
+  "fields": {
+    "stream_date": "2023-04-29T00:42:47.379Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 33,
+  "fields": {
+    "stream_date": "2023-04-29T00:46:01.703Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 34,
+  "fields": {
+    "stream_date": "2023-04-29T00:49:26.690Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 35,
+  "fields": {
+    "stream_date": "2023-04-29T00:52:02.331Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 36,
+  "fields": {
+    "stream_date": "2023-04-29T00:55:27.330Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 37,
+  "fields": {
+    "stream_date": "2023-04-29T00:58:49.929Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 38,
+  "fields": {
+    "stream_date": "2023-04-29T01:02:14.915Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 39,
+  "fields": {
+    "stream_date": "2023-04-29T01:04:50.552Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 40,
+  "fields": {
+    "stream_date": "2023-04-29T01:11:01.225Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 41,
+  "fields": {
+    "stream_date": "2023-04-29T10:31:31.524Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 42,
+  "fields": {
+    "stream_date": "2023-04-29T10:35:36.520Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 43,
+  "fields": {
+    "stream_date": "2023-04-29T10:39:07.309Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 44,
+  "fields": {
+    "stream_date": "2023-04-29T10:49:42.487Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 45,
+  "fields": {
+    "stream_date": "2023-04-29T10:53:07.544Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 46,
+  "fields": {
+    "stream_date": "2023-04-29T10:55:43.215Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 47,
+  "fields": {
+    "stream_date": "2023-04-29T10:59:08.240Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 48,
+  "fields": {
+    "stream_date": "2023-04-29T11:02:22.694Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 49,
+  "fields": {
+    "stream_date": "2023-04-29T11:05:17.030Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 50,
+  "fields": {
+    "stream_date": "2023-04-29T11:08:42.052Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 51,
+  "fields": {
+    "stream_date": "2023-04-29T11:11:36.353Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 52,
+  "fields": {
+    "stream_date": "2023-04-29T11:14:11.969Z",
+    "song": 17,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 53,
+  "fields": {
+    "stream_date": "2023-04-29T11:17:36.916Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 54,
+  "fields": {
+    "stream_date": "2023-04-29T17:28:52.299Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 55,
+  "fields": {
+    "stream_date": "2023-04-29T17:32:01.636Z",
+    "song": 29,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 56,
+  "fields": {
+    "stream_date": "2023-04-29T17:35:13.623Z",
+    "song": 30,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 57,
+  "fields": {
+    "stream_date": "2023-04-29T17:38:52.584Z",
+    "song": 19,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 58,
+  "fields": {
+    "stream_date": "2023-04-29T17:42:15.104Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 59,
+  "fields": {
+    "stream_date": "2023-04-29T17:45:36.639Z",
+    "song": 20,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 60,
+  "fields": {
+    "stream_date": "2023-04-29T17:49:52.931Z",
+    "song": 21,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 61,
+  "fields": {
+    "stream_date": "2023-04-29T17:53:07.972Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 62,
+  "fields": {
+    "stream_date": "2023-04-29T17:56:03.492Z",
+    "song": 23,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 63,
+  "fields": {
+    "stream_date": "2023-04-29T17:59:34.568Z",
+    "song": 24,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 64,
+  "fields": {
+    "stream_date": "2023-04-29T18:02:20.111Z",
+    "song": 25,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 65,
+  "fields": {
+    "stream_date": "2023-04-29T18:05:35.048Z",
+    "song": 26,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 66,
+  "fields": {
+    "stream_date": "2023-04-29T18:15:59.295Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 67,
+  "fields": {
+    "stream_date": "2023-04-29T18:19:07.952Z",
+    "song": 29,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 68,
+  "fields": {
+    "stream_date": "2023-04-29T19:04:01.916Z",
+    "song": 34,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 69,
+  "fields": {
+    "stream_date": "2023-04-29T19:07:35.371Z",
+    "song": 32,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 70,
+  "fields": {
+    "stream_date": "2023-04-29T19:10:48.314Z",
+    "song": 33,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 71,
+  "fields": {
+    "stream_date": "2023-04-29T19:13:35.808Z",
+    "song": 34,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 72,
+  "fields": {
+    "stream_date": "2023-04-29T19:37:15.517Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 73,
+  "fields": {
+    "stream_date": "2023-04-29T19:41:25.131Z",
+    "song": 34,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 74,
+  "fields": {
+    "stream_date": "2023-04-29T19:46:13.430Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 75,
+  "fields": {
+    "stream_date": "2023-04-29T19:51:23.227Z",
+    "song": 20,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 76,
+  "fields": {
+    "stream_date": "2023-04-29T19:54:56.071Z",
+    "song": 26,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 77,
+  "fields": {
+    "stream_date": "2023-04-29T19:58:41.813Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 78,
+  "fields": {
+    "stream_date": "2023-04-29T20:01:54.130Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 79,
+  "fields": {
+    "stream_date": "2023-04-29T20:04:14.589Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 80,
+  "fields": {
+    "stream_date": "2023-04-29T20:08:40.307Z",
+    "song": 6,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 81,
+  "fields": {
+    "stream_date": "2023-04-29T20:13:05.009Z",
+    "song": 7,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 82,
+  "fields": {
+    "stream_date": "2023-04-29T20:13:56.450Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 83,
+  "fields": {
+    "stream_date": "2023-04-29T23:26:07.646Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 84,
+  "fields": {
+    "stream_date": "2023-04-29T23:29:43.926Z",
+    "song": 20,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 85,
+  "fields": {
+    "stream_date": "2023-04-29T23:32:52.707Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 86,
+  "fields": {
+    "stream_date": "2023-04-29T23:37:57.482Z",
+    "song": 34,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 87,
+  "fields": {
+    "stream_date": "2023-04-29T23:45:11.789Z",
+    "song": 4,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 88,
+  "fields": {
+    "stream_date": "2023-04-29T23:46:40.376Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 89,
+  "fields": {
+    "stream_date": "2023-04-29T23:49:34.724Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 90,
+  "fields": {
+    "stream_date": "2023-04-29T23:58:39.381Z",
+    "song": 44,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 91,
+  "fields": {
+    "stream_date": "2023-04-30T00:02:46.450Z",
+    "song": 23,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 92,
+  "fields": {
+    "stream_date": "2023-04-30T00:11:18.001Z",
+    "song": 22,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 93,
+  "fields": {
+    "stream_date": "2023-04-30T00:14:48.600Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 94,
+  "fields": {
+    "stream_date": "2023-04-30T00:18:09.713Z",
+    "song": 20,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 95,
+  "fields": {
+    "stream_date": "2023-04-30T00:19:40.298Z",
+    "song": 31,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 96,
+  "fields": {
+    "stream_date": "2023-04-30T00:23:00.425Z",
+    "song": 31,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 97,
+  "fields": {
+    "stream_date": "2023-04-30T00:26:41.494Z",
+    "song": 18,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 98,
+  "fields": {
+    "stream_date": "2023-04-30T00:32:30.661Z",
+    "song": 39,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 99,
+  "fields": {
+    "stream_date": "2023-04-30T00:36:34.384Z",
+    "song": 28,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 100,
+  "fields": {
+    "stream_date": "2023-05-05T12:30:15.598Z",
+    "song": 2,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 101,
+  "fields": {
+    "stream_date": "2023-05-06T10:05:53.352Z",
+    "song": 11,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 102,
+  "fields": {
+    "stream_date": "2023-05-13T10:56:10.638Z",
+    "song": 56,
+    "owner": 6
+  }
+}
+]

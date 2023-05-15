@@ -1,36 +1,23 @@
 <div class="main-container">
   <div class="header-content">
-    <div class="header-search-box">
-      <div class="search-box">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="currentColor"
-          class="bi bi-search"
-          viewBox="0 0 16 16"
-          color="white"
-        >
-          <path
-            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-          />
-        </svg>
-        <input
-          class="search-txt"
-          type="text"
-          name=""
-          placeholder="Tìm kiếm bài hát, nghệ sĩ"
-        />
-      </div>
-    </div>
     {% if user.is_authenticated %}
-    <div class="avatar">
+    <div class="avatar d-flex"> 
       <img
-        src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg"
+        src= "https://cdn-icons-png.flaticon.com/512/147/147133.png"
         alt="avatar"
-      />
-      <span class="p-2 text-white">{{ user.username }}</span>
+        />
+      <ul class="navbar-nav mx-3">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="text-white">{{ user.username }}</span> 
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/change-password">Đổi mật khẩu</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+      
     {% endif %}
 
   </div>

@@ -1,29 +1,55 @@
 {% extends "master.html" %}
 {% block title %}
-  Detail Song
+{{song.name}}
 {% endblock %}
 {% block content %}
 {% include 'navbar.html' %}
 
-  <div>
-    {% include 'header.html' %}
+<head>
+  {% load static %}
+  <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+</head>
+<div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
+
+  {% include 'header.html' %}
   <div class="main-content" style="display: flex;align-items: center; justify-content: center;">
     <div class="detail_song">
       <div class="detail_song_img">
-        <img src="https://img.cand.com.vn/resize/800x800/NewFiles/Images/2022/04/29/ST3-1651223070682.jpeg" alt="detail_song_img">
+        <img src="{{ song.get_cover_path }}" alt="detail_song_img">
       </div>
       <div class="detail_song_info">
         <div class="detail_song_name">
-          <h1>Chúng ta của hiện tại</h1>
+          <h1>{{song.name}}</h1>
         </div>
         <div class="detail_song_singer">
-          <h2>Sơn Tùng M-TP</h2>
+          <a href="{% url 'artist' song.artists.all.first.id%}" style="text-decoration: none; color: white">
+            <h2>{{song.artist_list_str}}</h2>
+          </a>
+
         </div>
-        <button class="btn btn-primary">Nghe bài hát</button>
+        <div class="d-flex justify-content-evenly w-100">
+        <button class="btn btn-primary" onclick="showMusicPlayer()">Nghe bài hát</button>
+        <input type="hidden" id="url-{{song.id}}" data-url="{% url 'song_playlists' song.id %}" />
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#song_playlistform"
+            onclick="showPlaylists({{ song.id }})">
+            Thêm vào Playlist</button>
+      </div>
       </div>
     </div>
+  </div>
+
 </div>
-        
+<div id="music-player" style="display: none;">
+  {% include 'music_player.html' %}
 </div>
+{% include 'song_playlistform.html' %}
+<script>
+  const musicPlayer = document.getElementById("music-player")
+
+  function showMusicPlayer() {
+    musicPlayer.style.display = "flex";
+    playBtn.click();
+  }
+</script>
 
 {% endblock %}
