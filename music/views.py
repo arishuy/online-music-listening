@@ -133,6 +133,10 @@ def search(request):
         "id": genre.id,
         "name": genre.name,
     }, allgenres))
+    listgenre.insert(0, {
+        "id": -1,
+        "name": "Chọn thể loại nhạc",
+    })
     context = {
         'allgenres': listgenre,
 
