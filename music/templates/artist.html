@@ -9,8 +9,8 @@
 
 <div class="main-container">
     {% include 'header.html' %}
-    <div class="cover-container" style="position: relative; color: white; height: 350px; width: 80vw;">
-        <img src="{{ artist.cover_path.url }}" alt="" style="height: 100%; width: 100%; margin:auto; position: relative;">
+    <div class="cover-container" style="position: relative; color: white; height: 350px; width: 100%;">
+        <img src="{{ artist.cover_path.url }}" alt="" style="height: 100%; margin:auto; position: absolute; object-fit: contain; right: 10%">
         <div class="artist-name-banner" style="position: absolute; top:50%; transform: translateY(-50%); left: 40px; font-size: 80px; font-weight: 700;">{{ artist.name}}</div>
     </div>
     <div class="music-container" style="width: 100%; position: relative; margin: 20px 10px;">
@@ -33,10 +33,8 @@
                       <tr onclick="playMusic({{ song.id }})">
                         <th scope="row">{{forloop.counter}}</th>
                         <td style="text-align: left;">
-                          <a href="/music/{{song.id}}" style="text-decoration: none; color: white">
                           <img src="{{ song.get_cover_path }}" alt="avatar" style="width: 50px; height: 50px; border-radius: 50%;">
                           {{song.name}}
-                          </a>
                         </td>
                         <td>{{song.stream_count}}</td>
                         <!-- <td>{{song.release_day}}</td> -->
