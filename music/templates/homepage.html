@@ -15,7 +15,7 @@ Home Page
   {% include 'header.html' %}
   {% csrf_token %}
   <div class="main-content ">
-    <div class="head-group-title">Mới phát hành </div>
+    <div class="head-group-title">Bài hát mới phát hành </div>
     <div class="list-musics">
       {% if latest_songs %}
       {% for song in latest_songs%}

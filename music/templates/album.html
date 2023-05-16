@@ -22,7 +22,7 @@
           </a>
           <div class="album-another">{{album.release_day}}</div>
           <button type="button" class="btn btn-primary mt-2" onclick="playAll()">
-            <i id="play_album" class="fas fa-play px-2"></i>
+            <i class="fa-solid fa-music px-2"></i>
             Phát tất cả</button>
         </div>
         <div class="col-md-9">
@@ -42,11 +42,13 @@
                 <tr onclick="playMusic({{ song.id }})">
                   <td scope="row">{{forloop.counter}}</td>
                   <td>
+                    <a href="/music/{{song.id}}" style="text-decoration: none; color: white"></a>
                       <img
                         src="{{ song.get_cover_path }}"
                         style="width: 50px; height: 50px; border-radius: 50%"
                       />
                       {{song.name}}
+                    </a>
                   </td>
                   <td>{{song.stream_count}}</td>
                   <td>{{song.release_day}}</td>
