@@ -189,6 +189,33 @@
   }
 },
 {
+  "model": "music.artist",
+  "pk": 22,
+  "fields": {
+    "name": "FIFTY FIFTY",
+    "about": "Nghệ sĩ Hàn Quốc",
+    "cover_path": "artist_cover/fifty.webp"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 23,
+  "fields": {
+    "name": "Hoàng Thùy Linh",
+    "about": "Nữ ca sĩ, diễn viên, người mẫu kiêm người dẫn chương trình người Việt Nam. Cô từng giành 4 giải Cống hiến trong tổng số 6 đề cử.",
+    "cover_path": "artist_cover/HoangThuyLinh.jpg"
+  }
+},
+{
+  "model": "music.artist",
+  "pk": 24,
+  "fields": {
+    "name": "Da Lab",
+    "about": "Ban nhạc Việt Nam",
+    "cover_path": "artist_cover/DaLab.webp"
+  }
+},
+{
   "model": "music.genre",
   "pk": 1,
   "fields": {
@@ -320,11 +347,51 @@
   }
 },
 {
+  "model": "music.album",
+  "pk": 5,
+  "fields": {
+    "name": "The Beginning: Cupid",
+    "artist": 22,
+    "release_day": "2023-05-09",
+    "cover_path": "album_cover/cupidfifty.jpg"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 6,
+  "fields": {
+    "name": "99%",
+    "artist": 20,
+    "release_day": "2023-02-08",
+    "cover_path": "album_cover/99.jpg"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 7,
+  "fields": {
+    "name": "Hoàng",
+    "artist": 23,
+    "release_day": "2019-10-20",
+    "cover_path": "album_cover/Hoang.jpg"
+  }
+},
+{
+  "model": "music.album",
+  "pk": 8,
+  "fields": {
+    "name": "Da Ba Lab",
+    "artist": 24,
+    "release_day": "2022-06-16",
+    "cover_path": "album_cover/dabalab.jpg"
+  }
+},
+{
   "model": "music.song",
   "pk": 2,
   "fields": {
     "name": "Em Của Ngày Hôm Qua",
-    "stream_count": 1724,
+    "stream_count": 1725,
     "cover_path": "song_cover/EmCuaNgayHomQua.png",
     "audio_file": "audio/EmCuaNgayHomQua_Z0bLHyJ.mp3",
     "audio_link": null,
@@ -344,7 +411,7 @@
   "pk": 3,
   "fields": {
     "name": "Tấm Lòng Son",
-    "stream_count": 20,
+    "stream_count": 24,
     "cover_path": "song_cover/TamLongSon.jpg",
     "audio_file": "audio/TamLongSonRemix-HKrayDaiMeo-7887396.mp3",
     "audio_link": null,
@@ -364,7 +431,7 @@
   "pk": 4,
   "fields": {
     "name": "Không thể say",
-    "stream_count": 8766,
+    "stream_count": 8767,
     "cover_path": "song_cover/KhongTheSay.jpg",
     "audio_file": "audio/KhongTheSay-HIEUTHUHAI-9293024.mp3",
     "audio_link": null,
@@ -384,7 +451,7 @@
   "pk": 5,
   "fields": {
     "name": "Ưng Quá Chừng",
-    "stream_count": 7503,
+    "stream_count": 7506,
     "cover_path": "song_cover/UngQuaChung.jpg",
     "audio_file": "audio/UngQuaChung-AMEE-8783624.mp3",
     "audio_link": null,
@@ -424,7 +491,7 @@
   "pk": 7,
   "fields": {
     "name": "Nếu Lúc Đó",
-    "stream_count": 69,
+    "stream_count": 70,
     "cover_path": "song_cover/NeuLucDo.jpg",
     "audio_file": "audio/NeuLucDo-tlinh2pillz-8783613.mp3",
     "audio_link": null,
@@ -604,7 +671,7 @@
   "pk": 16,
   "fields": {
     "name": "Flower",
-    "stream_count": 486,
+    "stream_count": 487,
     "cover_path": "song_cover/Flower.jpg",
     "audio_file": "audio/Flower-JISOO-8949069.mp3",
     "audio_link": null,
@@ -1213,7 +1280,7 @@
   "pk": 46,
   "fields": {
     "name": "All Eyes On Me",
-    "stream_count": 29820,
+    "stream_count": 29821,
     "cover_path": "song_cover/AllEyesOnMe.jpg",
     "audio_file": "audio/AllEyesOnMe-JISOO-8949070.mp3",
     "audio_link": null,
@@ -1333,7 +1400,7 @@
   "pk": 52,
   "fields": {
     "name": "Nơi Này Có Anh",
-    "stream_count": 20984,
+    "stream_count": 20987,
     "cover_path": "song_cover/NoiNayCoAnh.jpg",
     "audio_file": "audio/Noi-Nay-Co-Anh-Masew-Bootleg-Son-Tung-M-TP-Masew.mp3",
     "audio_link": null,
@@ -1399,7 +1466,7 @@
     "audio_link": null,
     "release_day": "2022-09-23",
     "duration": 231,
-    "album": null,
+    "album": 6,
     "artists": [
       20
     ],
@@ -1413,7 +1480,7 @@
   "pk": 56,
   "fields": {
     "name": "Đưa Em Về Nhà",
-    "stream_count": 23593,
+    "stream_count": 23595,
     "cover_path": "song_cover/DuaEmVeNha.jpg",
     "audio_file": "audio/DuaEmVeNhaa-GREYDChillies-9214678.mp3",
     "audio_link": null,
@@ -1422,6 +1489,286 @@
     "album": null,
     "artists": [
       21
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 57,
+  "fields": {
+    "name": "Cupid",
+    "stream_count": 2467,
+    "cover_path": "song_cover/Cupid.webp",
+    "audio_file": "audio/Cupid.mp3",
+    "audio_link": null,
+    "release_day": "2023-05-11",
+    "duration": 180,
+    "album": 5,
+    "artists": [
+      22
+    ],
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 58,
+  "fields": {
+    "name": "Cupid Twin-ver",
+    "stream_count": 341,
+    "cover_path": "song_cover/Cupid_Whh59yK.webp",
+    "audio_file": "audio/CupidTwin.mp3",
+    "audio_link": null,
+    "release_day": "2023-05-10",
+    "duration": 180,
+    "album": 5,
+    "artists": [
+      22
+    ],
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 59,
+  "fields": {
+    "name": "Chìm Sâu",
+    "stream_count": 4623,
+    "cover_path": "song_cover/ChimSau.jpg",
+    "audio_file": "audio/ChimSau-MCKTrungTran-7205660.mp3",
+    "audio_link": null,
+    "release_day": "2023-03-17",
+    "duration": 242,
+    "album": 6,
+    "artists": [
+      20
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 60,
+  "fields": {
+    "name": "Để Mị Nói Cho Mà Nghe",
+    "stream_count": 2364,
+    "cover_path": "song_cover/DeMiNoiChoMaNghe.jpg",
+    "audio_file": "audio/DeMiNoiChoMaNghe-HoangThuyLinh-6153588.mp3",
+    "audio_link": null,
+    "release_day": "2019-06-19",
+    "duration": 194,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 61,
+  "fields": {
+    "name": "Duyên Âm",
+    "stream_count": 5572,
+    "cover_path": "song_cover/DuyenAm.jpg",
+    "audio_file": "audio/LoveofGhosts-HoangThuyLinh-6153589.mp3",
+    "audio_link": null,
+    "release_day": "2019-12-19",
+    "duration": 180,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 62,
+  "fields": {
+    "name": "Em đây chẳng phải Thúy Kiều",
+    "stream_count": 5758,
+    "cover_path": "song_cover/Emdaykphaithuykieu.jpg",
+    "audio_file": "audio/IAmNotThuyKieu-HoangThuyLinh-6153590.mp3",
+    "audio_link": null,
+    "release_day": "2019-01-07",
+    "duration": 189,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 63,
+  "fields": {
+    "name": "Lắm Mối Tối Ngồi Không",
+    "stream_count": 6546,
+    "cover_path": "song_cover/Lammoitoingoikhong.jpg",
+    "audio_file": "audio/RunAfterTwoHaresCatchNone-HoangThuyLinh-6153591.mp3",
+    "audio_link": null,
+    "release_day": "2021-06-26",
+    "duration": 180,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 64,
+  "fields": {
+    "name": "Kẽo Cà Kẽo Kẹt",
+    "stream_count": 7585,
+    "cover_path": "song_cover/KeoCaKeoKet.jpg",
+    "audio_file": "audio/TheCreaking-HoangThuyLinh-6153592.mp3",
+    "audio_link": null,
+    "release_day": "2021-08-11",
+    "duration": 198,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 65,
+  "fields": {
+    "name": "Tứ Phủ",
+    "stream_count": 7482,
+    "cover_path": "song_cover/TuPhu.jpg",
+    "audio_file": "audio/TuPhu-HoangThuyLinh-6153593.mp3",
+    "audio_link": null,
+    "release_day": "2019-08-08",
+    "duration": 265,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 66,
+  "fields": {
+    "name": "Kẻ Cắp Gặp Bà Già",
+    "stream_count": 9234,
+    "cover_path": "song_cover/KeCapBaGia.jpg",
+    "audio_file": "audio/DiamondCutDiamond-HoangThuyLinhBINZ-6153594.mp3",
+    "audio_link": null,
+    "release_day": "2020-04-04",
+    "duration": 269,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 67,
+  "fields": {
+    "name": "See Tình",
+    "stream_count": 22843,
+    "cover_path": "song_cover/SeeTinh.jpg",
+    "audio_file": "audio/SeeTinh-HoangThuyLinh-7702265.mp3",
+    "audio_link": null,
+    "release_day": "2022-02-20",
+    "duration": 185,
+    "album": 7,
+    "artists": [
+      23
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 68,
+  "fields": {
+    "name": "Thanh Xuân",
+    "stream_count": 7242,
+    "cover_path": "song_cover/ThanhXuan.jpg",
+    "audio_file": "audio/ThanhXuan-DaLAB-5773854.mp3",
+    "audio_link": null,
+    "release_day": "2018-09-04",
+    "duration": 221,
+    "album": 8,
+    "artists": [
+      24
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 69,
+  "fields": {
+    "name": "Gác Lại Âu Lo",
+    "stream_count": 8564,
+    "cover_path": "song_cover/GacLaiAuLo.jpg",
+    "audio_file": "audio/GacLaiAuLo-DaLABMiuLe-6360815.mp3",
+    "audio_link": null,
+    "release_day": "2020-07-25",
+    "duration": 283,
+    "album": 8,
+    "artists": [
+      24
+    ],
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "music.song",
+  "pk": 70,
+  "fields": {
+    "name": "Từ Ngày Em Đến",
+    "stream_count": 3242,
+    "cover_path": "song_cover/TuNgayEmDen.jpg",
+    "audio_file": "audio/TuNgayEmDen-DaLAB-8056548.mp3",
+    "audio_link": null,
+    "release_day": "2017-06-15",
+    "duration": 237,
+    "album": 8,
+    "artists": [
+      24
     ],
     "genres": [
       1
@@ -1442,7 +1789,8 @@
       7,
       8,
       10,
-      11
+      11,
+      55
     ]
   }
 },
@@ -2414,6 +2762,159 @@
   "fields": {
     "stream_date": "2023-05-13T10:56:10.638Z",
     "song": 56,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 103,
+  "fields": {
+    "stream_date": "2023-05-15T11:37:18.910Z",
+    "song": 2,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 104,
+  "fields": {
+    "stream_date": "2023-05-15T11:44:59.854Z",
+    "song": 3,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 105,
+  "fields": {
+    "stream_date": "2023-05-15T11:50:50.552Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 106,
+  "fields": {
+    "stream_date": "2023-05-15T11:52:12.574Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 107,
+  "fields": {
+    "stream_date": "2023-05-15T11:53:34.593Z",
+    "song": 5,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 108,
+  "fields": {
+    "stream_date": "2023-05-15T12:08:35.546Z",
+    "song": 56,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 109,
+  "fields": {
+    "stream_date": "2023-05-15T13:34:24.488Z",
+    "song": 52,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 110,
+  "fields": {
+    "stream_date": "2023-05-15T13:34:39.136Z",
+    "song": 52,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 111,
+  "fields": {
+    "stream_date": "2023-05-15T13:34:48.484Z",
+    "song": 52,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 112,
+  "fields": {
+    "stream_date": "2023-05-15T13:43:17.008Z",
+    "song": 46,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 113,
+  "fields": {
+    "stream_date": "2023-05-15T13:46:11.295Z",
+    "song": 16,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 114,
+  "fields": {
+    "stream_date": "2023-05-15T13:59:37.887Z",
+    "song": 3,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 115,
+  "fields": {
+    "stream_date": "2023-05-15T14:03:26.406Z",
+    "song": 4,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 116,
+  "fields": {
+    "stream_date": "2023-05-16T15:43:17.283Z",
+    "song": 7,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 117,
+  "fields": {
+    "stream_date": "2023-05-16T15:47:17.406Z",
+    "song": 56,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 118,
+  "fields": {
+    "stream_date": "2023-05-16T15:51:58.084Z",
+    "song": 3,
+    "owner": 6
+  }
+},
+{
+  "model": "music.listenhistory",
+  "pk": 119,
+  "fields": {
+    "stream_date": "2023-05-16T15:58:40.770Z",
+    "song": 3,
     "owner": 6
   }
 }
