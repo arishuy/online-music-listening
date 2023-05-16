@@ -13,3 +13,5 @@ __pycache__
 !.vscode/extensions.json 
 .history
 db.sqlite3
+
+.venv/
