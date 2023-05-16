@@ -10,13 +10,13 @@ Home Page
   {% load static %}
   <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
 </head>
-<div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
+<div class="main-container" >
 
   {% include 'header.html' %}
   {% csrf_token %}
   <div class="main-content ">
     <div class="head-group-title">Mới phát hành </div>
-    <div class="list-musics" style="width: 78vw">
+    <div class="list-musics">
       {% if latest_songs %}
       {% for song in latest_songs%}
       <!-- {% with cover_path="../../media/song_cover/"|add:song.cover_path %} -->
@@ -44,7 +44,7 @@ Home Page
     </div>
 
     <div class="head-group-title">Album mới phát hành </div>
-    <div class="list-musics" style="width: 78vw">
+    <div class="list-musics">
       {% if latest_albums %}
       {% for album in latest_albums %}
       <!-- {% with cover_path="../../media/album_cover/"|add:album.cover_path %} -->

@@ -132,12 +132,13 @@ body {
   padding: 0;
   overflow-x: hidden;
   display: flex;
+  flex-direction: row;
 }
 .dark-cl {
   background: #0d0d0d;
 }
-.main-container {
-  width: 80vw;
+.header-container {
+  width: 100%;
   height: 10vh;
 }
 .header-content {
@@ -236,8 +237,9 @@ body {
 .list-musics {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
+  grid-gap: 20px;
   margin: 20px 0 0 20px;
+  width: 100%;
 }
 .head-group-title {
   font-family: "Roboto";
@@ -391,7 +393,7 @@ progress {
   z-index: 1;
 }
 .main-content {
-  width: 80vw;
+  width: 100%;
 }
 .music-control-btn i:hover {
   transform: matrix(1.05, 0, 0, 1.05, 0, 0);
@@ -416,7 +418,7 @@ progress {
   text-transform: none;
 }
 .album-another {
-  color: hsla(0,0%,100%,0.5);
+  color: hsla(0, 0%, 100%, 0.5);
   font-size: 14px;
   line-height: 1.75;
 }
@@ -440,4 +442,11 @@ progress {
 }
 .top-3 {
   font-size: 25px;
+}
+
+.main-container {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
