@@ -1,3 +1,5 @@
+{% extends "master.html" %} {% block title %} 404 Not Found {% endblock %} 
+{% block content %} 
 <div class="moon"></div>
 <div class="moon__crater moon__crater1"></div>
 <div class="moon__crater moon__crater2"></div>
@@ -16,6 +18,9 @@
   <a href="{% url 'homepage' %}" >
       <button class="error__button error__button--active">BACK TO HOMEPAGE</button>
   </a>
+  <a href="{% url 'login' %}" >
+    <button class="error__button error__button">LOGIN</button>
+</a>
 </div>
 
 <div class="astronaut">
@@ -510,3 +515,4 @@ function animate() {
 drawVisor();
 animate();
 </script>
+{% endblock %}
