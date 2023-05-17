@@ -3,6 +3,12 @@
 Register
 {% endblock %}
 {% block content %}
+{% if user.is_authenticated %}
+    <script>
+        window.location.href = "/";
+    </script>
+{% else %}
+{% endif %}
 <div class="login-page">
   <div class="login-picture">
     <i class="fa-solid fa-key"></i>

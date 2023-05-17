@@ -6,7 +6,7 @@ Recent Listen
 
 {% include 'navbar.html' %}
 
-<div style="width: 80vw; max-height: 100vh; overflow-x: hidden; overflow-y: auto;">
+<div class="main-container">
   {% include 'header.html' %}
   <div class="main-content">
     <div class="head-group-title">Vừa mới nghe</div>
@@ -23,6 +23,13 @@ Recent Listen
           <a href="{% url 'artist' song.artists.all.first.id %}" style="text-decoration: none;">
             <div id="{{ song.id }}" class="music-singer">{{ song.artist_list_str }}</div>
           </a>
+        </div>
+        <div>
+          <i class="fas fa-play" onclick="playMusic({{ song.id }})" style="font-size: 12px;"></i>
+          <input type="hidden" id="url-{{song.id}}" data-url="{% url 'song_playlists' song.id %}" />
+          <button class="btn-add-playlist" type="button" data-bs-toggle="modal" data-bs-target="#song_playlistform"
+            onclick="showPlaylists({{ song.id }})">
+            <i class="fas fa-plus" style="font-size: 12px;"></i>
         </div>
       </div>
       {% endwith %}
