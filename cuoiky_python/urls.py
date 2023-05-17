@@ -24,6 +24,8 @@ urlpatterns = [
     path('', include('users.urls')),
     path("", include("django.contrib.auth.urls")),  # new
     path('admin/', admin.site.urls),
+    path('jet/', include('jet.urls', 'jet')),
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
