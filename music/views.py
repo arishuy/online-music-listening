@@ -234,15 +234,8 @@ def song_in_playlist(request, playlist_id, song_id):
         if song in playlist.song_list.all():
             playlist.song_list.remove(song)
             playlist.save()
-        return HttpResponseRedirect(
-            reverse('detail_playlist', args=(playlist_id,), context={
-
-            }))
     return HttpResponseRedirect(
-        reverse('detail_playlist', args=(playlist_id,),
-                context={
-
-        }))
+        reverse('detail_playlist', args=(playlist_id,)))
 
 
 def get_songJson(songs):
